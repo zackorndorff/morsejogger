@@ -7,7 +7,7 @@ import Foundation
 import XCTest
 @testable import MorseJoggerCore
 
-// SourceFixtures.json was generated once from the CW Field v0.15 web build
+// SourceFixtures.json was generated once from an earlier JavaScript web build of this app (v0.15)
 // (dist/core.js and rules.js). That build is not in the repository, so the file
 // is frozen. MRCE-derived fixtures come from tools/mrce-oracle.
 

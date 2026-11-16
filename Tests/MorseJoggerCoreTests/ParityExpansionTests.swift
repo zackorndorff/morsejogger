@@ -7,7 +7,7 @@ import XCTest
 @testable import MorseJoggerCore
 
 // ConfidenceFixtures, OperatorTransitions, CallFixtures, OperatorFixtures and
-// SerialFixtures were generated once from the CW Field v0.15 web build
+// SerialFixtures were generated once from an earlier JavaScript web build of this app (v0.15)
 // (dist/core.js and rules.js). That build is not in the repository, so these
 // files are frozen. MRCE-derived fixtures come from tools/mrce-oracle.
 

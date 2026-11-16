@@ -4,7 +4,7 @@
 //file, You can obtain one at http://mozilla.org/MPL/2.0/.
 //------------------------------------------------------------------------------
 
-/// Portable, platform-independent CW Field simulator types. No Apple UI, browser or JS APIs.
+/// Portable, platform-independent Morse Jogger simulator types. No Apple UI, browser or JS APIs.
 public enum ContestID: String, Codable, CaseIterable, Sendable, Identifiable {
     case wpx, cqww, arrldx, fieldday, sweepstakes, naqp, cwt, sst, iaru, allja, acag, arrl10, hst, pota
     public var id: String { rawValue }
@@ -332,7 +332,7 @@ public struct QSOEntry: Codable, Equatable, Sendable, Identifiable {
     }
 }
 /// Post-contact diagnosis. Original MRCE prioritizes NIL, DUP, RST and NR;
-/// additional CW Field contests can have named exchange fields.
+/// additional Morse Jogger contests can have named exchange fields.
 public struct QSODiagnosis: Equatable, Sendable {
     public var code:String, explanation:String
     public init(code:String,explanation:String) {self.code=code;self.explanation=explanation}

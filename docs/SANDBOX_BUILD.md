@@ -1,7 +1,7 @@
 # Sandbox build limits
 
 `scripts/sandbox_build.sh test` places SwiftPM scratch data, caches, and build
-products below `/private/tmp/cwfield-sandbox-build` by default. `host` uses
+products below `/private/tmp/morsejogger-sandbox-build` by default. `host` uses
 the same locations: it builds the core as a dylib, compiles
 `iOS/MorseJoggerTests/SessionDriverContractTests.swift` and
 `Tests/NativeModelServiceTests.swift` against it as standalone executables, and
@@ -40,15 +40,15 @@ those manifest writes by removing the package reference for this compile check.
 Verified with Xcode 27.0:
 
 ```sh
-CW_SANDBOX_BUILD_ROOT=/private/tmp/cwfield-sandbox-verify3 scripts/sandbox_build.sh ios
-CW_SANDBOX_BUILD_ROOT=/private/tmp/cwfield-sandbox-verify3 scripts/sandbox_build.sh catalyst
+CW_SANDBOX_BUILD_ROOT=/private/tmp/morsejogger-sandbox-verify3 scripts/sandbox_build.sh ios
+CW_SANDBOX_BUILD_ROOT=/private/tmp/morsejogger-sandbox-verify3 scripts/sandbox_build.sh catalyst
 ```
 
 Both commands exited 0 and printed `** BUILD SUCCEEDED **`. Products were
 created at:
 
-- `/private/tmp/cwfield-sandbox-verify3/xcode/ios-simulator-derived/Build/Products/Debug-iphonesimulator/MorseJogger.app/MorseJogger`
-- `/private/tmp/cwfield-sandbox-verify3/xcode/catalyst-derived/Build/Products/Debug-maccatalyst/MorseJogger.app/Contents/MacOS/MorseJogger`
+- `/private/tmp/morsejogger-sandbox-verify3/xcode/ios-simulator-derived/Build/Products/Debug-iphonesimulator/MorseJogger.app/MorseJogger`
+- `/private/tmp/morsejogger-sandbox-verify3/xcode/catalyst-derived/Build/Products/Debug-maccatalyst/MorseJogger.app/Contents/MacOS/MorseJogger`
 
 Xcode logs warnings about unavailable CoreSimulator services and denied
 developer log paths in this sandbox; they did not prevent these SDK compile

@@ -657,7 +657,7 @@ private final class MRCEAudioRenderState: @unchecked Sendable {
     nonisolated private static func restartEngineIfNeeded(_ engine: AVAudioEngine, renderState: MRCEAudioRenderState) {
         guard renderState.shouldRun.isSet, !engine.isRunning else { return }
         do { try engine.start() }
-        catch { NSLog("CW Field audio route restart failed: %@", String(describing: error)) }
+        catch { NSLog("Morse Jogger audio route restart failed: %@", String(describing: error)) }
     }
 
     // MARK: Lifecycle
@@ -692,7 +692,7 @@ private final class MRCEAudioRenderState: @unchecked Sendable {
                     self.sessionActive = true
                     self.startEngine { result in completions.forEach { $0(result) } }
                 case .failure(let error):
-                    NSLog("CW Field audio activation failed: %@", String(describing: error))
+                    NSLog("Morse Jogger audio activation failed: %@", String(describing: error))
                     let failure = SessionDriver.AudioFailure.sessionActivation(String(describing: error))
                     completions.forEach { $0(.failure(failure)) }
                 }
@@ -717,7 +717,7 @@ private final class MRCEAudioRenderState: @unchecked Sendable {
                 if !engine.isRunning { try engine.start() }
                 result = .success(())
             } catch {
-                NSLog("CW Field audio start failed: %@", String(describing: error))
+                NSLog("Morse Jogger audio start failed: %@", String(describing: error))
                 result = .failure(.engineStart(String(describing: error)))
             }
             if let completion { DispatchQueue.main.async { completion(result) } }
@@ -752,7 +752,7 @@ private final class MRCEAudioRenderState: @unchecked Sendable {
                 try AVAudioSession.sharedInstance().setActive(true)
                 activated = true
             } catch {
-                NSLog("CW Field audio foreground reconciliation deferred: %@", String(describing: error))
+                NSLog("Morse Jogger audio foreground reconciliation deferred: %@", String(describing: error))
                 activated = false
             }
             DispatchQueue.main.async { [weak self] in
@@ -788,7 +788,7 @@ private final class MRCEAudioRenderState: @unchecked Sendable {
                     guard let self, self.lifecycleGeneration == generation else { return }
                     Self.audioSessionQueue.async {
                         do { try AVAudioSession.sharedInstance().setActive(false, options: [.notifyOthersOnDeactivation]) }
-                        catch { NSLog("CW Field audio deactivation failed: %@", String(describing: error)) }
+                        catch { NSLog("Morse Jogger audio deactivation failed: %@", String(describing: error)) }
                     }
                 }
             }

@@ -10,7 +10,7 @@
 set -euo pipefail
 
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-BUILD_ROOT="${CW_SANDBOX_BUILD_ROOT:-/private/tmp/cwfield-sandbox-build}"
+BUILD_ROOT="${CW_SANDBOX_BUILD_ROOT:-/private/tmp/morsejogger-sandbox-build}"
 
 usage() {
   cat <<'USAGE'
@@ -25,7 +25,7 @@ contract tests, the settings store and SCP data service checks, and the
 JSON-lines CLI.
 
 SwiftPM test scratch data and build products are stored under
-CW_SANDBOX_BUILD_ROOT (default: /private/tmp/cwfield-sandbox-build). Xcode may
+CW_SANDBOX_BUILD_ROOT (default: /private/tmp/morsejogger-sandbox-build). Xcode may
 write additional SwiftPM and developer-tool caches outside that directory;
 see docs/SANDBOX_BUILD.md for the current sandbox limitation.
 USAGE
