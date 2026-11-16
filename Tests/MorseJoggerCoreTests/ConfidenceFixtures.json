@@ -1,0 +1,2202 @@
+[
+  {
+    "call": "K1ABC",
+    "typed": "K1ABC",
+    "confidence": 100
+  },
+  {
+    "call": "K1ABC",
+    "typed": "K1A",
+    "confidence": 60
+  },
+  {
+    "call": "K1ABC",
+    "typed": "1AB",
+    "confidence": 60
+  },
+  {
+    "call": "K1ABC",
+    "typed": "ABC",
+    "confidence": 60
+  },
+  {
+    "call": "K1ABC",
+    "typed": "K?ABC",
+    "confidence": 80
+  },
+  {
+    "call": "K1ABC",
+    "typed": "K1?BC",
+    "confidence": 80
+  },
+  {
+    "call": "K1ABC",
+    "typed": "K1???",
+    "confidence": 40
+  },
+  {
+    "call": "K1ABC",
+    "typed": "K1?",
+    "confidence": 40
+  },
+  {
+    "call": "K1ABC",
+    "typed": "?ABC",
+    "confidence": 60
+  },
+  {
+    "call": "K1ABC",
+    "typed": "?",
+    "confidence": 2
+  },
+  {
+    "call": "K1ABC",
+    "typed": "ABC?",
+    "confidence": 60
+  },
+  {
+    "call": "K1ABC",
+    "typed": "K1ABD",
+    "confidence": 80
+  },
+  {
+    "call": "K1ABC",
+    "typed": "K2ABC",
+    "confidence": 80
+  },
+  {
+    "call": "K1ABC",
+    "typed": "K1ABCD",
+    "confidence": 80
+  },
+  {
+    "call": "K1ABC",
+    "typed": "E8",
+    "confidence": 0
+  },
+  {
+    "call": "K1ABC",
+    "typed": "EA?XYZ",
+    "confidence": 0
+  },
+  {
+    "call": "K1ABC",
+    "typed": "EA8??",
+    "confidence": 0
+  },
+  {
+    "call": "K1ABC",
+    "typed": "3NEA",
+    "confidence": 0
+  },
+  {
+    "call": "K1ABC",
+    "typed": "VE?NEA",
+    "confidence": 0
+  },
+  {
+    "call": "K1ABC",
+    "typed": "VE3??",
+    "confidence": 0
+  },
+  {
+    "call": "K1ABC",
+    "typed": "W4A",
+    "confidence": 0
+  },
+  {
+    "call": "K1ABC",
+    "typed": "W4",
+    "confidence": 0
+  },
+  {
+    "call": "K1ABC",
+    "typed": "A2Z",
+    "confidence": 0
+  },
+  {
+    "call": "K1ABC",
+    "typed": "JA2?KU",
+    "confidence": 0
+  },
+  {
+    "call": "K1ABC",
+    "typed": "DL?ABC/P",
+    "confidence": 0
+  },
+  {
+    "call": "K1ABC",
+    "typed": "DL1A",
+    "confidence": 0
+  },
+  {
+    "call": "K1ABC",
+    "typed": "4X6TT",
+    "confidence": 0
+  },
+  {
+    "call": "K1ABC",
+    "typed": "4X6?",
+    "confidence": 0
+  },
+  {
+    "call": "K1ABC",
+    "typed": "AA0",
+    "confidence": 0
+  },
+  {
+    "call": "K1ABC",
+    "typed": "W4?",
+    "confidence": 0
+  },
+  {
+    "call": "K1ABC",
+    "typed": "Z9ZZZ",
+    "confidence": 0
+  },
+  {
+    "call": "K1ABC",
+    "typed": "1234",
+    "confidence": 0
+  },
+  {
+    "call": "K1ABC",
+    "typed": "N0?",
+    "confidence": 0
+  },
+  {
+    "call": "K1ABC",
+    "typed": "VK2A",
+    "confidence": 0
+  },
+  {
+    "call": "K1ABC",
+    "typed": "K1/B",
+    "confidence": 60
+  },
+  {
+    "call": "K1ABC",
+    "typed": "K?AB?",
+    "confidence": 60
+  },
+  {
+    "call": "K1ABC",
+    "typed": "??",
+    "confidence": 2
+  },
+  {
+    "call": "K1ABC",
+    "typed": "K1AB?",
+    "confidence": 80
+  },
+  {
+    "call": "K1ABC",
+    "typed": "K1A??",
+    "confidence": 60
+  },
+  {
+    "call": "K1ABC",
+    "typed": "K1A?",
+    "confidence": 60
+  },
+  {
+    "call": "K1ABC",
+    "typed": "VE3NEB",
+    "confidence": 0
+  },
+  {
+    "call": "K1ABC",
+    "typed": "AA0R",
+    "confidence": 0
+  },
+  {
+    "call": "K1ABC",
+    "typed": "AA?R",
+    "confidence": 0
+  },
+  {
+    "call": "K1ABC",
+    "typed": "EA8X",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "K1ABC",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "K1A",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "1AB",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "ABC",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "K?ABC",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "K1?BC",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "K1???",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "K1?",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "?ABC",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "?",
+    "confidence": 2
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "ABC?",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "K1ABD",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "K2ABC",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "K1ABCD",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "E8",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "EA?XYZ",
+    "confidence": 83
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "EA8??",
+    "confidence": 50
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "3NEA",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "VE?NEA",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "VE3??",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "W4A",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "W4",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "A2Z",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "JA2?KU",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "DL?ABC/P",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "DL1A",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "4X6TT",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "4X6?",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "AA0",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "W4?",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "Z9ZZZ",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "1234",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "N0?",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "VK2A",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "K1/B",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "K?AB?",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "??",
+    "confidence": 2
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "K1AB?",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "K1A??",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "K1A?",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "VE3NEB",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "AA0R",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "AA?R",
+    "confidence": 0
+  },
+  {
+    "call": "EA8XYZ",
+    "typed": "EA8X",
+    "confidence": 66
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "K1ABC",
+    "confidence": 0
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "K1A",
+    "confidence": 0
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "1AB",
+    "confidence": 0
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "ABC",
+    "confidence": 0
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "K?ABC",
+    "confidence": 0
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "K1?BC",
+    "confidence": 0
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "K1???",
+    "confidence": 0
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "K1?",
+    "confidence": 0
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "?ABC",
+    "confidence": 0
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "?",
+    "confidence": 2
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "ABC?",
+    "confidence": 0
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "K1ABD",
+    "confidence": 0
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "K2ABC",
+    "confidence": 0
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "K1ABCD",
+    "confidence": 0
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "E8",
+    "confidence": 0
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "EA?XYZ",
+    "confidence": 0
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "EA8??",
+    "confidence": 0
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "3NEA",
+    "confidence": 66
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "VE?NEA",
+    "confidence": 83
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "VE3??",
+    "confidence": 50
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "W4A",
+    "confidence": 0
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "W4",
+    "confidence": 0
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "A2Z",
+    "confidence": 0
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "JA2?KU",
+    "confidence": 0
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "DL?ABC/P",
+    "confidence": 0
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "DL1A",
+    "confidence": 0
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "4X6TT",
+    "confidence": 0
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "4X6?",
+    "confidence": 0
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "AA0",
+    "confidence": 0
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "W4?",
+    "confidence": 0
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "Z9ZZZ",
+    "confidence": 0
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "1234",
+    "confidence": 0
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "N0?",
+    "confidence": 0
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "VK2A",
+    "confidence": 0
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "K1/B",
+    "confidence": 0
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "K?AB?",
+    "confidence": 0
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "??",
+    "confidence": 2
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "K1AB?",
+    "confidence": 0
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "K1A??",
+    "confidence": 0
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "K1A?",
+    "confidence": 0
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "VE3NEB",
+    "confidence": 83
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "AA0R",
+    "confidence": 0
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "AA?R",
+    "confidence": 0
+  },
+  {
+    "call": "VE3NEA",
+    "typed": "EA8X",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "K1ABC",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "K1A",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "1AB",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "ABC",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "K?ABC",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "K1?BC",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "K1???",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "K1?",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "?ABC",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "?",
+    "confidence": 2
+  },
+  {
+    "call": "W4A",
+    "typed": "ABC?",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "K1ABD",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "K2ABC",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "K1ABCD",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "E8",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "EA?XYZ",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "EA8??",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "3NEA",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "VE?NEA",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "VE3??",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "W4A",
+    "confidence": 100
+  },
+  {
+    "call": "W4A",
+    "typed": "W4",
+    "confidence": 66
+  },
+  {
+    "call": "W4A",
+    "typed": "A2Z",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "JA2?KU",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "DL?ABC/P",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "DL1A",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "4X6TT",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "4X6?",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "AA0",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "W4?",
+    "confidence": 66
+  },
+  {
+    "call": "W4A",
+    "typed": "Z9ZZZ",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "1234",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "N0?",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "VK2A",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "K1/B",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "K?AB?",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "??",
+    "confidence": 2
+  },
+  {
+    "call": "W4A",
+    "typed": "K1AB?",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "K1A??",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "K1A?",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "VE3NEB",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "AA0R",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "AA?R",
+    "confidence": 0
+  },
+  {
+    "call": "W4A",
+    "typed": "EA8X",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "K1ABC",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "K1A",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "1AB",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "ABC",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "K?ABC",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "K1?BC",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "K1???",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "K1?",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "?ABC",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "?",
+    "confidence": 2
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "ABC?",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "K1ABD",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "K2ABC",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "K1ABCD",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "E8",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "EA?XYZ",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "EA8??",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "3NEA",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "VE?NEA",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "VE3??",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "W4A",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "W4",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "A2Z",
+    "confidence": 50
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "JA2?KU",
+    "confidence": 83
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "DL?ABC/P",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "DL1A",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "4X6TT",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "4X6?",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "AA0",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "W4?",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "Z9ZZZ",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "1234",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "N0?",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "VK2A",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "K1/B",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "K?AB?",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "??",
+    "confidence": 2
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "K1AB?",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "K1A??",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "K1A?",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "VE3NEB",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "AA0R",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "AA?R",
+    "confidence": 0
+  },
+  {
+    "call": "JA2ZKU",
+    "typed": "EA8X",
+    "confidence": 0
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "K1ABC",
+    "confidence": 0
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "K1A",
+    "confidence": 0
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "1AB",
+    "confidence": 37
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "ABC",
+    "confidence": 37
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "K?ABC",
+    "confidence": 0
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "K1?BC",
+    "confidence": 0
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "K1???",
+    "confidence": 0
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "K1?",
+    "confidence": 0
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "?ABC",
+    "confidence": 37
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "?",
+    "confidence": 2
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "ABC?",
+    "confidence": 37
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "K1ABD",
+    "confidence": 0
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "K2ABC",
+    "confidence": 0
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "K1ABCD",
+    "confidence": 0
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "E8",
+    "confidence": 0
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "EA?XYZ",
+    "confidence": 0
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "EA8??",
+    "confidence": 0
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "3NEA",
+    "confidence": 0
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "VE?NEA",
+    "confidence": 0
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "VE3??",
+    "confidence": 0
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "W4A",
+    "confidence": 0
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "W4",
+    "confidence": 0
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "A2Z",
+    "confidence": 0
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "JA2?KU",
+    "confidence": 0
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "DL?ABC/P",
+    "confidence": 87
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "DL1A",
+    "confidence": 50
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "4X6TT",
+    "confidence": 0
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "4X6?",
+    "confidence": 0
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "AA0",
+    "confidence": 0
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "W4?",
+    "confidence": 0
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "Z9ZZZ",
+    "confidence": 0
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "1234",
+    "confidence": 0
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "N0?",
+    "confidence": 0
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "VK2A",
+    "confidence": 0
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "K1/B",
+    "confidence": 0
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "K?AB?",
+    "confidence": 0
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "??",
+    "confidence": 2
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "K1AB?",
+    "confidence": 0
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "K1A??",
+    "confidence": 0
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "K1A?",
+    "confidence": 0
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "VE3NEB",
+    "confidence": 0
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "AA0R",
+    "confidence": 0
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "AA?R",
+    "confidence": 0
+  },
+  {
+    "call": "DL1ABC/P",
+    "typed": "EA8X",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "K1ABC",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "K1A",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "1AB",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "ABC",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "K?ABC",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "K1?BC",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "K1???",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "K1?",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "?ABC",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "?",
+    "confidence": 2
+  },
+  {
+    "call": "4X6TT",
+    "typed": "ABC?",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "K1ABD",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "K2ABC",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "K1ABCD",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "E8",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "EA?XYZ",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "EA8??",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "3NEA",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "VE?NEA",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "VE3??",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "W4A",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "W4",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "A2Z",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "JA2?KU",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "DL?ABC/P",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "DL1A",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "4X6TT",
+    "confidence": 100
+  },
+  {
+    "call": "4X6TT",
+    "typed": "4X6?",
+    "confidence": 60
+  },
+  {
+    "call": "4X6TT",
+    "typed": "AA0",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "W4?",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "Z9ZZZ",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "1234",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "N0?",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "VK2A",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "K1/B",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "K?AB?",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "??",
+    "confidence": 2
+  },
+  {
+    "call": "4X6TT",
+    "typed": "K1AB?",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "K1A??",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "K1A?",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "VE3NEB",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "AA0R",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "AA?R",
+    "confidence": 0
+  },
+  {
+    "call": "4X6TT",
+    "typed": "EA8X",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "K1ABC",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "K1A",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "1AB",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "ABC",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "K?ABC",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "K1?BC",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "K1???",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "K1?",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "?ABC",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "?",
+    "confidence": 2
+  },
+  {
+    "call": "AA0R",
+    "typed": "ABC?",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "K1ABD",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "K2ABC",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "K1ABCD",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "E8",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "EA?XYZ",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "EA8??",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "3NEA",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "VE?NEA",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "VE3??",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "W4A",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "W4",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "A2Z",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "JA2?KU",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "DL?ABC/P",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "DL1A",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "4X6TT",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "4X6?",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "AA0",
+    "confidence": 75
+  },
+  {
+    "call": "AA0R",
+    "typed": "W4?",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "Z9ZZZ",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "1234",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "N0?",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "VK2A",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "K1/B",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "K?AB?",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "??",
+    "confidence": 2
+  },
+  {
+    "call": "AA0R",
+    "typed": "K1AB?",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "K1A??",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "K1A?",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "VE3NEB",
+    "confidence": 0
+  },
+  {
+    "call": "AA0R",
+    "typed": "AA0R",
+    "confidence": 100
+  },
+  {
+    "call": "AA0R",
+    "typed": "AA?R",
+    "confidence": 75
+  },
+  {
+    "call": "AA0R",
+    "typed": "EA8X",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "K1ABC",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "K1A",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "1AB",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "ABC",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "K?ABC",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "K1?BC",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "K1???",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "K1?",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "?ABC",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "?",
+    "confidence": 2
+  },
+  {
+    "call": "N0W",
+    "typed": "ABC?",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "K1ABD",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "K2ABC",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "K1ABCD",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "E8",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "EA?XYZ",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "EA8??",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "3NEA",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "VE?NEA",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "VE3??",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "W4A",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "W4",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "A2Z",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "JA2?KU",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "DL?ABC/P",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "DL1A",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "4X6TT",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "4X6?",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "AA0",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "W4?",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "Z9ZZZ",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "1234",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "N0?",
+    "confidence": 66
+  },
+  {
+    "call": "N0W",
+    "typed": "VK2A",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "K1/B",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "K?AB?",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "??",
+    "confidence": 2
+  },
+  {
+    "call": "N0W",
+    "typed": "K1AB?",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "K1A??",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "K1A?",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "VE3NEB",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "AA0R",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "AA?R",
+    "confidence": 0
+  },
+  {
+    "call": "N0W",
+    "typed": "EA8X",
+    "confidence": 0
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "K1ABC",
+    "confidence": 66
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "K1A",
+    "confidence": 0
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "1AB",
+    "confidence": 0
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "ABC",
+    "confidence": 50
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "K?ABC",
+    "confidence": 66
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "K1?BC",
+    "confidence": 0
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "K1???",
+    "confidence": 0
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "K1?",
+    "confidence": 0
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "?ABC",
+    "confidence": 50
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "?",
+    "confidence": 2
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "ABC?",
+    "confidence": 50
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "K1ABD",
+    "confidence": 0
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "K2ABC",
+    "confidence": 83
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "K1ABCD",
+    "confidence": 0
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "E8",
+    "confidence": 0
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "EA?XYZ",
+    "confidence": 0
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "EA8??",
+    "confidence": 0
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "3NEA",
+    "confidence": 0
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "VE?NEA",
+    "confidence": 0
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "VE3??",
+    "confidence": 0
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "W4A",
+    "confidence": 0
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "W4",
+    "confidence": 0
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "A2Z",
+    "confidence": 0
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "JA2?KU",
+    "confidence": 0
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "DL?ABC/P",
+    "confidence": 0
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "DL1A",
+    "confidence": 0
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "4X6TT",
+    "confidence": 0
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "4X6?",
+    "confidence": 0
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "AA0",
+    "confidence": 0
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "W4?",
+    "confidence": 0
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "Z9ZZZ",
+    "confidence": 0
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "1234",
+    "confidence": 0
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "N0?",
+    "confidence": 0
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "VK2A",
+    "confidence": 66
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "K1/B",
+    "confidence": 0
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "K?AB?",
+    "confidence": 50
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "??",
+    "confidence": 2
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "K1AB?",
+    "confidence": 0
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "K1A??",
+    "confidence": 0
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "K1A?",
+    "confidence": 0
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "VE3NEB",
+    "confidence": 0
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "AA0R",
+    "confidence": 0
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "AA?R",
+    "confidence": 0
+  },
+  {
+    "call": "VK2ABC",
+    "typed": "EA8X",
+    "confidence": 0
+  }
+]

@@ -1,0 +1,307 @@
+{
+  "provenance": {
+    "upstream": "304e51aece5a17f4cba548527816a385a8f6f814",
+    "sourceSHA256": {
+      "DxOper.pas": "65a0eb08c153ec6375d71c82ff04c775a8e49ec3c0afbce626c8c2d39f263bc1",
+      "Main.pas": "782093ccbc33fd9649305c2b5a0a9d9f0f94d756f0450125b42fbabcb30924fd",
+      "Contest.pas": "b01f145f2910369c96cf47cdab62def5e85ee03292ed2ae4fa0660787cdaf0d6",
+      "RndFunc.pas": "f9c09ef38c22c0b7e4a0f7df6e4d16379dbf163656808d5d0d57b66a6e99b4bf",
+      "Station.pas": "a6f68199eee9e2c8d15b512546d16ba8b558785b5d9d7a6d3741ec4c15acd977"
+    },
+    "compiler": "3.2.2",
+    "target": [
+      "aarch64",
+      "darwin"
+    ],
+    "regenerate": "python3 tools/mrce-oracle/generate.py --conversations --output Tests/MorseJoggerCoreTests/MRCEConversationFixtures.json"
+  },
+  "scenarios": [
+    {
+      "name": "final-correct",
+      "settings": {
+        "contest": "wpx",
+        "mode": "single",
+        "seed": 172,
+        "caller": "K1ABC",
+        "styleBand": 0.7,
+        "pascalDraw": 0.5,
+        "ownExchange": "5NN 001",
+        "callerExchange": "599 001"
+      },
+      "steps": [
+        {
+          "label": "CQ",
+          "input": {
+            "command": "CQ",
+            "call": "",
+            "validCall": false,
+            "match": 0,
+            "exchange1": "",
+            "exchange2": ""
+          },
+          "oracle": {
+            "tx": "CQ VE3NEA TEST",
+            "rxMessage": "msgMyCall",
+            "rx": "K1ABC",
+            "messages": [
+              "msgCQ"
+            ],
+            "state": "osNeedQso"
+          }
+        },
+        {
+          "label": "partial-1",
+          "input": {
+            "command": "Enter",
+            "call": "K1AB?",
+            "validCall": false,
+            "match": 80,
+            "exchange1": "",
+            "exchange2": ""
+          },
+          "oracle": {
+            "tx": "K1AB?",
+            "rxMessage": "msgMyCall2",
+            "rx": "K1ABC K1ABC",
+            "messages": [
+              "msgHisCall"
+            ],
+            "state": "osNeedCallNr"
+          }
+        },
+        {
+          "label": "partial-2",
+          "input": {
+            "command": "Enter",
+            "call": "K1A?",
+            "validCall": false,
+            "match": 60,
+            "exchange1": "",
+            "exchange2": ""
+          },
+          "oracle": {
+            "tx": "K1A?",
+            "rxMessage": "msgMyCall2",
+            "rx": "K1ABC K1ABC",
+            "messages": [
+              "msgHisCall"
+            ],
+            "state": "osNeedCallNr"
+          }
+        },
+        {
+          "label": "final",
+          "input": {
+            "command": "Enter",
+            "call": "K1ABC",
+            "validCall": true,
+            "match": 100,
+            "exchange1": "",
+            "exchange2": ""
+          },
+          "oracle": {
+            "tx": "K1ABC 5NN 001",
+            "rxMessage": "msgR_NR",
+            "rx": "R 599 001",
+            "messages": [
+              "msgNR",
+              "msgHisCall"
+            ],
+            "state": "osNeedEnd"
+          }
+        }
+      ]
+    },
+    {
+      "name": "final-wildcard",
+      "settings": {
+        "contest": "wpx",
+        "mode": "single",
+        "seed": 172,
+        "caller": "K1ABC",
+        "styleBand": 0.7,
+        "pascalDraw": 0.5,
+        "ownExchange": "5NN 001",
+        "callerExchange": "599 001"
+      },
+      "steps": [
+        {
+          "label": "CQ",
+          "input": {
+            "command": "CQ",
+            "call": "",
+            "validCall": false,
+            "match": 0,
+            "exchange1": "",
+            "exchange2": ""
+          },
+          "oracle": {
+            "tx": "CQ VE3NEA TEST",
+            "rxMessage": "msgMyCall",
+            "rx": "K1ABC",
+            "messages": [
+              "msgCQ"
+            ],
+            "state": "osNeedQso"
+          }
+        },
+        {
+          "label": "partial-1",
+          "input": {
+            "command": "Enter",
+            "call": "K1AB?",
+            "validCall": false,
+            "match": 80,
+            "exchange1": "",
+            "exchange2": ""
+          },
+          "oracle": {
+            "tx": "K1AB?",
+            "rxMessage": "msgMyCall2",
+            "rx": "K1ABC K1ABC",
+            "messages": [
+              "msgHisCall"
+            ],
+            "state": "osNeedCallNr"
+          }
+        },
+        {
+          "label": "partial-2",
+          "input": {
+            "command": "Enter",
+            "call": "K1A?",
+            "validCall": false,
+            "match": 60,
+            "exchange1": "",
+            "exchange2": ""
+          },
+          "oracle": {
+            "tx": "K1A?",
+            "rxMessage": "msgMyCall2",
+            "rx": "K1ABC K1ABC",
+            "messages": [
+              "msgHisCall"
+            ],
+            "state": "osNeedCallNr"
+          }
+        },
+        {
+          "label": "wildcard",
+          "input": {
+            "command": "Enter",
+            "call": "K1AB?",
+            "validCall": false,
+            "match": 80,
+            "exchange1": "",
+            "exchange2": ""
+          },
+          "oracle": {
+            "tx": "K1AB?",
+            "rxMessage": "msgMyCall2",
+            "rx": "K1ABC K1ABC",
+            "messages": [
+              "msgHisCall"
+            ],
+            "state": "osNeedCallNr"
+          }
+        }
+      ]
+    },
+    {
+      "name": "final-valid-inexact",
+      "settings": {
+        "contest": "wpx",
+        "mode": "single",
+        "seed": 172,
+        "caller": "K1ABC",
+        "styleBand": 0.7,
+        "pascalDraw": 0.5,
+        "ownExchange": "5NN 001",
+        "callerExchange": "599 001"
+      },
+      "steps": [
+        {
+          "label": "CQ",
+          "input": {
+            "command": "CQ",
+            "call": "",
+            "validCall": false,
+            "match": 0,
+            "exchange1": "",
+            "exchange2": ""
+          },
+          "oracle": {
+            "tx": "CQ VE3NEA TEST",
+            "rxMessage": "msgMyCall",
+            "rx": "K1ABC",
+            "messages": [
+              "msgCQ"
+            ],
+            "state": "osNeedQso"
+          }
+        },
+        {
+          "label": "partial-1",
+          "input": {
+            "command": "Enter",
+            "call": "K1AB?",
+            "validCall": false,
+            "match": 80,
+            "exchange1": "",
+            "exchange2": ""
+          },
+          "oracle": {
+            "tx": "K1AB?",
+            "rxMessage": "msgMyCall2",
+            "rx": "K1ABC K1ABC",
+            "messages": [
+              "msgHisCall"
+            ],
+            "state": "osNeedCallNr"
+          }
+        },
+        {
+          "label": "partial-2",
+          "input": {
+            "command": "Enter",
+            "call": "K1A?",
+            "validCall": false,
+            "match": 60,
+            "exchange1": "",
+            "exchange2": ""
+          },
+          "oracle": {
+            "tx": "K1A?",
+            "rxMessage": "msgMyCall2",
+            "rx": "K1ABC K1ABC",
+            "messages": [
+              "msgHisCall"
+            ],
+            "state": "osNeedCallNr"
+          }
+        },
+        {
+          "label": "valid-inexact",
+          "input": {
+            "command": "Enter",
+            "call": "K1AB",
+            "validCall": true,
+            "match": 60,
+            "exchange1": "",
+            "exchange2": ""
+          },
+          "oracle": {
+            "tx": "K1AB 5NN 001",
+            "rxMessage": "msgMyCallNr2",
+            "rx": "K1ABC K1ABC 599 001",
+            "messages": [
+              "msgNR",
+              "msgHisCall"
+            ],
+            "state": "osNeedCall"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+// Base settings for the MorseJogger app target.
+//
+// Local.xcconfig is gitignored and holds settings that stay out of the
+// repository. The build fails until it exists: copy Local.xcconfig.example to
+// Local.xcconfig and fill it in.
+#include "Local.xcconfig"

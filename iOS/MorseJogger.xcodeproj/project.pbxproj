@@ -1,0 +1,402 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		145C43B5309EE2AC0030F22D /* morse_jogger_dev.icon in Resources */ = {isa = PBXBuildFile; fileRef = 145C43B4309EE2AC0030F22D /* morse_jogger_dev.icon */; };
+		146E572E307DABF400549CC3 /* morse_jogger.icon in Resources */ = {isa = PBXBuildFile; fileRef = 146E572D307DABF400549CC3 /* morse_jogger.icon */; };
+		3009AC24EA7625B582588567 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543F1A7BE79C28795425832A /* GameView.swift */; };
+		36577E57548BDF89DE39F733 /* MorseJoggerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765BAEC3973EBCF53988E3E /* MorseJoggerApp.swift */; };
+		4561A60EA7109DCC9D036835 /* FieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C66E6B3CBE06A56A8EA8C2 /* FieldViewModel.swift */; };
+		597BFD45796DBE72BE418B79 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B1B2974874FA421F462B64 /* RootView.swift */; };
+		A08B3A1F58795CA19A06E67C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8E9F2B505E199D5D11D5D54 /* Assets.xcassets */; };
+		A1B2C3D4E5F60718293A4B5C /* CWAtomic.c in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F60718293A4B5B /* CWAtomic.c */; };
+		D77AD7C44DBE889A25D1F3A1 /* SessionDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77AD7C44DBE889A25D1F3A2 /* SessionDriver.swift */; };
+		DBCEFD382D7B0C627A66238A /* MorseJoggerCore in Frameworks */ = {isa = PBXBuildFile; productRef = ABA857E919B98E9E458DB870 /* MorseJoggerCore */; };
+		DD8B8351E994A0C59FD305FA /* FieldAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA39B63DA97324FA1C727F8 /* FieldAudio.swift */; };
+		F00D00000000000000000001 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00D00000000000000000002 /* SettingsStore.swift */; };
+		F00D00000000000000000003 /* FieldFileServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00D00000000000000000004 /* FieldFileServices.swift */; };
+		F2E449A11B776A590D52A6C8 /* SCPDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E449A01B776A590D52A6C8 /* SCPDataService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		08C66E6B3CBE06A56A8EA8C2 /* FieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldViewModel.swift; sourceTree = "<group>"; };
+		145C43B4309EE2AC0030F22D /* morse_jogger_dev.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = morse_jogger_dev.icon; sourceTree = "<group>"; };
+		146E572D307DABF400549CC3 /* morse_jogger.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = morse_jogger.icon; sourceTree = "<group>"; };
+		29B1B2974874FA421F462B64 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		3AA39B63DA97324FA1C727F8 /* FieldAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldAudio.swift; sourceTree = "<group>"; };
+		543F1A7BE79C28795425832A /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		5765BAEC3973EBCF53988E3E /* MorseJoggerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorseJoggerApp.swift; sourceTree = "<group>"; };
+		A1B2C3D4E5F60718293A4B5B /* CWAtomic.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = CWAtomic.c; sourceTree = "<group>"; };
+		ABC24B0E2A22F9D2EAC86480 /* MorseJogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MorseJogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8E9F2B505E199D5D11D5D54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D77AD7C44DBE889A25D1F3A2 /* SessionDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDriver.swift; sourceTree = "<group>"; };
+		F00D00000000000000000002 /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		F00D00000000000000000004 /* FieldFileServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldFileServices.swift; sourceTree = "<group>"; };
+		F2E449A01B776A590D52A6C8 /* SCPDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCPDataService.swift; sourceTree = "<group>"; };
+		F00D00000000000000000005 /* MorseJogger.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = MorseJogger.xcconfig; sourceTree = "<group>"; };
+		F00D00000000000000000006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		948446B205A756CC454F8605 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBCEFD382D7B0C627A66238A /* MorseJoggerCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4A4F3C5C9247670577288BE9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABC24B0E2A22F9D2EAC86480 /* MorseJogger.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8EA87D037DE8944CA9640B82 /* MorseJogger */ = {
+			isa = PBXGroup;
+			children = (
+				5765BAEC3973EBCF53988E3E /* MorseJoggerApp.swift */,
+				08C66E6B3CBE06A56A8EA8C2 /* FieldViewModel.swift */,
+				D77AD7C44DBE889A25D1F3A2 /* SessionDriver.swift */,
+				F00D00000000000000000002 /* SettingsStore.swift */,
+				F00D00000000000000000004 /* FieldFileServices.swift */,
+				3AA39B63DA97324FA1C727F8 /* FieldAudio.swift */,
+				A1B2C3D4E5F60718293A4B5B /* CWAtomic.c */,
+				29B1B2974874FA421F462B64 /* RootView.swift */,
+				543F1A7BE79C28795425832A /* GameView.swift */,
+				F2E449A01B776A590D52A6C8 /* SCPDataService.swift */,
+				B8E9F2B505E199D5D11D5D54 /* Assets.xcassets */,
+				F00D00000000000000000006 /* Info.plist */,
+			);
+			path = MorseJogger;
+			sourceTree = "<group>";
+		};
+		93035DC7EBAE2A26CEDC2E35 = {
+			isa = PBXGroup;
+			children = (
+				145C43B4309EE2AC0030F22D /* morse_jogger_dev.icon */,
+				146E572D307DABF400549CC3 /* morse_jogger.icon */,
+				F00D00000000000000000005 /* MorseJogger.xcconfig */,
+				8EA87D037DE8944CA9640B82 /* MorseJogger */,
+				4A4F3C5C9247670577288BE9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B78249E06FF6942F52655DA3 /* MorseJogger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C6A78C83B1361906CD1F3FF /* Build configuration list for PBXNativeTarget "MorseJogger" */;
+			buildPhases = (
+				BBB24376FD9D72ADDC7BFAD4 /* Sources */,
+				948446B205A756CC454F8605 /* Frameworks */,
+				7A21ECBD1263341A37B39A22 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MorseJogger;
+			packageProductDependencies = (
+				ABA857E919B98E9E458DB870 /* MorseJoggerCore */,
+			);
+			productName = MorseJogger;
+			productReference = ABC24B0E2A22F9D2EAC86480 /* MorseJogger.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC96B4D60CAA0136C61C59E7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 2700;
+				TargetAttributes = {
+					B78249E06FF6942F52655DA3 = {
+						CreatedOnToolsVersion = 16.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1CECEFDDDBD9DF6965EFB5AA /* Build configuration list for PBXProject "MorseJogger" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 93035DC7EBAE2A26CEDC2E35;
+			packageReferences = (
+				852BDDF0CC5DBD6E981402E9 /* XCLocalSwiftPackageReference ".." */,
+			);
+			productRefGroup = 4A4F3C5C9247670577288BE9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B78249E06FF6942F52655DA3 /* MorseJogger */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7A21ECBD1263341A37B39A22 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				145C43B5309EE2AC0030F22D /* morse_jogger_dev.icon in Resources */,
+				A08B3A1F58795CA19A06E67C /* Assets.xcassets in Resources */,
+				146E572E307DABF400549CC3 /* morse_jogger.icon in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BBB24376FD9D72ADDC7BFAD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36577E57548BDF89DE39F733 /* MorseJoggerApp.swift in Sources */,
+				4561A60EA7109DCC9D036835 /* FieldViewModel.swift in Sources */,
+				D77AD7C44DBE889A25D1F3A1 /* SessionDriver.swift in Sources */,
+				F00D00000000000000000001 /* SettingsStore.swift in Sources */,
+				F00D00000000000000000003 /* FieldFileServices.swift in Sources */,
+				DD8B8351E994A0C59FD305FA /* FieldAudio.swift in Sources */,
+				A1B2C3D4E5F60718293A4B5C /* CWAtomic.c in Sources */,
+				F2E449A11B776A590D52A6C8 /* SCPDataService.swift in Sources */,
+				597BFD45796DBE72BE418B79 /* RootView.swift in Sources */,
+				3009AC24EA7625B582588567 /* GameView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		15542D8D94B25E4B838345B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		2B57B5688B4F0F659283C708 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		32BCA397287FF59ABF15C220 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F00D00000000000000000005 /* MorseJogger.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = morse_jogger_dev;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MorseJogger/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Morse Jogger";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIFileSharingEnabled = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.z10f.morsejogger.dev;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CBDF51A2C38F995AD895F67C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F00D00000000000000000005 /* MorseJogger.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = morse_jogger;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MorseJogger/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Morse Jogger";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIFileSharingEnabled = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.z10f.morsejogger;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0C6A78C83B1361906CD1F3FF /* Build configuration list for PBXNativeTarget "MorseJogger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32BCA397287FF59ABF15C220 /* Debug */,
+				CBDF51A2C38F995AD895F67C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1CECEFDDDBD9DF6965EFB5AA /* Build configuration list for PBXProject "MorseJogger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B57B5688B4F0F659283C708 /* Debug */,
+				15542D8D94B25E4B838345B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		852BDDF0CC5DBD6E981402E9 /* XCLocalSwiftPackageReference ".." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ..;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ABA857E919B98E9E458DB870 /* MorseJoggerCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 852BDDF0CC5DBD6E981402E9 /* XCLocalSwiftPackageReference ".." */;
+			productName = MorseJoggerCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = AC96B4D60CAA0136C61C59E7 /* Project object */;
+}

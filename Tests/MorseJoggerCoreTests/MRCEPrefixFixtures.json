@@ -1,0 +1,484 @@
+{
+ "upstream": "304e51aece5a17f4cba548527816a385a8f6f814",
+ "sourceSHA256": "8e1aae1c7e0247fe5ff255e5dea1606d1d1f42cba036d9b0ed9db0b0ae88fbb9",
+ "compiler": "3.2.2",
+ "regenerate": "python3 tools/mrce-oracle/generate_prefix.py --output Tests/MorseJoggerCoreTests/MRCEPrefixFixtures.json",
+ "cases": [
+  {
+   "call": "K1ABC",
+   "prefix": "K1"
+  },
+  {
+   "call": "W1AW",
+   "prefix": "W1"
+  },
+  {
+   "call": "N7HPT",
+   "prefix": "N7"
+  },
+  {
+   "call": "AA1A",
+   "prefix": "AA1"
+  },
+  {
+   "call": "KX7FUR",
+   "prefix": "KX7"
+  },
+  {
+   "call": "WB6ACK",
+   "prefix": "WB6"
+  },
+  {
+   "call": "KC5ARZ",
+   "prefix": "KC5"
+  },
+  {
+   "call": "VE3NEA",
+   "prefix": "VE3"
+  },
+  {
+   "call": "VA7XX",
+   "prefix": "VA7"
+  },
+  {
+   "call": "VO1AA",
+   "prefix": "VO1"
+  },
+  {
+   "call": "VY2TT",
+   "prefix": "VY2"
+  },
+  {
+   "call": "DL1ABC",
+   "prefix": "DL1"
+  },
+  {
+   "call": "DA0HQ",
+   "prefix": "DA0"
+  },
+  {
+   "call": "G3ABC",
+   "prefix": "G3"
+  },
+  {
+   "call": "M0XYZ",
+   "prefix": "M0"
+  },
+  {
+   "call": "2E0ABC",
+   "prefix": "2E0"
+  },
+  {
+   "call": "F5XYZ",
+   "prefix": "F5"
+  },
+  {
+   "call": "I1ZA",
+   "prefix": "I1"
+  },
+  {
+   "call": "IK2ABC",
+   "prefix": "IK2"
+  },
+  {
+   "call": "EA0U",
+   "prefix": "EA0"
+  },
+  {
+   "call": "EA8AB",
+   "prefix": "EA8"
+  },
+  {
+   "call": "JA4BKS",
+   "prefix": "JA4"
+  },
+  {
+   "call": "7J1AAA",
+   "prefix": "7J1"
+  },
+  {
+   "call": "JH1XYZ",
+   "prefix": "JH1"
+  },
+  {
+   "call": "ZL2M",
+   "prefix": "ZL2"
+  },
+  {
+   "call": "VK3ABC",
+   "prefix": "VK3"
+  },
+  {
+   "call": "PY4E",
+   "prefix": "PY4"
+  },
+  {
+   "call": "PY2AVE",
+   "prefix": "PY2"
+  },
+  {
+   "call": "LU1ABC",
+   "prefix": "LU1"
+  },
+  {
+   "call": "YU6E",
+   "prefix": "YU6"
+  },
+  {
+   "call": "YU6HAW",
+   "prefix": "YU6"
+  },
+  {
+   "call": "9A1A",
+   "prefix": "9A1"
+  },
+  {
+   "call": "S51A",
+   "prefix": "S51"
+  },
+  {
+   "call": "OK1ABC",
+   "prefix": "OK1"
+  },
+  {
+   "call": "OM3XX",
+   "prefix": "OM3"
+  },
+  {
+   "call": "SP9ABC",
+   "prefix": "SP9"
+  },
+  {
+   "call": "HB9ABC",
+   "prefix": "HB9"
+  },
+  {
+   "call": "OE1XYZ",
+   "prefix": "OE1"
+  },
+  {
+   "call": "ON4UN",
+   "prefix": "ON4"
+  },
+  {
+   "call": "PA3ABC",
+   "prefix": "PA3"
+  },
+  {
+   "call": "SM5XYZ",
+   "prefix": "SM5"
+  },
+  {
+   "call": "OH2BH",
+   "prefix": "OH2"
+  },
+  {
+   "call": "LZ1ABC",
+   "prefix": "LZ1"
+  },
+  {
+   "call": "YO3XX",
+   "prefix": "YO3"
+  },
+  {
+   "call": "UA3ABC",
+   "prefix": "UA3"
+  },
+  {
+   "call": "R3A",
+   "prefix": "R3"
+  },
+  {
+   "call": "RC2FX",
+   "prefix": "RC2"
+  },
+  {
+   "call": "4X6TT",
+   "prefix": "4X6"
+  },
+  {
+   "call": "3DA0RU",
+   "prefix": "3DA0"
+  },
+  {
+   "call": "8P6ABC",
+   "prefix": "8P6"
+  },
+  {
+   "call": "9V1YC",
+   "prefix": "9V1"
+  },
+  {
+   "call": "A61AA",
+   "prefix": "A61"
+  },
+  {
+   "call": "A71BX",
+   "prefix": "A71"
+  },
+  {
+   "call": "B1A",
+   "prefix": "B1"
+  },
+  {
+   "call": "BY1AA",
+   "prefix": "BY1"
+  },
+  {
+   "call": "C6AAA",
+   "prefix": "C6"
+  },
+  {
+   "call": "D4C",
+   "prefix": "D4"
+  },
+  {
+   "call": "E73A",
+   "prefix": "E73"
+  },
+  {
+   "call": "K7S",
+   "prefix": "K7"
+  },
+  {
+   "call": "W8LNS",
+   "prefix": "W8"
+  },
+  {
+   "call": "AB3W",
+   "prefix": "AB3"
+  },
+  {
+   "call": "KO4HD",
+   "prefix": "KO4"
+  },
+  {
+   "call": "WG2MS",
+   "prefix": "WG2"
+  },
+  {
+   "call": "W1AW/3",
+   "prefix": "W3"
+  },
+  {
+   "call": "W1AW/KH6",
+   "prefix": "KH6"
+  },
+  {
+   "call": "KH6/W1AW",
+   "prefix": "KH6"
+  },
+  {
+   "call": "DL1ABC/P",
+   "prefix": "DL1"
+  },
+  {
+   "call": "G3ABC/M",
+   "prefix": "G3"
+  },
+  {
+   "call": "K1ABC/MM",
+   "prefix": "K1"
+  },
+  {
+   "call": "VE3NEA/QRP",
+   "prefix": "VE3"
+  },
+  {
+   "call": "DL/K1ABC",
+   "prefix": "DL0"
+  },
+  {
+   "call": "K1ABC/DL",
+   "prefix": "DL0"
+  },
+  {
+   "call": "F/G3ABC",
+   "prefix": "F0"
+  },
+  {
+   "call": "9A/DL1ABC",
+   "prefix": "9A0"
+  },
+  {
+   "call": "3/K1ABC",
+   "prefix": "K3"
+  },
+  {
+   "call": "K1ABC/3",
+   "prefix": "K3"
+  },
+  {
+   "call": "EA8/DL1ABC/P",
+   "prefix": "EA8"
+  },
+  {
+   "call": "VP2E/K1ABC",
+   "prefix": "VP2"
+  },
+  {
+   "call": "K1ABC/VP2E",
+   "prefix": "VP2"
+  },
+  {
+   "call": "KH6ABC",
+   "prefix": "KH6"
+  },
+  {
+   "call": "KL7XX",
+   "prefix": "KL7"
+  },
+  {
+   "call": "KP4AA",
+   "prefix": "KP4"
+  },
+  {
+   "call": "KP2M",
+   "prefix": "KP2"
+  },
+  {
+   "call": "XE1ABC",
+   "prefix": "XE1"
+  },
+  {
+   "call": "XE2/K1ABC",
+   "prefix": "XE2"
+  },
+  {
+   "call": "4U1ITU",
+   "prefix": "4U1"
+  },
+  {
+   "call": "4U1UN",
+   "prefix": "4U1"
+  },
+  {
+   "call": "HK0ABC",
+   "prefix": "HK0"
+  },
+  {
+   "call": "TI9A",
+   "prefix": "TI9"
+  },
+  {
+   "call": "VP8ABC",
+   "prefix": "VP8"
+  },
+  {
+   "call": "ZS6ABC",
+   "prefix": "ZS6"
+  },
+  {
+   "call": "5B4ABC",
+   "prefix": "5B4"
+  },
+  {
+   "call": "A1",
+   "prefix": "A1"
+  },
+  {
+   "call": "K1",
+   "prefix": "K1"
+  },
+  {
+   "call": "W",
+   "prefix": ""
+  },
+  {
+   "call": "K1A",
+   "prefix": "K1"
+  },
+  {
+   "call": "9A",
+   "prefix": "9A0"
+  },
+  {
+   "call": "A9A",
+   "prefix": "A9"
+  },
+  {
+   "call": "LX1NO",
+   "prefix": "LX1"
+  },
+  {
+   "call": "OZ1ABC",
+   "prefix": "OZ1"
+  },
+  {
+   "call": "CT1ABC",
+   "prefix": "CT1"
+  },
+  {
+   "call": "CU3AA",
+   "prefix": "CU3"
+  },
+  {
+   "call": "GM3ABC",
+   "prefix": "GM3"
+  },
+  {
+   "call": "GW4ABC",
+   "prefix": "GW4"
+  },
+  {
+   "call": "EI3ABC",
+   "prefix": "EI3"
+  },
+  {
+   "call": "TF3ABC",
+   "prefix": "TF3"
+  },
+  {
+   "call": "JW5E",
+   "prefix": "JW5"
+  },
+  {
+   "call": "R1FJ",
+   "prefix": "R1"
+  },
+  {
+   "call": "UA9ABC",
+   "prefix": "UA9"
+  },
+  {
+   "call": "UN7AB",
+   "prefix": "UN7"
+  },
+  {
+   "call": "BA1AA",
+   "prefix": "BA1"
+  },
+  {
+   "call": "BV1AB",
+   "prefix": "BV1"
+  },
+  {
+   "call": "HL1ABC",
+   "prefix": "HL1"
+  },
+  {
+   "call": "DU1ABC",
+   "prefix": "DU1"
+  },
+  {
+   "call": "YB0ABC",
+   "prefix": "YB0"
+  },
+  {
+   "call": "VU2ABC",
+   "prefix": "VU2"
+  },
+  {
+   "call": "9M2AB",
+   "prefix": "9M2"
+  },
+  {
+   "call": "HS0ZAA",
+   "prefix": "HS0"
+  },
+  {
+   "call": "ZS1/DL1ABC",
+   "prefix": "ZS1"
+  }
+ ]
+}

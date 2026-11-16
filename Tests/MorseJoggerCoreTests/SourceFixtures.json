@@ -1,0 +1,827 @@
+{
+  "provenance": "CW Field v0.15 dist/core.js and rules.js source-derived, not native MRCE reference",
+  "entries": [
+    {
+      "contest": "wpx",
+      "call": "DL1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "P:DL1"
+      ]
+    },
+    {
+      "contest": "wpx",
+      "call": "K1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "P:K1"
+      ]
+    },
+    {
+      "contest": "wpx",
+      "call": "VE3NEA",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "P:VE3"
+      ]
+    },
+    {
+      "contest": "wpx",
+      "call": "JA1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "P:JA1"
+      ]
+    },
+    {
+      "contest": "wpx",
+      "call": "VK2ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "P:VK2"
+      ]
+    },
+    {
+      "contest": "wpx",
+      "call": "EA8/K1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "P:EA8"
+      ]
+    },
+    {
+      "contest": "cqww",
+      "call": "DL1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 3,
+      "multipliers": [
+        "C:DL",
+        "Z:14"
+      ]
+    },
+    {
+      "contest": "cqww",
+      "call": "K1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 2,
+      "multipliers": [
+        "C:K",
+        "Z:5"
+      ]
+    },
+    {
+      "contest": "cqww",
+      "call": "VE3NEA",
+      "state": "NY",
+      "section": "CT",
+      "points": 0,
+      "multipliers": [
+        "C:VE",
+        "Z:4"
+      ]
+    },
+    {
+      "contest": "cqww",
+      "call": "JA1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 3,
+      "multipliers": [
+        "C:JA",
+        "Z:25"
+      ]
+    },
+    {
+      "contest": "cqww",
+      "call": "VK2ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 3,
+      "multipliers": [
+        "C:VK",
+        "Z:30"
+      ]
+    },
+    {
+      "contest": "cqww",
+      "call": "EA8/K1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 3,
+      "multipliers": [
+        "C:EA",
+        "Z:14"
+      ]
+    },
+    {
+      "contest": "arrldx",
+      "call": "DL1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 3,
+      "multipliers": [
+        "DX:DL"
+      ]
+    },
+    {
+      "contest": "arrldx",
+      "call": "K1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 0,
+      "multipliers": []
+    },
+    {
+      "contest": "arrldx",
+      "call": "VE3NEA",
+      "state": "NY",
+      "section": "CT",
+      "points": 0,
+      "multipliers": []
+    },
+    {
+      "contest": "arrldx",
+      "call": "JA1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 3,
+      "multipliers": [
+        "DX:JA"
+      ]
+    },
+    {
+      "contest": "arrldx",
+      "call": "VK2ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 3,
+      "multipliers": [
+        "DX:VK"
+      ]
+    },
+    {
+      "contest": "arrldx",
+      "call": "EA8/K1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 3,
+      "multipliers": [
+        "DX:EA"
+      ]
+    },
+    {
+      "contest": "fieldday",
+      "call": "DL1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 2,
+      "multipliers": [
+        "CONST:1"
+      ]
+    },
+    {
+      "contest": "fieldday",
+      "call": "K1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 2,
+      "multipliers": [
+        "CONST:1"
+      ]
+    },
+    {
+      "contest": "fieldday",
+      "call": "VE3NEA",
+      "state": "NY",
+      "section": "CT",
+      "points": 2,
+      "multipliers": [
+        "CONST:1"
+      ]
+    },
+    {
+      "contest": "fieldday",
+      "call": "JA1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 2,
+      "multipliers": [
+        "CONST:1"
+      ]
+    },
+    {
+      "contest": "fieldday",
+      "call": "VK2ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 2,
+      "multipliers": [
+        "CONST:1"
+      ]
+    },
+    {
+      "contest": "fieldday",
+      "call": "EA8/K1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 2,
+      "multipliers": [
+        "CONST:1"
+      ]
+    },
+    {
+      "contest": "sweepstakes",
+      "call": "DL1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 2,
+      "multipliers": [
+        "SEC:CT"
+      ]
+    },
+    {
+      "contest": "sweepstakes",
+      "call": "K1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 2,
+      "multipliers": [
+        "SEC:CT"
+      ]
+    },
+    {
+      "contest": "sweepstakes",
+      "call": "VE3NEA",
+      "state": "NY",
+      "section": "CT",
+      "points": 2,
+      "multipliers": [
+        "SEC:CT"
+      ]
+    },
+    {
+      "contest": "sweepstakes",
+      "call": "JA1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 2,
+      "multipliers": [
+        "SEC:CT"
+      ]
+    },
+    {
+      "contest": "sweepstakes",
+      "call": "VK2ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 2,
+      "multipliers": [
+        "SEC:CT"
+      ]
+    },
+    {
+      "contest": "sweepstakes",
+      "call": "EA8/K1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 2,
+      "multipliers": [
+        "SEC:CT"
+      ]
+    },
+    {
+      "contest": "naqp",
+      "call": "DL1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": []
+    },
+    {
+      "contest": "naqp",
+      "call": "K1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "S:NY"
+      ]
+    },
+    {
+      "contest": "naqp",
+      "call": "VE3NEA",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "S:NY"
+      ]
+    },
+    {
+      "contest": "naqp",
+      "call": "JA1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": []
+    },
+    {
+      "contest": "naqp",
+      "call": "VK2ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": []
+    },
+    {
+      "contest": "naqp",
+      "call": "EA8/K1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": []
+    },
+    {
+      "contest": "cwt",
+      "call": "DL1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "CALL:DL1ABC"
+      ]
+    },
+    {
+      "contest": "cwt",
+      "call": "K1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "CALL:K1ABC"
+      ]
+    },
+    {
+      "contest": "cwt",
+      "call": "VE3NEA",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "CALL:VE3NEA"
+      ]
+    },
+    {
+      "contest": "cwt",
+      "call": "JA1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "CALL:JA1ABC"
+      ]
+    },
+    {
+      "contest": "cwt",
+      "call": "VK2ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "CALL:VK2ABC"
+      ]
+    },
+    {
+      "contest": "cwt",
+      "call": "EA8/K1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "CALL:EA8/K1ABC"
+      ]
+    },
+    {
+      "contest": "sst",
+      "call": "DL1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "DX:DL"
+      ]
+    },
+    {
+      "contest": "sst",
+      "call": "K1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "S:NY"
+      ]
+    },
+    {
+      "contest": "sst",
+      "call": "VE3NEA",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "S:NY"
+      ]
+    },
+    {
+      "contest": "sst",
+      "call": "JA1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "DX:JA"
+      ]
+    },
+    {
+      "contest": "sst",
+      "call": "VK2ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "DX:VK"
+      ]
+    },
+    {
+      "contest": "sst",
+      "call": "EA8/K1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "DX:EA"
+      ]
+    },
+    {
+      "contest": "iaru",
+      "call": "DL1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 5,
+      "multipliers": [
+        "I:12"
+      ]
+    },
+    {
+      "contest": "iaru",
+      "call": "K1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 3,
+      "multipliers": [
+        "I:12"
+      ]
+    },
+    {
+      "contest": "iaru",
+      "call": "VE3NEA",
+      "state": "NY",
+      "section": "CT",
+      "points": 3,
+      "multipliers": [
+        "I:12"
+      ]
+    },
+    {
+      "contest": "iaru",
+      "call": "JA1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 5,
+      "multipliers": [
+        "I:12"
+      ]
+    },
+    {
+      "contest": "iaru",
+      "call": "VK2ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 5,
+      "multipliers": [
+        "I:12"
+      ]
+    },
+    {
+      "contest": "iaru",
+      "call": "EA8/K1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 5,
+      "multipliers": [
+        "I:12"
+      ]
+    },
+    {
+      "contest": "allja",
+      "call": "DL1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "JA:10"
+      ]
+    },
+    {
+      "contest": "allja",
+      "call": "K1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "JA:10"
+      ]
+    },
+    {
+      "contest": "allja",
+      "call": "VE3NEA",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "JA:10"
+      ]
+    },
+    {
+      "contest": "allja",
+      "call": "JA1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "JA:10"
+      ]
+    },
+    {
+      "contest": "allja",
+      "call": "VK2ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "JA:10"
+      ]
+    },
+    {
+      "contest": "allja",
+      "call": "EA8/K1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "JA:10"
+      ]
+    },
+    {
+      "contest": "acag",
+      "call": "DL1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "JA:1002"
+      ]
+    },
+    {
+      "contest": "acag",
+      "call": "K1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "JA:1002"
+      ]
+    },
+    {
+      "contest": "acag",
+      "call": "VE3NEA",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "JA:1002"
+      ]
+    },
+    {
+      "contest": "acag",
+      "call": "JA1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "JA:1002"
+      ]
+    },
+    {
+      "contest": "acag",
+      "call": "VK2ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "JA:1002"
+      ]
+    },
+    {
+      "contest": "acag",
+      "call": "EA8/K1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "JA:1002"
+      ]
+    },
+    {
+      "contest": "arrl10",
+      "call": "DL1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 4,
+      "multipliers": [
+        "DX:DL"
+      ]
+    },
+    {
+      "contest": "arrl10",
+      "call": "K1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 4,
+      "multipliers": [
+        "S:NY"
+      ]
+    },
+    {
+      "contest": "arrl10",
+      "call": "VE3NEA",
+      "state": "NY",
+      "section": "CT",
+      "points": 4,
+      "multipliers": [
+        "S:NY"
+      ]
+    },
+    {
+      "contest": "arrl10",
+      "call": "JA1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 4,
+      "multipliers": [
+        "DX:JA"
+      ]
+    },
+    {
+      "contest": "arrl10",
+      "call": "VK2ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 4,
+      "multipliers": [
+        "DX:VK"
+      ]
+    },
+    {
+      "contest": "arrl10",
+      "call": "EA8/K1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 4,
+      "multipliers": [
+        "DX:EA"
+      ]
+    },
+    {
+      "contest": "hst",
+      "call": "DL1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 73,
+      "multipliers": []
+    },
+    {
+      "contest": "hst",
+      "call": "K1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 63,
+      "multipliers": []
+    },
+    {
+      "contest": "hst",
+      "call": "VE3NEA",
+      "state": "NY",
+      "section": "CT",
+      "points": 49,
+      "multipliers": []
+    },
+    {
+      "contest": "hst",
+      "call": "JA1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 75,
+      "multipliers": []
+    },
+    {
+      "contest": "hst",
+      "call": "VK2ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 73,
+      "multipliers": []
+    },
+    {
+      "contest": "hst",
+      "call": "EA8/K1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 109,
+      "multipliers": []
+    },
+    {
+      "contest": "pota",
+      "call": "DL1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "POTA:NY"
+      ]
+    },
+    {
+      "contest": "pota",
+      "call": "K1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "POTA:NY"
+      ]
+    },
+    {
+      "contest": "pota",
+      "call": "VE3NEA",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "POTA:NY"
+      ]
+    },
+    {
+      "contest": "pota",
+      "call": "JA1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "POTA:NY"
+      ]
+    },
+    {
+      "contest": "pota",
+      "call": "VK2ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "POTA:NY"
+      ]
+    },
+    {
+      "contest": "pota",
+      "call": "EA8/K1ABC",
+      "state": "NY",
+      "section": "CT",
+      "points": 1,
+      "multipliers": [
+        "POTA:NY"
+      ]
+    }
+  ]
+}

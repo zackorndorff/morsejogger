@@ -1,0 +1,1730 @@
+[
+  {
+    "state": "need-prev-end",
+    "kind": "call",
+    "confidence": 0,
+    "next": "need-prev-end",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-prev-end",
+    "kind": "call",
+    "confidence": 50,
+    "next": "need-callnr",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 1
+  },
+  {
+    "state": "need-prev-end",
+    "kind": "call",
+    "confidence": 100,
+    "next": "need-nr",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-prev-end",
+    "kind": "call-exchange",
+    "confidence": 0,
+    "next": "need-prev-end",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-prev-end",
+    "kind": "call-exchange",
+    "confidence": 50,
+    "next": "need-call",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 1
+  },
+  {
+    "state": "need-prev-end",
+    "kind": "call-exchange",
+    "confidence": 100,
+    "next": "need-end",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-prev-end",
+    "kind": "exchange",
+    "confidence": 0,
+    "next": "need-prev-end",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-prev-end",
+    "kind": "exchange",
+    "confidence": 50,
+    "next": "need-prev-end",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-prev-end",
+    "kind": "exchange",
+    "confidence": 100,
+    "next": "need-prev-end",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-prev-end",
+    "kind": "question",
+    "confidence": 0,
+    "next": "need-prev-end",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-prev-end",
+    "kind": "question",
+    "confidence": 50,
+    "next": "need-prev-end",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-prev-end",
+    "kind": "question",
+    "confidence": 100,
+    "next": "need-prev-end",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-prev-end",
+    "kind": "tu",
+    "confidence": 0,
+    "next": "need-qso",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-prev-end",
+    "kind": "tu",
+    "confidence": 50,
+    "next": "need-qso",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-prev-end",
+    "kind": "tu",
+    "confidence": 100,
+    "next": "need-qso",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-prev-end",
+    "kind": "cq",
+    "confidence": 0,
+    "next": "need-qso",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-prev-end",
+    "kind": "cq",
+    "confidence": 50,
+    "next": "need-qso",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-prev-end",
+    "kind": "cq",
+    "confidence": 100,
+    "next": "need-qso",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-prev-end",
+    "kind": "nil",
+    "confidence": 0,
+    "next": "need-qso",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-prev-end",
+    "kind": "nil",
+    "confidence": 50,
+    "next": "need-qso",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-prev-end",
+    "kind": "nil",
+    "confidence": 100,
+    "next": "need-qso",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-prev-end",
+    "kind": "b4",
+    "confidence": 0,
+    "next": "need-qso",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-prev-end",
+    "kind": "b4",
+    "confidence": 50,
+    "next": "need-qso",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-prev-end",
+    "kind": "b4",
+    "confidence": 100,
+    "next": "need-qso",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-qso",
+    "kind": "call",
+    "confidence": 0,
+    "next": "need-qso",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-qso",
+    "kind": "call",
+    "confidence": 50,
+    "next": "need-callnr",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 1
+  },
+  {
+    "state": "need-qso",
+    "kind": "call",
+    "confidence": 100,
+    "next": "need-nr",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-qso",
+    "kind": "call-exchange",
+    "confidence": 0,
+    "next": "need-qso",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-qso",
+    "kind": "call-exchange",
+    "confidence": 50,
+    "next": "need-call",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 1
+  },
+  {
+    "state": "need-qso",
+    "kind": "call-exchange",
+    "confidence": 100,
+    "next": "need-end",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-qso",
+    "kind": "exchange",
+    "confidence": 0,
+    "next": "need-qso",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-qso",
+    "kind": "exchange",
+    "confidence": 50,
+    "next": "need-qso",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-qso",
+    "kind": "exchange",
+    "confidence": 100,
+    "next": "need-qso",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-qso",
+    "kind": "question",
+    "confidence": 0,
+    "next": "need-qso",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-qso",
+    "kind": "question",
+    "confidence": 50,
+    "next": "need-qso",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-qso",
+    "kind": "question",
+    "confidence": 100,
+    "next": "need-qso",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-qso",
+    "kind": "tu",
+    "confidence": 0,
+    "next": "need-qso",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-qso",
+    "kind": "tu",
+    "confidence": 50,
+    "next": "need-qso",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-qso",
+    "kind": "tu",
+    "confidence": 100,
+    "next": "need-qso",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-qso",
+    "kind": "cq",
+    "confidence": 0,
+    "next": "need-qso",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-qso",
+    "kind": "cq",
+    "confidence": 50,
+    "next": "need-qso",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-qso",
+    "kind": "cq",
+    "confidence": 100,
+    "next": "need-qso",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-qso",
+    "kind": "nil",
+    "confidence": 0,
+    "next": "need-qso",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-qso",
+    "kind": "nil",
+    "confidence": 50,
+    "next": "need-qso",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-qso",
+    "kind": "nil",
+    "confidence": 100,
+    "next": "need-qso",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-qso",
+    "kind": "b4",
+    "confidence": 0,
+    "next": "need-qso",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-qso",
+    "kind": "b4",
+    "confidence": 50,
+    "next": "need-qso",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-qso",
+    "kind": "b4",
+    "confidence": 100,
+    "next": "need-qso",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-nr",
+    "kind": "call",
+    "confidence": 0,
+    "next": "need-prev-end",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-nr",
+    "kind": "call",
+    "confidence": 50,
+    "next": "need-callnr",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 1
+  },
+  {
+    "state": "need-nr",
+    "kind": "call",
+    "confidence": 100,
+    "next": "need-nr",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-nr",
+    "kind": "call-exchange",
+    "confidence": 0,
+    "next": "need-prev-end",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-nr",
+    "kind": "call-exchange",
+    "confidence": 50,
+    "next": "need-call",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 1
+  },
+  {
+    "state": "need-nr",
+    "kind": "call-exchange",
+    "confidence": 100,
+    "next": "need-end",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-nr",
+    "kind": "exchange",
+    "confidence": 0,
+    "next": "need-end",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-nr",
+    "kind": "exchange",
+    "confidence": 50,
+    "next": "need-end",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-nr",
+    "kind": "exchange",
+    "confidence": 100,
+    "next": "need-end",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-nr",
+    "kind": "question",
+    "confidence": 0,
+    "next": "need-nr",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-nr",
+    "kind": "question",
+    "confidence": 50,
+    "next": "need-nr",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-nr",
+    "kind": "question",
+    "confidence": 100,
+    "next": "need-nr",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-nr",
+    "kind": "tu",
+    "confidence": 0,
+    "next": "done",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-nr",
+    "kind": "tu",
+    "confidence": 50,
+    "next": "done",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-nr",
+    "kind": "tu",
+    "confidence": 100,
+    "next": "done",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-nr",
+    "kind": "cq",
+    "confidence": 0,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-nr",
+    "kind": "cq",
+    "confidence": 50,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-nr",
+    "kind": "cq",
+    "confidence": 100,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-nr",
+    "kind": "nil",
+    "confidence": 0,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-nr",
+    "kind": "nil",
+    "confidence": 50,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-nr",
+    "kind": "nil",
+    "confidence": 100,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-nr",
+    "kind": "b4",
+    "confidence": 0,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-nr",
+    "kind": "b4",
+    "confidence": 50,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-nr",
+    "kind": "b4",
+    "confidence": 100,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-call",
+    "kind": "call",
+    "confidence": 0,
+    "next": "need-prev-end",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-call",
+    "kind": "call",
+    "confidence": 50,
+    "next": "need-call",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 1
+  },
+  {
+    "state": "need-call",
+    "kind": "call",
+    "confidence": 100,
+    "next": "need-end",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-call",
+    "kind": "call-exchange",
+    "confidence": 0,
+    "next": "need-prev-end",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-call",
+    "kind": "call-exchange",
+    "confidence": 50,
+    "next": "need-call",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 1
+  },
+  {
+    "state": "need-call",
+    "kind": "call-exchange",
+    "confidence": 100,
+    "next": "need-end",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-call",
+    "kind": "exchange",
+    "confidence": 0,
+    "next": "need-call",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-call",
+    "kind": "exchange",
+    "confidence": 50,
+    "next": "need-call",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-call",
+    "kind": "exchange",
+    "confidence": 100,
+    "next": "need-call",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-call",
+    "kind": "question",
+    "confidence": 0,
+    "next": "need-call",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 1
+  },
+  {
+    "state": "need-call",
+    "kind": "question",
+    "confidence": 50,
+    "next": "need-call",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 1
+  },
+  {
+    "state": "need-call",
+    "kind": "question",
+    "confidence": 100,
+    "next": "need-call",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 1
+  },
+  {
+    "state": "need-call",
+    "kind": "tu",
+    "confidence": 0,
+    "next": "done",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-call",
+    "kind": "tu",
+    "confidence": 50,
+    "next": "done",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-call",
+    "kind": "tu",
+    "confidence": 100,
+    "next": "done",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-call",
+    "kind": "cq",
+    "confidence": 0,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-call",
+    "kind": "cq",
+    "confidence": 50,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-call",
+    "kind": "cq",
+    "confidence": 100,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-call",
+    "kind": "nil",
+    "confidence": 0,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-call",
+    "kind": "nil",
+    "confidence": 50,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-call",
+    "kind": "nil",
+    "confidence": 100,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-call",
+    "kind": "b4",
+    "confidence": 0,
+    "next": "need-call",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-call",
+    "kind": "b4",
+    "confidence": 50,
+    "next": "need-call",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-call",
+    "kind": "b4",
+    "confidence": 100,
+    "next": "need-call",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-callnr",
+    "kind": "call",
+    "confidence": 0,
+    "next": "need-prev-end",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-callnr",
+    "kind": "call",
+    "confidence": 50,
+    "next": "need-callnr",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 1
+  },
+  {
+    "state": "need-callnr",
+    "kind": "call",
+    "confidence": 100,
+    "next": "need-nr",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-callnr",
+    "kind": "call-exchange",
+    "confidence": 0,
+    "next": "need-prev-end",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-callnr",
+    "kind": "call-exchange",
+    "confidence": 50,
+    "next": "need-call",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 1
+  },
+  {
+    "state": "need-callnr",
+    "kind": "call-exchange",
+    "confidence": 100,
+    "next": "need-end",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-callnr",
+    "kind": "exchange",
+    "confidence": 0,
+    "next": "need-call",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-callnr",
+    "kind": "exchange",
+    "confidence": 50,
+    "next": "need-call",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-callnr",
+    "kind": "exchange",
+    "confidence": 100,
+    "next": "need-call",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-callnr",
+    "kind": "question",
+    "confidence": 0,
+    "next": "need-callnr",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 1
+  },
+  {
+    "state": "need-callnr",
+    "kind": "question",
+    "confidence": 50,
+    "next": "need-callnr",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 1
+  },
+  {
+    "state": "need-callnr",
+    "kind": "question",
+    "confidence": 100,
+    "next": "need-callnr",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 1
+  },
+  {
+    "state": "need-callnr",
+    "kind": "tu",
+    "confidence": 0,
+    "next": "need-qso",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-callnr",
+    "kind": "tu",
+    "confidence": 50,
+    "next": "need-qso",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-callnr",
+    "kind": "tu",
+    "confidence": 100,
+    "next": "need-qso",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-callnr",
+    "kind": "cq",
+    "confidence": 0,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-callnr",
+    "kind": "cq",
+    "confidence": 50,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-callnr",
+    "kind": "cq",
+    "confidence": 100,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-callnr",
+    "kind": "nil",
+    "confidence": 0,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-callnr",
+    "kind": "nil",
+    "confidence": 50,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-callnr",
+    "kind": "nil",
+    "confidence": 100,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-callnr",
+    "kind": "b4",
+    "confidence": 0,
+    "next": "need-callnr",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-callnr",
+    "kind": "b4",
+    "confidence": 50,
+    "next": "need-callnr",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-callnr",
+    "kind": "b4",
+    "confidence": 100,
+    "next": "need-callnr",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-end",
+    "kind": "call",
+    "confidence": 0,
+    "next": "need-end",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-end",
+    "kind": "call",
+    "confidence": 50,
+    "next": "need-call",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 1
+  },
+  {
+    "state": "need-end",
+    "kind": "call",
+    "confidence": 100,
+    "next": "need-end",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-end",
+    "kind": "call-exchange",
+    "confidence": 0,
+    "next": "need-end",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-end",
+    "kind": "call-exchange",
+    "confidence": 50,
+    "next": "need-call",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 1
+  },
+  {
+    "state": "need-end",
+    "kind": "call-exchange",
+    "confidence": 100,
+    "next": "need-end",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-end",
+    "kind": "exchange",
+    "confidence": 0,
+    "next": "need-end",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-end",
+    "kind": "exchange",
+    "confidence": 50,
+    "next": "need-end",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-end",
+    "kind": "exchange",
+    "confidence": 100,
+    "next": "need-end",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-end",
+    "kind": "question",
+    "confidence": 0,
+    "next": "need-end",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 1
+  },
+  {
+    "state": "need-end",
+    "kind": "question",
+    "confidence": 50,
+    "next": "need-end",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 1
+  },
+  {
+    "state": "need-end",
+    "kind": "question",
+    "confidence": 100,
+    "next": "need-end",
+    "patience": 4,
+    "ghosting": false,
+    "incomplete": 1
+  },
+  {
+    "state": "need-end",
+    "kind": "tu",
+    "confidence": 0,
+    "next": "done",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-end",
+    "kind": "tu",
+    "confidence": 50,
+    "next": "done",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-end",
+    "kind": "tu",
+    "confidence": 100,
+    "next": "done",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-end",
+    "kind": "cq",
+    "confidence": 0,
+    "next": "done",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-end",
+    "kind": "cq",
+    "confidence": 50,
+    "next": "done",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-end",
+    "kind": "cq",
+    "confidence": 100,
+    "next": "done",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-end",
+    "kind": "nil",
+    "confidence": 0,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-end",
+    "kind": "nil",
+    "confidence": 50,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-end",
+    "kind": "nil",
+    "confidence": 100,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-end",
+    "kind": "b4",
+    "confidence": 0,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-end",
+    "kind": "b4",
+    "confidence": 50,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "need-end",
+    "kind": "b4",
+    "confidence": 100,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "done",
+    "kind": "call",
+    "confidence": 0,
+    "next": "done",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "done",
+    "kind": "call",
+    "confidence": 50,
+    "next": "done",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "done",
+    "kind": "call",
+    "confidence": 100,
+    "next": "done",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "done",
+    "kind": "call-exchange",
+    "confidence": 0,
+    "next": "done",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "done",
+    "kind": "call-exchange",
+    "confidence": 50,
+    "next": "done",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "done",
+    "kind": "call-exchange",
+    "confidence": 100,
+    "next": "done",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "done",
+    "kind": "exchange",
+    "confidence": 0,
+    "next": "done",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "done",
+    "kind": "exchange",
+    "confidence": 50,
+    "next": "done",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "done",
+    "kind": "exchange",
+    "confidence": 100,
+    "next": "done",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "done",
+    "kind": "question",
+    "confidence": 0,
+    "next": "done",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "done",
+    "kind": "question",
+    "confidence": 50,
+    "next": "done",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "done",
+    "kind": "question",
+    "confidence": 100,
+    "next": "done",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "done",
+    "kind": "tu",
+    "confidence": 0,
+    "next": "done",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "done",
+    "kind": "tu",
+    "confidence": 50,
+    "next": "done",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "done",
+    "kind": "tu",
+    "confidence": 100,
+    "next": "done",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "done",
+    "kind": "cq",
+    "confidence": 0,
+    "next": "done",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "done",
+    "kind": "cq",
+    "confidence": 50,
+    "next": "done",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "done",
+    "kind": "cq",
+    "confidence": 100,
+    "next": "done",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "done",
+    "kind": "nil",
+    "confidence": 0,
+    "next": "done",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "done",
+    "kind": "nil",
+    "confidence": 50,
+    "next": "done",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "done",
+    "kind": "nil",
+    "confidence": 100,
+    "next": "done",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "done",
+    "kind": "b4",
+    "confidence": 0,
+    "next": "done",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "done",
+    "kind": "b4",
+    "confidence": 50,
+    "next": "done",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "done",
+    "kind": "b4",
+    "confidence": 100,
+    "next": "done",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "failed",
+    "kind": "call",
+    "confidence": 0,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "failed",
+    "kind": "call",
+    "confidence": 50,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "failed",
+    "kind": "call",
+    "confidence": 100,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "failed",
+    "kind": "call-exchange",
+    "confidence": 0,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "failed",
+    "kind": "call-exchange",
+    "confidence": 50,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "failed",
+    "kind": "call-exchange",
+    "confidence": 100,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "failed",
+    "kind": "exchange",
+    "confidence": 0,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "failed",
+    "kind": "exchange",
+    "confidence": 50,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "failed",
+    "kind": "exchange",
+    "confidence": 100,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "failed",
+    "kind": "question",
+    "confidence": 0,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "failed",
+    "kind": "question",
+    "confidence": 50,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "failed",
+    "kind": "question",
+    "confidence": 100,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "failed",
+    "kind": "tu",
+    "confidence": 0,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "failed",
+    "kind": "tu",
+    "confidence": 50,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "failed",
+    "kind": "tu",
+    "confidence": 100,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "failed",
+    "kind": "cq",
+    "confidence": 0,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "failed",
+    "kind": "cq",
+    "confidence": 50,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "failed",
+    "kind": "cq",
+    "confidence": 100,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "failed",
+    "kind": "nil",
+    "confidence": 0,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "failed",
+    "kind": "nil",
+    "confidence": 50,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "failed",
+    "kind": "nil",
+    "confidence": 100,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "failed",
+    "kind": "b4",
+    "confidence": 0,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "failed",
+    "kind": "b4",
+    "confidence": 50,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  },
+  {
+    "state": "failed",
+    "kind": "b4",
+    "confidence": 100,
+    "next": "failed",
+    "patience": 5,
+    "ghosting": false,
+    "incomplete": 0
+  }
+]

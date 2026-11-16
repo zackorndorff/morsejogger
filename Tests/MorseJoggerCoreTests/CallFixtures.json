@@ -1,0 +1,642 @@
+[
+  {
+    "region": "all",
+    "seed": 1,
+    "calls": [
+      "KQ2ZZ",
+      "WJ4LMD",
+      "K2KU",
+      "N2VG"
+    ]
+  },
+  {
+    "region": "all",
+    "seed": 2,
+    "calls": [
+      "KI4NXR",
+      "WA5EKW",
+      "WI1AYB",
+      "F2RZ"
+    ]
+  },
+  {
+    "region": "all",
+    "seed": 3,
+    "calls": [
+      "KO4BUM",
+      "K7BTL",
+      "G5SNW/P",
+      "W4U"
+    ]
+  },
+  {
+    "region": "all",
+    "seed": 4,
+    "calls": [
+      "K2B",
+      "F3SU",
+      "W4K",
+      "F7J"
+    ]
+  },
+  {
+    "region": "all",
+    "seed": 5,
+    "calls": [
+      "VE7RBP",
+      "W6U/P",
+      "WF7G",
+      "W4EGC"
+    ]
+  },
+  {
+    "region": "all",
+    "seed": 6,
+    "calls": [
+      "KV0EN/P",
+      "G3Y/P",
+      "W4RM",
+      "G8Y"
+    ]
+  },
+  {
+    "region": "all",
+    "seed": 7,
+    "calls": [
+      "W4TM",
+      "W5FDU",
+      "KR9G",
+      "K2D"
+    ]
+  },
+  {
+    "region": "all",
+    "seed": 8,
+    "calls": [
+      "G4TP",
+      "K2MBP",
+      "G0C",
+      "LZ4A"
+    ]
+  },
+  {
+    "region": "all",
+    "seed": 9,
+    "calls": [
+      "G2VTS",
+      "I9PG",
+      "OH4NXW",
+      "F5BXE"
+    ]
+  },
+  {
+    "region": "all",
+    "seed": 10,
+    "calls": [
+      "OM4VL",
+      "W3YC",
+      "SM9V",
+      "HB2M"
+    ]
+  },
+  {
+    "region": "all",
+    "seed": 24,
+    "calls": [
+      "G2CNC",
+      "F0H",
+      "WG7YMH",
+      "F1D"
+    ]
+  },
+  {
+    "region": "all",
+    "seed": 25,
+    "calls": [
+      "SP1UG",
+      "KG0F",
+      "G9FKL",
+      "I1B"
+    ]
+  },
+  {
+    "region": "all",
+    "seed": 100,
+    "calls": [
+      "N0XNS",
+      "N3EDF",
+      "K5ET",
+      "I8FD"
+    ]
+  },
+  {
+    "region": "all",
+    "seed": 500,
+    "calls": [
+      "F0XYC",
+      "WF6C",
+      "AB7VDM",
+      "I5R"
+    ]
+  },
+  {
+    "region": "all",
+    "seed": 1000,
+    "calls": [
+      "OM3XAK",
+      "OK5EWM",
+      "N8VFJ",
+      "K4VWT"
+    ]
+  },
+  {
+    "region": "all",
+    "seed": 10000,
+    "calls": [
+      "KM2J",
+      "F0NCW",
+      "KK1WG",
+      "ZL2DD"
+    ]
+  },
+  {
+    "region": "usve",
+    "seed": 1,
+    "calls": [
+      "AA9NZ",
+      "KX4KZ",
+      "N4FD",
+      "KZ1G"
+    ]
+  },
+  {
+    "region": "usve",
+    "seed": 2,
+    "calls": [
+      "KJ6GNX",
+      "WA7C",
+      "WD1P",
+      "WI9A"
+    ]
+  },
+  {
+    "region": "usve",
+    "seed": 3,
+    "calls": [
+      "AB4LBU",
+      "K0NE",
+      "WA3X",
+      "W0NWN"
+    ]
+  },
+  {
+    "region": "usve",
+    "seed": 4,
+    "calls": [
+      "K0F",
+      "AC6ZR",
+      "KY5X",
+      "KP9T"
+    ]
+  },
+  {
+    "region": "usve",
+    "seed": 5,
+    "calls": [
+      "KZ5FRB",
+      "WF7F",
+      "AA8LG",
+      "KY2FAV"
+    ]
+  },
+  {
+    "region": "usve",
+    "seed": 6,
+    "calls": [
+      "AA5SE",
+      "W9ZE",
+      "K6LV",
+      "KE9Z"
+    ]
+  },
+  {
+    "region": "usve",
+    "seed": 7,
+    "calls": [
+      "K5ZT",
+      "KF7N",
+      "W3ME",
+      "KI8ZF"
+    ]
+  },
+  {
+    "region": "usve",
+    "seed": 8,
+    "calls": [
+      "N5GT",
+      "KF0MBM",
+      "K1YSC",
+      "KN0UU"
+    ]
+  },
+  {
+    "region": "usve",
+    "seed": 9,
+    "calls": [
+      "W6DVT",
+      "K6R",
+      "W3GTR",
+      "W8L"
+    ]
+  },
+  {
+    "region": "usve",
+    "seed": 10,
+    "calls": [
+      "WG4SV",
+      "K1AZY",
+      "KN2Y",
+      "K6J"
+    ]
+  },
+  {
+    "region": "usve",
+    "seed": 24,
+    "calls": [
+      "W1GCN",
+      "WE6V",
+      "N9SJ",
+      "KJ9UJ"
+    ]
+  },
+  {
+    "region": "usve",
+    "seed": 25,
+    "calls": [
+      "WB2PU",
+      "KO2H",
+      "N2DU",
+      "KO8Y"
+    ]
+  },
+  {
+    "region": "usve",
+    "seed": 100,
+    "calls": [
+      "K6NXN/P",
+      "KF1MR",
+      "N2ZBM",
+      "KS6WCR"
+    ]
+  },
+  {
+    "region": "usve",
+    "seed": 500,
+    "calls": [
+      "W0JXY",
+      "N6CXC",
+      "KT5AVD",
+      "W6VX"
+    ]
+  },
+  {
+    "region": "usve",
+    "seed": 1000,
+    "calls": [
+      "WB4SXA",
+      "W1TR",
+      "KS3AF",
+      "KG1JVG"
+    ]
+  },
+  {
+    "region": "usve",
+    "seed": 10000,
+    "calls": [
+      "KK3K",
+      "K1SPN",
+      "K3RH",
+      "K9LNU"
+    ]
+  },
+  {
+    "region": "dx",
+    "seed": 1,
+    "calls": [
+      "DL9NZ",
+      "YO4KZ",
+      "F4FD",
+      "LZ1G"
+    ]
+  },
+  {
+    "region": "dx",
+    "seed": 2,
+    "calls": [
+      "OH6GNX",
+      "LZ7C",
+      "UA1P",
+      "ZL9A"
+    ]
+  },
+  {
+    "region": "dx",
+    "seed": 3,
+    "calls": [
+      "DL4LBU",
+      "G0NE",
+      "LZ3X",
+      "I0NWN"
+    ]
+  },
+  {
+    "region": "dx",
+    "seed": 4,
+    "calls": [
+      "G0F",
+      "EA6ZR",
+      "YO5X",
+      "HB9T"
+    ]
+  },
+  {
+    "region": "dx",
+    "seed": 5,
+    "calls": [
+      "LZ5FRB",
+      "4X7F",
+      "DL8LG",
+      "YO2FAV"
+    ]
+  },
+  {
+    "region": "dx",
+    "seed": 6,
+    "calls": [
+      "DL5SE",
+      "I9ZE",
+      "G6LV",
+      "VK9Z"
+    ]
+  },
+  {
+    "region": "dx",
+    "seed": 7,
+    "calls": [
+      "G5ZT",
+      "PY7N",
+      "I3ME",
+      "SM8ZF"
+    ]
+  },
+  {
+    "region": "dx",
+    "seed": 8,
+    "calls": [
+      "F5GT",
+      "PY0MBM",
+      "G1YSC",
+      "PA0UU"
+    ]
+  },
+  {
+    "region": "dx",
+    "seed": 9,
+    "calls": [
+      "I6DVT",
+      "G6R",
+      "I3GTR",
+      "I8L"
+    ]
+  },
+  {
+    "region": "dx",
+    "seed": 10,
+    "calls": [
+      "4X4SV",
+      "G1AZY",
+      "PA2Y",
+      "G6J"
+    ]
+  },
+  {
+    "region": "dx",
+    "seed": 24,
+    "calls": [
+      "I1GCN",
+      "YU6V",
+      "F9SJ",
+      "OH9UJ"
+    ]
+  },
+  {
+    "region": "dx",
+    "seed": 25,
+    "calls": [
+      "UA2PU",
+      "HB2H",
+      "F2DU",
+      "HB8Y"
+    ]
+  },
+  {
+    "region": "dx",
+    "seed": 100,
+    "calls": [
+      "G6NXN/P",
+      "PY1MR",
+      "F2ZBM",
+      "SP6WCR"
+    ]
+  },
+  {
+    "region": "dx",
+    "seed": 500,
+    "calls": [
+      "I0JXY",
+      "F6CXC",
+      "OK5AVD",
+      "I6VX"
+    ]
+  },
+  {
+    "region": "dx",
+    "seed": 1000,
+    "calls": [
+      "UA4SXA",
+      "I1TR",
+      "SP3AF",
+      "SM1JVG"
+    ]
+  },
+  {
+    "region": "dx",
+    "seed": 10000,
+    "calls": [
+      "ON3K",
+      "G1SPN",
+      "G3RH",
+      "G9LNU"
+    ]
+  },
+  {
+    "region": "ja",
+    "seed": 1,
+    "calls": [
+      "JA9NZ",
+      "JO4KZ",
+      "JG0DM",
+      "JH5EAK"
+    ]
+  },
+  {
+    "region": "ja",
+    "seed": 2,
+    "calls": [
+      "JI6GNX",
+      "JP7C",
+      "JQ1P",
+      "JS9A"
+    ]
+  },
+  {
+    "region": "ja",
+    "seed": 3,
+    "calls": [
+      "JA4LBU",
+      "JL7EB",
+      "JR6HSG",
+      "JL9AXH"
+    ]
+  },
+  {
+    "region": "ja",
+    "seed": 4,
+    "calls": [
+      "JG2B",
+      "JM3SU",
+      "JO4K",
+      "JK7J"
+    ]
+  },
+  {
+    "region": "ja",
+    "seed": 5,
+    "calls": [
+      "JP5FRB",
+      "JR7F",
+      "JA8LG",
+      "JO2FAV"
+    ]
+  },
+  {
+    "region": "ja",
+    "seed": 6,
+    "calls": [
+      "JA5SE",
+      "JS3EY/P",
+      "JP4RM",
+      "JH8Y"
+    ]
+  },
+  {
+    "region": "ja",
+    "seed": 7,
+    "calls": [
+      "JS4TM",
+      "JO5FDU",
+      "JH2N",
+      "JG5DDG"
+    ]
+  },
+  {
+    "region": "ja",
+    "seed": 8,
+    "calls": [
+      "JH4TP",
+      "JA2MBP",
+      "JE0C",
+      "JP0U"
+    ]
+  },
+  {
+    "region": "ja",
+    "seed": 9,
+    "calls": [
+      "JF2VTS",
+      "JO9PG",
+      "JN8JNX",
+      "JN0H"
+    ]
+  },
+  {
+    "region": "ja",
+    "seed": 10,
+    "calls": [
+      "JR4SV",
+      "JA3ZYC",
+      "JR8G",
+      "JO2MM"
+    ]
+  },
+  {
+    "region": "ja",
+    "seed": 24,
+    "calls": [
+      "JH2CNC",
+      "JN0H",
+      "JI3YYM",
+      "JS6R"
+    ]
+  },
+  {
+    "region": "ja",
+    "seed": 25,
+    "calls": [
+      "JQ2PU",
+      "JK2H",
+      "JF2UG",
+      "JR9X"
+    ]
+  },
+  {
+    "region": "ja",
+    "seed": 100,
+    "calls": [
+      "JL0XNS",
+      "JN3EDF",
+      "JG5ET",
+      "JN8FD"
+    ]
+  },
+  {
+    "region": "ja",
+    "seed": 500,
+    "calls": [
+      "JI0XYC",
+      "JE0X",
+      "JO1PAV",
+      "JA6XVX"
+    ]
+  },
+  {
+    "region": "ja",
+    "seed": 1000,
+    "calls": [
+      "JQ4SXA",
+      "JO8RE",
+      "JA5FH",
+      "JP1GED"
+    ]
+  },
+  {
+    "region": "ja",
+    "seed": 10000,
+    "calls": [
+      "JI3K",
+      "JN8PNC/P",
+      "JH2JW",
+      "JL9U"
+    ]
+  }
+]

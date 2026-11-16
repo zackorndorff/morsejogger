@@ -1,0 +1,57 @@
+# SwiftPM and Xcode build output
+.build/
+.swiftpm/
+DerivedData/
+build/
+*.xcarchive/
+*.ipa
+*.dSYM/
+
+# Xcode user state
+*.xcuserstate
+xcuserdata/
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+
+# macOS metadata
+.DS_Store
+
+# Local secrets and signing material
+.env
+.env.*
+!.env.example
+*.mobileprovision
+*.p12
+*.p8
+*.pem
+*.key
+secrets.*
+
+# Xcode test results
+*.xcresult/
+
+# Python and Free Pascal (tools/mrce-oracle) byproducts
+__pycache__/
+*.pyc
+*.o
+*.ppu
+*.compiled
+
+# Downloaded SCP data
+scp_data/
+
+# Read-only MRCE reference checkout (see AGENTS.md)
+.upstream/
+
+# Editors
+*.swp
+*~
+.vscode/
+.idea/
+
+# Local build settings (see iOS/Local.xcconfig.example)
+iOS/Local.xcconfig
+
+# Agent tooling state
+.claude/

@@ -1,0 +1,2728 @@
+{
+ "upstream": "304e51aece5a17f4cba548527816a385a8f6f814",
+ "source": "Test/SSExchParserTest.pas",
+ "sourceSHA256": "a6e0358ce4892fe8f79e496eeed9db7eb61b6347df5716275f39facd558c7f65",
+ "regenerate": "python3 tools/mrce-oracle/extract_ss_parser_vectors.py --output Tests/MorseJoggerCoreTests/MRCESweepstakesParserFixtures.json",
+ "cases": [
+  {
+   "name": "Simple.1",
+   "entered": "1",
+   "serial": 1,
+   "precedence": "",
+   "check": "",
+   "section": "",
+   "call": "",
+   "error": "Missing/Invalid Precedence"
+  },
+  {
+   "name": "Simple.2",
+   "entered": "12",
+   "serial": 0,
+   "precedence": "",
+   "check": "12",
+   "section": "",
+   "call": "",
+   "error": "Missing/Invalid Serial Number"
+  },
+  {
+   "name": "Simple.3",
+   "entered": "123",
+   "serial": 123,
+   "precedence": "",
+   "check": "",
+   "section": "",
+   "call": "",
+   "error": "Missing/Invalid Precedence"
+  },
+  {
+   "name": "Simple.4",
+   "entered": "1234",
+   "serial": 1234,
+   "precedence": "",
+   "check": "",
+   "section": "",
+   "call": "",
+   "error": "Missing/Invalid Precedence"
+  },
+  {
+   "name": "Simple.5",
+   "entered": "11 22",
+   "serial": 11,
+   "precedence": "",
+   "check": "22",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Simple.6",
+   "entered": "11 22 33",
+   "serial": 22,
+   "precedence": "",
+   "check": "33",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Simple.7",
+   "entered": "11 22 33 44",
+   "serial": 33,
+   "precedence": "",
+   "check": "44",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Simple.8",
+   "entered": "1",
+   "serial": 1,
+   "precedence": "",
+   "check": "",
+   "section": "",
+   "call": "",
+   "error": "Missing/Invalid Precedence"
+  },
+  {
+   "name": "Simple.9",
+   "entered": "1 2",
+   "serial": 2,
+   "precedence": "",
+   "check": "",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Simple.10",
+   "entered": "1 2 3",
+   "serial": 3,
+   "precedence": "",
+   "check": "",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Simple.11",
+   "entered": "1 2 3 4",
+   "serial": 4,
+   "precedence": "",
+   "check": "",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Zero.1",
+   "entered": "0 01",
+   "serial": 0,
+   "precedence": "",
+   "check": "01",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Zero.2",
+   "entered": "01 0",
+   "serial": 1,
+   "precedence": "",
+   "check": "00",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Zero.3",
+   "entered": "0 01 02",
+   "serial": 1,
+   "precedence": "",
+   "check": "02",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Zero.4",
+   "entered": "01 0 02",
+   "serial": 0,
+   "precedence": "",
+   "check": "02",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Zero.5",
+   "entered": "01 02 0",
+   "serial": 2,
+   "precedence": "",
+   "check": "00",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Zero.6",
+   "entered": "0 01 02 03",
+   "serial": 2,
+   "precedence": "",
+   "check": "03",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Zero.7",
+   "entered": "01 0 02 03",
+   "serial": 2,
+   "precedence": "",
+   "check": "03",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Zero.8",
+   "entered": "01 02 0 03",
+   "serial": 0,
+   "precedence": "",
+   "check": "03",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Zero.9",
+   "entered": "01 02 03 0",
+   "serial": 3,
+   "precedence": "",
+   "check": "00",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Limit.1",
+   "entered": "9999 A 72 OR",
+   "serial": 9999,
+   "precedence": "A",
+   "check": "72",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Limit.2",
+   "entered": "10000 A 72 OR",
+   "serial": 10000,
+   "precedence": "A",
+   "check": "72",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Limit.3",
+   "entered": "10001 A 72 OR",
+   "serial": 10000,
+   "precedence": "A",
+   "check": "72",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Limit.4",
+   "entered": "99999 A 72 OR",
+   "serial": 10000,
+   "precedence": "A",
+   "check": "72",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Limit.5",
+   "entered": "999999 A 72 OR",
+   "serial": 10000,
+   "precedence": "A",
+   "check": "72",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Prec.1",
+   "entered": "1 A",
+   "serial": 1,
+   "precedence": "A",
+   "check": "",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Prec.2",
+   "entered": "12 A",
+   "serial": 12,
+   "precedence": "A",
+   "check": "",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Prec.3",
+   "entered": "123 A",
+   "serial": 123,
+   "precedence": "A",
+   "check": "",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Prec.4",
+   "entered": "1234 A",
+   "serial": 1234,
+   "precedence": "A",
+   "check": "",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Prec.5",
+   "entered": "1 X",
+   "serial": 1,
+   "precedence": "",
+   "check": "",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Prec.6",
+   "entered": "12 X",
+   "serial": 12,
+   "precedence": "",
+   "check": "",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Prec.7",
+   "entered": "123 X",
+   "serial": 123,
+   "precedence": "",
+   "check": "",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Prec.8",
+   "entered": "1234 X",
+   "serial": 1234,
+   "precedence": "",
+   "check": "",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Prec.9",
+   "entered": "1 A 123 B",
+   "serial": 123,
+   "precedence": "B",
+   "check": "",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Prec.10",
+   "entered": "1 A 123 B M",
+   "serial": 123,
+   "precedence": "M",
+   "check": "",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Prec.11",
+   "entered": "1 A B",
+   "serial": 1,
+   "precedence": "B",
+   "check": "",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Prec.12",
+   "entered": "1 A B U M S",
+   "serial": 1,
+   "precedence": "S",
+   "check": "",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Sect.1",
+   "entered": "12 OR",
+   "serial": 0,
+   "precedence": "",
+   "check": "12",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Sect.2",
+   "entered": "12 34 OR",
+   "serial": 12,
+   "precedence": "",
+   "check": "34",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Sect.3",
+   "entered": "12 34 OR 56",
+   "serial": 12,
+   "precedence": "",
+   "check": "56",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Sect.4",
+   "entered": "12 34 OR 56 78",
+   "serial": 56,
+   "precedence": "",
+   "check": "78",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Sect.5",
+   "entered": "12 OR 34",
+   "serial": 0,
+   "precedence": "",
+   "check": "34",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Sect.6",
+   "entered": "12 OR 34 56",
+   "serial": 34,
+   "precedence": "",
+   "check": "56",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Sect.7",
+   "entered": "1 2 3 ID 4",
+   "serial": 4,
+   "precedence": "",
+   "check": "03",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Sect.7a",
+   "entered": "1 2 3 ID 4 OR",
+   "serial": 2,
+   "precedence": "",
+   "check": "04",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Sect.7b",
+   "entered": "1 2 3 ID 4 OR WWA",
+   "serial": 2,
+   "precedence": "",
+   "check": "04",
+   "section": "WWA",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Sect.8",
+   "entered": "1 2 3 ID 4 X",
+   "serial": 4,
+   "precedence": "",
+   "check": "03",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Sect.9",
+   "entered": "1 2 3 ID 4 XX",
+   "serial": 2,
+   "precedence": "",
+   "check": "04",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Sect.10",
+   "entered": "1 2 3 ID 4 XX OR WWA",
+   "serial": 2,
+   "precedence": "",
+   "check": "04",
+   "section": "WWA",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Sect.11",
+   "entered": "1 2 3 ID 4 XYZ",
+   "serial": 2,
+   "precedence": "",
+   "check": "04",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Sect.12",
+   "entered": "1 2 3 ID 4 WXYZ",
+   "serial": 4,
+   "precedence": "",
+   "check": "03",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Sect.13",
+   "entered": "11 22 33 ID 44",
+   "serial": 22,
+   "precedence": "",
+   "check": "44",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Sect.14",
+   "entered": "11 22 33 ID 44 55",
+   "serial": 44,
+   "precedence": "",
+   "check": "55",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Sect.15",
+   "entered": "11 22 33 ID 44 55 66",
+   "serial": 55,
+   "precedence": "",
+   "check": "66",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Sect.16",
+   "entered": "11 12 13 XX",
+   "serial": 12,
+   "precedence": "",
+   "check": "13",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Sect.17",
+   "entered": "11 12 13 XYZ",
+   "serial": 12,
+   "precedence": "",
+   "check": "13",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Sect.18",
+   "entered": "11 12 13 XX OR",
+   "serial": 12,
+   "precedence": "",
+   "check": "13",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Sect.19",
+   "entered": "11 22 33 ID 44 X",
+   "serial": 44,
+   "precedence": "",
+   "check": "33",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Sect.20",
+   "entered": "11 22 33 ID 44 XX",
+   "serial": 22,
+   "precedence": "",
+   "check": "44",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Sect.21",
+   "entered": "11 22 33 ID 44 XYZ",
+   "serial": 22,
+   "precedence": "",
+   "check": "44",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Sect.22",
+   "entered": "11 22 33 ID 44 WXYZ",
+   "serial": 22,
+   "precedence": "",
+   "check": "44",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Sect.23",
+   "entered": "11 22 33 ID 44 O",
+   "serial": 44,
+   "precedence": "",
+   "check": "33",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Sect.24",
+   "entered": "11 22 33 ID 44 OR",
+   "serial": 22,
+   "precedence": "",
+   "check": "44",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Sect.31",
+   "entered": "11 12 13 XX",
+   "serial": 12,
+   "precedence": "",
+   "check": "13",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Sect.32",
+   "entered": "11 12 13 XX YY",
+   "serial": 12,
+   "precedence": "",
+   "check": "13",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Sect.33",
+   "entered": "11 12 13 XX YY WWA",
+   "serial": 12,
+   "precedence": "",
+   "check": "13",
+   "section": "WWA",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Sect.34",
+   "entered": "11 7 13 XX YY WWA",
+   "serial": 7,
+   "precedence": "",
+   "check": "13",
+   "section": "WWA",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Sect.35",
+   "entered": "7 11 8 XX YY WWA",
+   "serial": 7,
+   "precedence": "",
+   "check": "08",
+   "section": "WWA",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.1",
+   "entered": "12 A 34 OR",
+   "serial": 12,
+   "precedence": "A",
+   "check": "34",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.2",
+   "entered": "1 22 3 ID",
+   "serial": 1,
+   "precedence": "",
+   "check": "03",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.3",
+   "entered": "1 22 3 ID 4",
+   "serial": 4,
+   "precedence": "",
+   "check": "03",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.4",
+   "entered": "1 A 22 3 ID 4",
+   "serial": 4,
+   "precedence": "A",
+   "check": "03",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.5",
+   "entered": "1 ID 22 3 A 4",
+   "serial": 4,
+   "precedence": "A",
+   "check": "22",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.6",
+   "entered": "1 A 22 4 ID 3 4",
+   "serial": 4,
+   "precedence": "A",
+   "check": "04",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.7",
+   "entered": "1 A 22 ID 3 4",
+   "serial": 4,
+   "precedence": "A",
+   "check": "22",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.8",
+   "entered": "1 A 22 123 ID 4",
+   "serial": 4,
+   "precedence": "A",
+   "check": "22",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.9",
+   "entered": "22 ID 1 A",
+   "serial": 1,
+   "precedence": "A",
+   "check": "22",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.10",
+   "entered": "123 11 A ID",
+   "serial": 11,
+   "precedence": "A",
+   "check": "",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.11",
+   "entered": "72 OR 73 56 A",
+   "serial": 56,
+   "precedence": "A",
+   "check": "73",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.12",
+   "entered": "72 OR 73 74 56 A",
+   "serial": 56,
+   "precedence": "A",
+   "check": "74",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.13",
+   "entered": "72 OR 73 A 72 73 A",
+   "serial": 73,
+   "precedence": "A",
+   "check": "72",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.14",
+   "entered": "72OR  73 A 72 73A",
+   "serial": 73,
+   "precedence": "A",
+   "check": "72",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.15",
+   "entered": "72 OR 73 A 72 73",
+   "serial": 73,
+   "precedence": "A",
+   "check": "73",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.16",
+   "entered": "72OR 73A 72 73",
+   "serial": 73,
+   "precedence": "A",
+   "check": "73",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.17",
+   "entered": "72 OR 73 A 72 73 74",
+   "serial": 73,
+   "precedence": "A",
+   "check": "74",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.18",
+   "entered": "72 OR 73 72 A 74 75",
+   "serial": 72,
+   "precedence": "A",
+   "check": "75",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.19",
+   "entered": "72OR  73 72A  74 75",
+   "serial": 72,
+   "precedence": "A",
+   "check": "75",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.20",
+   "entered": "1 2 OR 10 11 A",
+   "serial": 11,
+   "precedence": "A",
+   "check": "10",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.21",
+   "entered": "1 2 OR 10 3 11 A",
+   "serial": 11,
+   "precedence": "A",
+   "check": "10",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.22",
+   "entered": "1 2OR  10 3 11A",
+   "serial": 11,
+   "precedence": "A",
+   "check": "10",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.31",
+   "entered": "XX YY ZZ 1",
+   "serial": 1,
+   "precedence": "",
+   "check": "",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.32",
+   "entered": "XX YY ZZ 1 XX",
+   "serial": 0,
+   "precedence": "",
+   "check": "01",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.33",
+   "entered": "XX YY ZZ 1 XX YY",
+   "serial": 0,
+   "precedence": "",
+   "check": "01",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.34",
+   "entered": "XX YY ZZ 1 XX YY B",
+   "serial": 0,
+   "precedence": "B",
+   "check": "01",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.35",
+   "entered": "XX YY ZZ 1 XX YY ID",
+   "serial": 0,
+   "precedence": "",
+   "check": "01",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.36",
+   "entered": "XX YY ZZ 1 XX ID B",
+   "serial": 0,
+   "precedence": "B",
+   "check": "01",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.37",
+   "entered": "XX YY ZZ 1 XX B",
+   "serial": 0,
+   "precedence": "B",
+   "check": "01",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.38",
+   "entered": "XX YY ZZ 1 XX B ID",
+   "serial": 0,
+   "precedence": "B",
+   "check": "01",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.40",
+   "entered": "10A20OR",
+   "serial": 10,
+   "precedence": "A",
+   "check": "20",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.41",
+   "entered": "20OR10A",
+   "serial": 10,
+   "precedence": "A",
+   "check": "20",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.42",
+   "entered": "20OR 10A",
+   "serial": 10,
+   "precedence": "A",
+   "check": "20",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.43",
+   "entered": "10 20OR 30A",
+   "serial": 30,
+   "precedence": "A",
+   "check": "20",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.44",
+   "entered": "20OR 10 30A",
+   "serial": 30,
+   "precedence": "A",
+   "check": "10",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.45",
+   "entered": "20OR10A W1AW",
+   "serial": 10,
+   "precedence": "A",
+   "check": "20",
+   "section": "OR",
+   "call": "W1AW",
+   "error": ""
+  },
+  {
+   "name": "Mixed.46",
+   "entered": "10A20OR W1AW",
+   "serial": 10,
+   "precedence": "A",
+   "check": "20",
+   "section": "OR",
+   "call": "W1AW",
+   "error": ""
+  },
+  {
+   "name": "Mixed.47",
+   "entered": "W1AW 20OR10A",
+   "serial": 10,
+   "precedence": "A",
+   "check": "20",
+   "section": "OR",
+   "call": "W1AW",
+   "error": ""
+  },
+  {
+   "name": "Mixed.48",
+   "entered": "W1AW 10A20OR",
+   "serial": 10,
+   "precedence": "A",
+   "check": "20",
+   "section": "OR",
+   "call": "W1AW",
+   "error": ""
+  },
+  {
+   "name": "Mixed.49",
+   "entered": "W1AW10A20OR",
+   "serial": 0,
+   "precedence": "",
+   "check": "",
+   "section": "",
+   "call": "W1AW10A20OR",
+   "error": ""
+  },
+  {
+   "name": "Mixed.50",
+   "entered": "10A20ORW1AW",
+   "serial": 10,
+   "precedence": "A",
+   "check": "01",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.51",
+   "entered": "86 TN",
+   "serial": 0,
+   "precedence": "",
+   "check": "86",
+   "section": "TN",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.52",
+   "entered": "86 TN WM",
+   "serial": 0,
+   "precedence": "",
+   "check": "86",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.53",
+   "entered": "86 TN WM 6",
+   "serial": 6,
+   "precedence": "",
+   "check": "86",
+   "section": "TN",
+   "call": "",
+   "error": "Missing/Invalid Precedence"
+  },
+  {
+   "name": "Mixed.54",
+   "entered": "86 TN WM 66",
+   "serial": 0,
+   "precedence": "",
+   "check": "66",
+   "section": "TN",
+   "call": "",
+   "error": "Missing/Invalid Serial Number"
+  },
+  {
+   "name": "Mixed.55",
+   "entered": "86 TN WM 66 B",
+   "serial": 66,
+   "precedence": "B",
+   "check": "86",
+   "section": "TN",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Mixed.56",
+   "entered": "86 TN WM4Q 66 B",
+   "serial": 66,
+   "precedence": "B",
+   "check": "86",
+   "section": "TN",
+   "call": "WM4Q",
+   "error": ""
+  },
+  {
+   "name": "Misc.p04.1",
+   "entered": "98",
+   "serial": 0,
+   "precedence": "",
+   "check": "98",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p04.2",
+   "entered": "98 WNY",
+   "serial": 0,
+   "precedence": "",
+   "check": "98",
+   "section": "WNY",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p04.3",
+   "entered": "98 WNY 1",
+   "serial": 1,
+   "precedence": "",
+   "check": "98",
+   "section": "WNY",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p04.4",
+   "entered": "98 WNY 11",
+   "serial": 0,
+   "precedence": "",
+   "check": "11",
+   "section": "WNY",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p04.6",
+   "entered": "98 WNY 11 A",
+   "serial": 11,
+   "precedence": "A",
+   "check": "98",
+   "section": "WNY",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p04.7",
+   "entered": "98 WNY N2DC 11 A",
+   "serial": 11,
+   "precedence": "A",
+   "check": "98",
+   "section": "WNY",
+   "call": "N2DC",
+   "error": ""
+  },
+  {
+   "name": "Misc.p04.8",
+   "entered": "98 WNY N2DC 11A",
+   "serial": 11,
+   "precedence": "A",
+   "check": "98",
+   "section": "WNY",
+   "call": "N2DC",
+   "error": ""
+  },
+  {
+   "name": "Misc.p04.9",
+   "entered": "98 WNY 11A N2DC",
+   "serial": 11,
+   "precedence": "A",
+   "check": "98",
+   "section": "WNY",
+   "call": "N2DC",
+   "error": ""
+  },
+  {
+   "name": "Misc.p04.10",
+   "entered": "98 11A WNY N2DC",
+   "serial": 11,
+   "precedence": "A",
+   "check": "98",
+   "section": "WNY",
+   "call": "N2DC",
+   "error": ""
+  },
+  {
+   "name": "Misc.p04.11",
+   "entered": "11A 98 WNY N2DC",
+   "serial": 11,
+   "precedence": "A",
+   "check": "98",
+   "section": "WNY",
+   "call": "N2DC",
+   "error": ""
+  },
+  {
+   "name": "Misc.p04.12",
+   "entered": "98 WNY 11A N2DC",
+   "serial": 11,
+   "precedence": "A",
+   "check": "98",
+   "section": "WNY",
+   "call": "N2DC",
+   "error": ""
+  },
+  {
+   "name": "Misc.p04.13",
+   "entered": "98 WNY N2DC 11A",
+   "serial": 11,
+   "precedence": "A",
+   "check": "98",
+   "section": "WNY",
+   "call": "N2DC",
+   "error": ""
+  },
+  {
+   "name": "Misc.p04.14",
+   "entered": "98 N2DC WNY 11A",
+   "serial": 11,
+   "precedence": "A",
+   "check": "98",
+   "section": "WNY",
+   "call": "N2DC",
+   "error": ""
+  },
+  {
+   "name": "Misc.p04.15",
+   "entered": "N2DC 98 WNY 11A",
+   "serial": 11,
+   "precedence": "A",
+   "check": "98",
+   "section": "WNY",
+   "call": "N2DC",
+   "error": ""
+  },
+  {
+   "name": "Misc.p05.1",
+   "entered": "123 124 11 A UT",
+   "serial": 11,
+   "precedence": "A",
+   "check": "",
+   "section": "UT",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p05.2",
+   "entered": "123 124 11 A UT 0",
+   "serial": 11,
+   "precedence": "A",
+   "check": "00",
+   "section": "UT",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p05.3",
+   "entered": "123 124 11 A UT 125",
+   "serial": 125,
+   "precedence": "A",
+   "check": "",
+   "section": "UT",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p06.1",
+   "entered": "1 111 OR",
+   "serial": 1,
+   "precedence": "",
+   "check": "",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p06.2",
+   "entered": "12 111 OR",
+   "serial": 0,
+   "precedence": "",
+   "check": "12",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p06.3",
+   "entered": "12 111 OR UT",
+   "serial": 0,
+   "precedence": "",
+   "check": "12",
+   "section": "UT",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p06.4",
+   "entered": "12 111 OR UT 13",
+   "serial": 12,
+   "precedence": "",
+   "check": "13",
+   "section": "UT",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p07.1",
+   "entered": "12 111 OR UT 13",
+   "serial": 12,
+   "precedence": "",
+   "check": "13",
+   "section": "UT",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p07.2",
+   "entered": "12        UT 13",
+   "serial": 0,
+   "precedence": "",
+   "check": "13",
+   "section": "UT",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p07.3",
+   "entered": "12 111 OR UT",
+   "serial": 0,
+   "precedence": "",
+   "check": "12",
+   "section": "UT",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p07.4",
+   "entered": "12 A OR 133",
+   "serial": 133,
+   "precedence": "A",
+   "check": "",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p07.5",
+   "entered": "12 A OR 13",
+   "serial": 12,
+   "precedence": "A",
+   "check": "13",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p07.6",
+   "entered": "12 OR 13",
+   "serial": 0,
+   "precedence": "",
+   "check": "13",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p07.7",
+   "entered": "11 12 ORR 133",
+   "serial": 133,
+   "precedence": "",
+   "check": "12",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p08.1",
+   "entered": "11 12 UT 13",
+   "serial": 11,
+   "precedence": "",
+   "check": "13",
+   "section": "UT",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p08.2",
+   "entered": "11 12 XYZ 13",
+   "serial": 11,
+   "precedence": "",
+   "check": "13",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p08.3",
+   "entered": "11 12 XYZZ 123",
+   "serial": 123,
+   "precedence": "",
+   "check": "12",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p11.1",
+   "entered": "11 12",
+   "serial": 11,
+   "precedence": "",
+   "check": "12",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p11.2",
+   "entered": "11 12 A",
+   "serial": 12,
+   "precedence": "A",
+   "check": "11",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p11.3",
+   "entered": "11 12 A 1",
+   "serial": 1,
+   "precedence": "A",
+   "check": "11",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p11.4",
+   "entered": "11 12 A 13",
+   "serial": 12,
+   "precedence": "A",
+   "check": "13",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p11.5",
+   "entered": "11 12 A 134",
+   "serial": 134,
+   "precedence": "A",
+   "check": "11",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p11.6",
+   "entered": "11 12 A 1345",
+   "serial": 1345,
+   "precedence": "A",
+   "check": "11",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p11b.1",
+   "entered": "11 12",
+   "serial": 11,
+   "precedence": "",
+   "check": "12",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p11b.2",
+   "entered": "11 12 OR",
+   "serial": 11,
+   "precedence": "",
+   "check": "12",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p11b.3",
+   "entered": "11 12 OR 1",
+   "serial": 1,
+   "precedence": "",
+   "check": "12",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p11b.4",
+   "entered": "11 12 OR 13",
+   "serial": 11,
+   "precedence": "",
+   "check": "13",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p11b.5",
+   "entered": "11 12 OR 134",
+   "serial": 134,
+   "precedence": "",
+   "check": "12",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p11b.6",
+   "entered": "11 12 OR 13 14",
+   "serial": 13,
+   "precedence": "",
+   "check": "14",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p11b.7",
+   "entered": "11 12 OR 13 14 15",
+   "serial": 14,
+   "precedence": "",
+   "check": "15",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p12.1",
+   "entered": "1 2 OR",
+   "serial": 1,
+   "precedence": "",
+   "check": "02",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p12.2",
+   "entered": "1 OR 2",
+   "serial": 2,
+   "precedence": "",
+   "check": "01",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p12.3",
+   "entered": "",
+   "serial": 0,
+   "precedence": "",
+   "check": "",
+   "section": "",
+   "call": "",
+   "error": "Missing/Invalid Serial Number"
+  },
+  {
+   "name": "Misc.p12.4",
+   "entered": "1",
+   "serial": 1,
+   "precedence": "",
+   "check": "",
+   "section": "",
+   "call": "",
+   "error": "Missing/Invalid Precedence"
+  },
+  {
+   "name": "Misc.p12.5",
+   "entered": "2 4",
+   "serial": 4,
+   "precedence": "",
+   "check": "",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p12.6",
+   "entered": "2 0",
+   "serial": 2,
+   "precedence": "",
+   "check": "00",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p12.7",
+   "entered": "2 00",
+   "serial": 2,
+   "precedence": "",
+   "check": "00",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p12.8",
+   "entered": "2 000",
+   "serial": 0,
+   "precedence": "",
+   "check": "",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p12.9",
+   "entered": "56 A 0",
+   "serial": 56,
+   "precedence": "A",
+   "check": "00",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p12.10",
+   "entered": "11 12 ID 134 14",
+   "serial": 134,
+   "precedence": "",
+   "check": "14",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p12.11",
+   "entered": "11 12 ID 134 14 A",
+   "serial": 14,
+   "precedence": "A",
+   "check": "12",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p12.12",
+   "entered": "11 12 ID 134 14 Z",
+   "serial": 14,
+   "precedence": "",
+   "check": "12",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p12.13",
+   "entered": "11 A 12 Z",
+   "serial": 12,
+   "precedence": "A",
+   "check": "",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p12.14",
+   "entered": "11 12 Z",
+   "serial": 12,
+   "precedence": "",
+   "check": "11",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p12.15",
+   "entered": "11 12 ZZ",
+   "serial": 11,
+   "precedence": "",
+   "check": "12",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p12.15b",
+   "entered": "11 12 ZZZ",
+   "serial": 11,
+   "precedence": "",
+   "check": "12",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p12.15c",
+   "entered": "11 12 ZZZZ",
+   "serial": 11,
+   "precedence": "",
+   "check": "12",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p12.16",
+   "entered": "0ID",
+   "serial": 0,
+   "precedence": "",
+   "check": "00",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p12.17",
+   "entered": "0 ID",
+   "serial": 0,
+   "precedence": "",
+   "check": "00",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p13.1",
+   "entered": "01 02",
+   "serial": 1,
+   "precedence": "",
+   "check": "02",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p13.2",
+   "entered": "01 02 A",
+   "serial": 2,
+   "precedence": "A",
+   "check": "01",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p13.3",
+   "entered": "01 02 A 03",
+   "serial": 2,
+   "precedence": "A",
+   "check": "03",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p13.4",
+   "entered": "01 02 A 3",
+   "serial": 3,
+   "precedence": "A",
+   "check": "01",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p13.5",
+   "entered": "01 02 A 57 3",
+   "serial": 3,
+   "precedence": "A",
+   "check": "57",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p13.6",
+   "entered": "01 02 A 003",
+   "serial": 3,
+   "precedence": "A",
+   "check": "01",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p13.7",
+   "entered": "01 02 A 000",
+   "serial": 0,
+   "precedence": "A",
+   "check": "01",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p14.1",
+   "entered": "01",
+   "serial": 0,
+   "precedence": "",
+   "check": "01",
+   "section": "",
+   "call": "",
+   "error": "Missing/Invalid Serial Number"
+  },
+  {
+   "name": "Misc.p14.2",
+   "entered": "01 02",
+   "serial": 1,
+   "precedence": "",
+   "check": "02",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p14.3",
+   "entered": "01 02 A",
+   "serial": 2,
+   "precedence": "A",
+   "check": "01",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p14.4",
+   "entered": "01 02 A 5",
+   "serial": 5,
+   "precedence": "A",
+   "check": "01",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p14.5",
+   "entered": "01 02 A 57",
+   "serial": 2,
+   "precedence": "A",
+   "check": "57",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p14.6",
+   "entered": "01 02 A 57 7",
+   "serial": 7,
+   "precedence": "A",
+   "check": "57",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p14.7",
+   "entered": "01 02 A 57 72",
+   "serial": 2,
+   "precedence": "A",
+   "check": "72",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p14.8",
+   "entered": "01 02 A 57 72 8",
+   "serial": 8,
+   "precedence": "A",
+   "check": "72",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p14.9",
+   "entered": "01 02 A 57 72 83",
+   "serial": 2,
+   "precedence": "A",
+   "check": "83",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p14.10",
+   "entered": "1",
+   "serial": 1,
+   "precedence": "",
+   "check": "",
+   "section": "",
+   "call": "",
+   "error": "Missing/Invalid Precedence"
+  },
+  {
+   "name": "Misc.p14.11",
+   "entered": "1 2",
+   "serial": 2,
+   "precedence": "",
+   "check": "",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p14.12",
+   "entered": "1 2 3",
+   "serial": 3,
+   "precedence": "",
+   "check": "",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p14.13",
+   "entered": "1 2 3 ID",
+   "serial": 2,
+   "precedence": "",
+   "check": "03",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p14.14",
+   "entered": "1 2 3 ID 4",
+   "serial": 4,
+   "precedence": "",
+   "check": "03",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p14.15b",
+   "entered": "1 2 3 ID 4 X",
+   "serial": 4,
+   "precedence": "",
+   "check": "03",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p14.15",
+   "entered": "1 2 3 ID 4 XX",
+   "serial": 2,
+   "precedence": "",
+   "check": "04",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p14.15c",
+   "entered": "1 2 3 ID 4 XXX",
+   "serial": 2,
+   "precedence": "",
+   "check": "04",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p14.15d",
+   "entered": "1 2 3 ID 4 XXXX",
+   "serial": 4,
+   "precedence": "",
+   "check": "03",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p14.15e",
+   "entered": "1 2 3 ID 4 WWA",
+   "serial": 2,
+   "precedence": "",
+   "check": "04",
+   "section": "WWA",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p15.1",
+   "entered": "10",
+   "serial": 0,
+   "precedence": "",
+   "check": "10",
+   "section": "",
+   "call": "",
+   "error": "Missing/Invalid Serial Number"
+  },
+  {
+   "name": "Misc.p15.2",
+   "entered": "10 20",
+   "serial": 10,
+   "precedence": "",
+   "check": "20",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p15.3",
+   "entered": "10 20 30",
+   "serial": 20,
+   "precedence": "",
+   "check": "30",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p15.4",
+   "entered": "10 20 30 X",
+   "serial": 30,
+   "precedence": "",
+   "check": "20",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p15.5",
+   "entered": "10 20 30 X 40",
+   "serial": 30,
+   "precedence": "",
+   "check": "40",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p15.6",
+   "entered": "10 20 30 X 40 50",
+   "serial": 30,
+   "precedence": "",
+   "check": "50",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p15.7",
+   "entered": "10 20 30 X 40 50 A",
+   "serial": 50,
+   "precedence": "A",
+   "check": "40",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p15.8",
+   "entered": "10 20 30 X 40 50 60",
+   "serial": 30,
+   "precedence": "",
+   "check": "60",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p15.9",
+   "entered": "10 20 30 X 40 50 60 A",
+   "serial": 60,
+   "precedence": "A",
+   "check": "50",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p16.1",
+   "entered": "11 22 33 ID 44 X",
+   "serial": 44,
+   "precedence": "",
+   "check": "33",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p16.2",
+   "entered": "11 0 33 ID",
+   "serial": 0,
+   "precedence": "",
+   "check": "33",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p16.3",
+   "entered": "11 0 33 ID X",
+   "serial": 0,
+   "precedence": "",
+   "check": "33",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.p16.4",
+   "entered": "11 0 33 ID A",
+   "serial": 0,
+   "precedence": "A",
+   "check": "33",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.4",
+   "entered": "1 111 OR 66",
+   "serial": 1,
+   "precedence": "",
+   "check": "66",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.5",
+   "entered": "1 111 OR 66 A",
+   "serial": 66,
+   "precedence": "A",
+   "check": "",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.6",
+   "entered": "10 20 111 OR",
+   "serial": 10,
+   "precedence": "",
+   "check": "20",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.7",
+   "entered": "10 20 111 OR A",
+   "serial": 10,
+   "precedence": "A",
+   "check": "20",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.8",
+   "entered": "10 20 111 222 OR",
+   "serial": 111,
+   "precedence": "",
+   "check": "20",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.9",
+   "entered": "10 20 111 222 OR ID",
+   "serial": 111,
+   "precedence": "",
+   "check": "20",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.10",
+   "entered": "10 20 111 222 OR A ID",
+   "serial": 111,
+   "precedence": "A",
+   "check": "20",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.11",
+   "entered": "10 20 111 222 OR ID A",
+   "serial": 111,
+   "precedence": "A",
+   "check": "20",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.12",
+   "entered": "1 10 2",
+   "serial": 2,
+   "precedence": "",
+   "check": "10",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.13",
+   "entered": "1 10 2 OR",
+   "serial": 1,
+   "precedence": "",
+   "check": "02",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.14",
+   "entered": "1 10 2 OR 20",
+   "serial": 1,
+   "precedence": "",
+   "check": "20",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.15",
+   "entered": "1 10 2 20",
+   "serial": 2,
+   "precedence": "",
+   "check": "20",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.16",
+   "entered": "1 10 2 20 3",
+   "serial": 3,
+   "precedence": "",
+   "check": "20",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.17",
+   "entered": "1 10 2 20 3 30",
+   "serial": 3,
+   "precedence": "",
+   "check": "30",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.18",
+   "entered": "1 10 2 20 3 OR",
+   "serial": 2,
+   "precedence": "",
+   "check": "03",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.19",
+   "entered": "1 10 2 20 3 OR 30",
+   "serial": 2,
+   "precedence": "",
+   "check": "30",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.20",
+   "entered": "1 10 2 OR 20 3",
+   "serial": 3,
+   "precedence": "",
+   "check": "20",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.21",
+   "entered": "1 10 2 OR 20 3 30",
+   "serial": 3,
+   "precedence": "",
+   "check": "30",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.22",
+   "entered": "1 10 2 20 OR 3 30",
+   "serial": 3,
+   "precedence": "",
+   "check": "30",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.23",
+   "entered": "1 10 2 20 3 OR 30",
+   "serial": 2,
+   "precedence": "",
+   "check": "30",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.24",
+   "entered": "10 1 20 2 OR 30 3",
+   "serial": 3,
+   "precedence": "",
+   "check": "30",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.25",
+   "entered": "OR 1 10 2 20 ID 3 30",
+   "serial": 3,
+   "precedence": "",
+   "check": "30",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.26",
+   "entered": "10 1 20 2 A 30 3",
+   "serial": 3,
+   "precedence": "A",
+   "check": "30",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.27",
+   "entered": "OR 1 10 2 20 A 3 30",
+   "serial": 3,
+   "precedence": "A",
+   "check": "30",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.28",
+   "entered": "1 10 2 20 OR A 3 30",
+   "serial": 3,
+   "precedence": "A",
+   "check": "30",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.29",
+   "entered": "1 10 2 20 3 OR 30 A",
+   "serial": 30,
+   "precedence": "A",
+   "check": "03",
+   "section": "OR",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.31",
+   "entered": "A",
+   "serial": 0,
+   "precedence": "A",
+   "check": "",
+   "section": "",
+   "call": "",
+   "error": "Missing/Invalid Serial Number"
+  },
+  {
+   "name": "Misc.32",
+   "entered": "A 10",
+   "serial": 0,
+   "precedence": "A",
+   "check": "10",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.33",
+   "entered": "A 10 20",
+   "serial": 10,
+   "precedence": "A",
+   "check": "20",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.34",
+   "entered": "A 10 B 20",
+   "serial": 10,
+   "precedence": "B",
+   "check": "20",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.35",
+   "entered": "A 10 20 B",
+   "serial": 20,
+   "precedence": "B",
+   "check": "10",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.40",
+   "entered": "ID",
+   "serial": 0,
+   "precedence": "",
+   "check": "",
+   "section": "ID",
+   "call": "",
+   "error": "Missing/Invalid Serial Number"
+  },
+  {
+   "name": "Misc.41",
+   "entered": "ID 10",
+   "serial": 0,
+   "precedence": "",
+   "check": "10",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.42",
+   "entered": "ID 10 20",
+   "serial": 10,
+   "precedence": "",
+   "check": "20",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.43",
+   "entered": "ID 10 A 20",
+   "serial": 10,
+   "precedence": "A",
+   "check": "20",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.44",
+   "entered": "ID 10 20 A",
+   "serial": 20,
+   "precedence": "A",
+   "check": "10",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.50",
+   "entered": "",
+   "serial": 0,
+   "precedence": "",
+   "check": "",
+   "section": "",
+   "call": "",
+   "error": "Missing/Invalid Serial Number"
+  },
+  {
+   "name": "Misc.51",
+   "entered": "20 ID 10 A",
+   "serial": 10,
+   "precedence": "A",
+   "check": "20",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.52",
+   "entered": "20 ID 10 A",
+   "serial": 10,
+   "precedence": "A",
+   "check": "20",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.53",
+   "entered": "20 ID 10 A",
+   "serial": 10,
+   "precedence": "A",
+   "check": "20",
+   "section": "ID",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.54",
+   "entered": "12 111 OR",
+   "serial": 0,
+   "precedence": "",
+   "check": "12",
+   "section": "",
+   "call": "",
+   "error": ""
+  },
+  {
+   "name": "Misc.60",
+   "entered": "W7SST ID 10 A 20",
+   "serial": 10,
+   "precedence": "A",
+   "check": "20",
+   "section": "ID",
+   "call": "W7SST",
+   "error": ""
+  },
+  {
+   "name": "Misc.61",
+   "entered": "ID W7SST 10 A 20",
+   "serial": 10,
+   "precedence": "A",
+   "check": "20",
+   "section": "ID",
+   "call": "W7SST",
+   "error": ""
+  },
+  {
+   "name": "Misc.62",
+   "entered": "ID 10 W7SST A 20",
+   "serial": 10,
+   "precedence": "A",
+   "check": "20",
+   "section": "ID",
+   "call": "W7SST",
+   "error": ""
+  },
+  {
+   "name": "Misc.63",
+   "entered": "ID 10 A W7SST 20",
+   "serial": 10,
+   "precedence": "A",
+   "check": "20",
+   "section": "ID",
+   "call": "W7SST",
+   "error": ""
+  },
+  {
+   "name": "Misc.64",
+   "entered": "ID 10 A 20 W7SST",
+   "serial": 10,
+   "precedence": "A",
+   "check": "20",
+   "section": "ID",
+   "call": "W7SST",
+   "error": ""
+  },
+  {
+   "name": "Misc.65",
+   "entered": "W7SST OR 1 10 2 20 ID 3 30",
+   "serial": 3,
+   "precedence": "",
+   "check": "30",
+   "section": "ID",
+   "call": "W7SST",
+   "error": ""
+  },
+  {
+   "name": "Misc.66",
+   "entered": "OR W7SST 1 10 2 20 ID 3 30",
+   "serial": 3,
+   "precedence": "",
+   "check": "30",
+   "section": "ID",
+   "call": "W7SST",
+   "error": ""
+  },
+  {
+   "name": "Misc.67",
+   "entered": "OR 1 W7SST 10 2 20 ID 3 30",
+   "serial": 3,
+   "precedence": "",
+   "check": "30",
+   "section": "ID",
+   "call": "W7SST",
+   "error": ""
+  },
+  {
+   "name": "Misc.68",
+   "entered": "OR 1 10 W7SST 2 20 ID 3 30",
+   "serial": 3,
+   "precedence": "",
+   "check": "30",
+   "section": "ID",
+   "call": "W7SST",
+   "error": ""
+  },
+  {
+   "name": "Misc.69",
+   "entered": "OR 1 10 2 W7SST 20 ID 3 30",
+   "serial": 3,
+   "precedence": "",
+   "check": "30",
+   "section": "ID",
+   "call": "W7SST",
+   "error": ""
+  },
+  {
+   "name": "Misc.70",
+   "entered": "OR 1 10 2 20 W7SST ID 3 30",
+   "serial": 3,
+   "precedence": "",
+   "check": "30",
+   "section": "ID",
+   "call": "W7SST",
+   "error": ""
+  },
+  {
+   "name": "Misc.71",
+   "entered": "OR 1 10 2 20 ID W7SST 3 30",
+   "serial": 3,
+   "precedence": "",
+   "check": "30",
+   "section": "ID",
+   "call": "W7SST",
+   "error": ""
+  },
+  {
+   "name": "Misc.72",
+   "entered": "OR 1 10 2 20 ID 3 W7SST 30",
+   "serial": 3,
+   "precedence": "",
+   "check": "30",
+   "section": "ID",
+   "call": "W7SST",
+   "error": ""
+  },
+  {
+   "name": "Misc.73",
+   "entered": "OR 1 10 2 20 ID 3 30 W7SST",
+   "serial": 3,
+   "precedence": "",
+   "check": "30",
+   "section": "ID",
+   "call": "W7SST",
+   "error": ""
+  }
+ ]
+}

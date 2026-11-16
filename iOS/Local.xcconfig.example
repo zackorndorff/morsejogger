@@ -1,0 +1,16 @@
+// Copy to iOS/Local.xcconfig (gitignored) and fill in.
+
+// Contact address sent in the User-Agent when downloading SCP data, so the
+// data host can reach whoever runs this build. Use your own address.
+SCP_CONTACT =
+
+// Apple Developer Team ID used to sign the app. Leave empty to build for
+// the simulator only, or set your own team to run on a device.
+//
+// To find it: sign in at https://developer.apple.com/account and look under
+// Membership details for "Team ID" (ten characters, such as ABCDE12345).
+// With a free Apple ID, add the account in Xcode > Settings > Accounts, pick
+// the team under Signing & Capabilities for the MorseJogger target, and copy
+// the DEVELOPMENT_TEAM value Xcode writes into project.pbxproj (then remove
+// that line from the project so it stays out of the repository).
+DEVELOPMENT_TEAM =

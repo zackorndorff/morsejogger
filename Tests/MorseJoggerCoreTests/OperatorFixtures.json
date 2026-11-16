@@ -1,0 +1,898 @@
+[
+  {
+    "state": "need-prev-end",
+    "style": 0.01,
+    "cause": "timeout",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-prev-end",
+    "style": 0.01,
+    "cause": "corrected",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-prev-end",
+    "style": 0.2,
+    "cause": "timeout",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-prev-end",
+    "style": 0.2,
+    "cause": "corrected",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-prev-end",
+    "style": 0.4,
+    "cause": "timeout",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-prev-end",
+    "style": 0.4,
+    "cause": "corrected",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-prev-end",
+    "style": 0.7,
+    "cause": "timeout",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-prev-end",
+    "style": 0.7,
+    "cause": "corrected",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-prev-end",
+    "style": 0.84,
+    "cause": "timeout",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-prev-end",
+    "style": 0.84,
+    "cause": "corrected",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-prev-end",
+    "style": 0.9,
+    "cause": "timeout",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-prev-end",
+    "style": 0.9,
+    "cause": "corrected",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-prev-end",
+    "style": 0.99,
+    "cause": "timeout",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-prev-end",
+    "style": 0.99,
+    "cause": "corrected",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-qso",
+    "style": 0.01,
+    "cause": "timeout",
+    "text": "K1ABC",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-qso",
+    "style": 0.01,
+    "cause": "corrected",
+    "text": "K1ABC",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-qso",
+    "style": 0.2,
+    "cause": "timeout",
+    "text": "K1ABC",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-qso",
+    "style": 0.2,
+    "cause": "corrected",
+    "text": "K1ABC",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-qso",
+    "style": 0.4,
+    "cause": "timeout",
+    "text": "K1ABC",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-qso",
+    "style": 0.4,
+    "cause": "corrected",
+    "text": "K1ABC",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-qso",
+    "style": 0.7,
+    "cause": "timeout",
+    "text": "K1ABC",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-qso",
+    "style": 0.7,
+    "cause": "corrected",
+    "text": "K1ABC",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-qso",
+    "style": 0.84,
+    "cause": "timeout",
+    "text": "K1ABC",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-qso",
+    "style": 0.84,
+    "cause": "corrected",
+    "text": "K1ABC",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-qso",
+    "style": 0.9,
+    "cause": "timeout",
+    "text": "K1ABC",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-qso",
+    "style": 0.9,
+    "cause": "corrected",
+    "text": "K1ABC",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-qso",
+    "style": 0.99,
+    "cause": "timeout",
+    "text": "K1ABC",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-qso",
+    "style": 0.99,
+    "cause": "corrected",
+    "text": "K1ABC",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-nr",
+    "style": 0.01,
+    "cause": "timeout",
+    "text": "NR?",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-nr",
+    "style": 0.01,
+    "cause": "corrected",
+    "text": "NR?",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-nr",
+    "style": 0.2,
+    "cause": "timeout",
+    "text": "NR?",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-nr",
+    "style": 0.2,
+    "cause": "corrected",
+    "text": "NR?",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-nr",
+    "style": 0.4,
+    "cause": "timeout",
+    "text": "NR?",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-nr",
+    "style": 0.4,
+    "cause": "corrected",
+    "text": "NR?",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-nr",
+    "style": 0.7,
+    "cause": "timeout",
+    "text": "NR?",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-nr",
+    "style": 0.7,
+    "cause": "corrected",
+    "text": "NR?",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-nr",
+    "style": 0.84,
+    "cause": "timeout",
+    "text": "NR?",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-nr",
+    "style": 0.84,
+    "cause": "corrected",
+    "text": "NR?",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-nr",
+    "style": 0.9,
+    "cause": "timeout",
+    "text": "NR?",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-nr",
+    "style": 0.9,
+    "cause": "corrected",
+    "text": "NR?",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-nr",
+    "style": 0.99,
+    "cause": "timeout",
+    "text": "NR?",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-nr",
+    "style": 0.99,
+    "cause": "corrected",
+    "text": "NR?",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-call",
+    "style": 0.01,
+    "cause": "timeout",
+    "text": "DE K1ABC 599 124",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-call",
+    "style": 0.01,
+    "cause": "corrected",
+    "text": "DE K1ABC 599 124",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-call",
+    "style": 0.2,
+    "cause": "timeout",
+    "text": "DE K1ABC K1ABC 599 124",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-call",
+    "style": 0.2,
+    "cause": "corrected",
+    "text": "DE K1ABC K1ABC 599 124",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-call",
+    "style": 0.4,
+    "cause": "timeout",
+    "text": "K1ABC 599 124",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-call",
+    "style": 0.4,
+    "cause": "corrected",
+    "text": "K1ABC 599 124",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-call",
+    "style": 0.7,
+    "cause": "timeout",
+    "text": "K1ABC K1ABC 599 124",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-call",
+    "style": 0.7,
+    "cause": "corrected",
+    "text": "K1ABC K1ABC 599 124",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-call",
+    "style": 0.84,
+    "cause": "timeout",
+    "text": "K1ABC",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-call",
+    "style": 0.84,
+    "cause": "corrected",
+    "text": "K1ABC",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-call",
+    "style": 0.9,
+    "cause": "timeout",
+    "text": "K1ABC",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-call",
+    "style": 0.9,
+    "cause": "corrected",
+    "text": "K1ABC",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-call",
+    "style": 0.99,
+    "cause": "timeout",
+    "text": "K1ABC",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-call",
+    "style": 0.99,
+    "cause": "corrected",
+    "text": "K1ABC",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-callnr",
+    "style": 0.01,
+    "cause": "timeout",
+    "text": "DE K1ABC",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-callnr",
+    "style": 0.01,
+    "cause": "corrected",
+    "text": "DE K1ABC",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-callnr",
+    "style": 0.2,
+    "cause": "timeout",
+    "text": "DE K1ABC K1ABC",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-callnr",
+    "style": 0.2,
+    "cause": "corrected",
+    "text": "DE K1ABC K1ABC",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-callnr",
+    "style": 0.4,
+    "cause": "timeout",
+    "text": "K1ABC",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-callnr",
+    "style": 0.4,
+    "cause": "corrected",
+    "text": "K1ABC",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-callnr",
+    "style": 0.7,
+    "cause": "timeout",
+    "text": "K1ABC K1ABC",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-callnr",
+    "style": 0.7,
+    "cause": "corrected",
+    "text": "K1ABC K1ABC",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-callnr",
+    "style": 0.84,
+    "cause": "timeout",
+    "text": "K1ABC 599 124",
+    "nrCount": 0,
+    "corrected": true
+  },
+  {
+    "state": "need-callnr",
+    "style": 0.84,
+    "cause": "corrected",
+    "text": "K1ABC 599 124",
+    "nrCount": 0,
+    "corrected": true
+  },
+  {
+    "state": "need-callnr",
+    "style": 0.9,
+    "cause": "timeout",
+    "text": "K1ABC",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-callnr",
+    "style": 0.9,
+    "cause": "corrected",
+    "text": "K1ABC",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-callnr",
+    "style": 0.99,
+    "cause": "timeout",
+    "text": "K1ABC K1ABC",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-callnr",
+    "style": 0.99,
+    "cause": "corrected",
+    "text": "K1ABC K1ABC",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-end",
+    "style": 0.01,
+    "cause": "timeout",
+    "text": "R 599 124",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-end",
+    "style": 0.01,
+    "cause": "corrected",
+    "text": "R 599 124",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-end",
+    "style": 0.2,
+    "cause": "timeout",
+    "text": "R 599 124",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-end",
+    "style": 0.2,
+    "cause": "corrected",
+    "text": "R 599 124",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-end",
+    "style": 0.4,
+    "cause": "timeout",
+    "text": "R 599 124",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-end",
+    "style": 0.4,
+    "cause": "corrected",
+    "text": "R 599 124",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-end",
+    "style": 0.7,
+    "cause": "timeout",
+    "text": "R 599 124",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-end",
+    "style": 0.7,
+    "cause": "corrected",
+    "text": "R 599 124",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-end",
+    "style": 0.84,
+    "cause": "timeout",
+    "text": "R 599 124",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-end",
+    "style": 0.84,
+    "cause": "corrected",
+    "text": "R 599 124",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-end",
+    "style": 0.9,
+    "cause": "timeout",
+    "text": "R 599 124",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-end",
+    "style": 0.9,
+    "cause": "corrected",
+    "text": "R 599 124",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-end",
+    "style": 0.99,
+    "cause": "timeout",
+    "text": "R 599 124",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "need-end",
+    "style": 0.99,
+    "cause": "corrected",
+    "text": "R 599 124",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "done",
+    "style": 0.01,
+    "cause": "timeout",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "done",
+    "style": 0.01,
+    "cause": "corrected",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "done",
+    "style": 0.2,
+    "cause": "timeout",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "done",
+    "style": 0.2,
+    "cause": "corrected",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "done",
+    "style": 0.4,
+    "cause": "timeout",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "done",
+    "style": 0.4,
+    "cause": "corrected",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "done",
+    "style": 0.7,
+    "cause": "timeout",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "done",
+    "style": 0.7,
+    "cause": "corrected",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "done",
+    "style": 0.84,
+    "cause": "timeout",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "done",
+    "style": 0.84,
+    "cause": "corrected",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "done",
+    "style": 0.9,
+    "cause": "timeout",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "done",
+    "style": 0.9,
+    "cause": "corrected",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "done",
+    "style": 0.99,
+    "cause": "timeout",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "done",
+    "style": 0.99,
+    "cause": "corrected",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "failed",
+    "style": 0.01,
+    "cause": "timeout",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "failed",
+    "style": 0.01,
+    "cause": "corrected",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "failed",
+    "style": 0.2,
+    "cause": "timeout",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "failed",
+    "style": 0.2,
+    "cause": "corrected",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "failed",
+    "style": 0.4,
+    "cause": "timeout",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "failed",
+    "style": 0.4,
+    "cause": "corrected",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "failed",
+    "style": 0.7,
+    "cause": "timeout",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "failed",
+    "style": 0.7,
+    "cause": "corrected",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "failed",
+    "style": 0.84,
+    "cause": "timeout",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "failed",
+    "style": 0.84,
+    "cause": "corrected",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "failed",
+    "style": 0.9,
+    "cause": "timeout",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "failed",
+    "style": 0.9,
+    "cause": "corrected",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "failed",
+    "style": 0.99,
+    "cause": "timeout",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  },
+  {
+    "state": "failed",
+    "style": 0.99,
+    "cause": "corrected",
+    "text": "",
+    "nrCount": 0,
+    "corrected": false
+  }
+]
