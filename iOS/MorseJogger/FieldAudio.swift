@@ -239,14 +239,6 @@ private final class AudioRetirementRing: @unchecked Sendable {
     }
 }
 
-enum MorseJoggerAudioDiagnostics {
-    static let enabled = ProcessInfo.processInfo.environment["CWFIELD_AUDIO_DIAGNOSTICS"] == "1"
-    static func log(_ message: @autoclosure () -> String) {
-        guard enabled else { return }
-        NSLog("%@", message())
-    }
-}
-
 // MARK: - Render state
 
 /// Everything the render callback reads and writes.
@@ -527,7 +519,6 @@ private final class MRCEAudioRenderState: @unchecked Sendable {
     /// so sounds reach the render thread in the order they were asked for
     /// and a cancel cannot overtake the sound it cancels.
     nonisolated private static let audioQueue = DispatchQueue(label: "MorseJogger.audio-graph", qos: .default)
-    nonisolated private static let diagnosticsQueue = DispatchQueue(label: "MorseJogger.audio-diagnostics", qos: .utility)
     nonisolated private static let recordingQueue = DispatchQueue(label: "MorseJogger.audio-recording", qos: .utility)
 
     /// Keep graph work serialized while allowing a blocking engine stop to run
@@ -590,7 +581,7 @@ private final class MRCEAudioRenderState: @unchecked Sendable {
     /// result is ignored.
     private var lifecycleGeneration = 0
     private var suspended = false
-    private var diagnosticObservers: [NSObjectProtocol] = []
+    private var audioSystemObservers: [NSObjectProtocol] = []
 
     // Recording.
     private var recording: AVAudioFile?
@@ -617,7 +608,7 @@ private final class MRCEAudioRenderState: @unchecked Sendable {
     }
 
     deinit {
-        diagnosticObservers.forEach(NotificationCenter.default.removeObserver)
+        audioSystemObservers.forEach(NotificationCenter.default.removeObserver)
     }
 
     /// The source node's render callback. Renders one channel and copies it to
@@ -649,62 +640,18 @@ private final class MRCEAudioRenderState: @unchecked Sendable {
         return noErr
     }
 
-    /// Restarts the engine after a route or configuration change, and logs
-    /// audio-system events when diagnostics are switched on.
+    /// Restarts the engine after a route or configuration change.
     private func observeAudioSystem() {
         let center = NotificationCenter.default
         let session = AVAudioSession.sharedInstance()
         let engine = engine, renderState = renderState
 
-        diagnosticObservers.append(center.addObserver(forName: AVAudioSession.routeChangeNotification, object: session, queue: nil) { note in
+        audioSystemObservers.append(center.addObserver(forName: AVAudioSession.routeChangeNotification, object: session, queue: nil) { _ in
             Self.audioGraphAsync { Self.restartEngineIfNeeded(engine, renderState: renderState) }
-            guard MorseJoggerAudioDiagnostics.enabled else { return }
-            let reason = (note.userInfo?[AVAudioSessionRouteChangeReasonKey] as? UInt)
-                .flatMap(AVAudioSession.RouteChangeReason.init(rawValue:))
-            let previous = (note.userInfo?[AVAudioSessionRouteChangePreviousRouteKey] as? AVAudioSessionRouteDescription)?
-                .outputs.map { String(describing: $0.portType) }.joined(separator: ",") ?? "unknown"
-            let current = session.currentRoute.outputs.map { String(describing: $0.portType) }.joined(separator: ",")
-            Self.logDiagnostic("routeChange reason=\(reason.map { String(describing: $0) } ?? "unknown") old=\(previous) new=\(current)")
         })
-        diagnosticObservers.append(center.addObserver(forName: AVAudioSession.interruptionNotification, object: session, queue: nil) { note in
-            guard MorseJoggerAudioDiagnostics.enabled else { return }
-            let kind = (note.userInfo?[AVAudioSessionInterruptionTypeKey] as? UInt)
-                .flatMap(AVAudioSession.InterruptionType.init(rawValue:))
-            Self.logDiagnostic("interruption=\(kind.map { String(describing: $0) } ?? "unknown")")
+        audioSystemObservers.append(center.addObserver(forName: .AVAudioEngineConfigurationChange, object: engine, queue: nil) { _ in
+            Self.audioGraphAsync { Self.restartEngineIfNeeded(engine, renderState: renderState) }
         })
-        diagnosticObservers.append(center.addObserver(forName: .AVAudioEngineConfigurationChange, object: engine, queue: nil) { _ in
-            Self.audioGraphAsync {
-                Self.restartEngineIfNeeded(engine, renderState: renderState)
-                guard MorseJoggerAudioDiagnostics.enabled else { return }
-                let sampleRate = engine.outputNode.outputFormat(forBus: 0).sampleRate
-                Self.logDiagnostic("engineConfig running=\(engine.isRunning ? "yes" : "no") sampleRate=\(Int(sampleRate))")
-            }
-        })
-        // The keyboard appearing has coincided with audio glitches before, so
-        // diagnostics record how long the graph queue takes to respond to it.
-        let keyboardEvents = [(UIResponder.keyboardWillShowNotification, "keyboardWillShow"),
-                              (UIResponder.keyboardDidShowNotification, "keyboardDidShow"),
-                              (UIResponder.keyboardWillHideNotification, "keyboardWillHide"),
-                              (UIResponder.keyboardDidHideNotification, "keyboardDidHide")]
-        for (name, label) in keyboardEvents {
-            diagnosticObservers.append(center.addObserver(forName: name, object: nil, queue: nil) { _ in
-                guard MorseJoggerAudioDiagnostics.enabled else { return }
-                let postedAt = ProcessInfo.processInfo.systemUptime
-                Self.audioGraphAsync {
-                    let delayMs = (ProcessInfo.processInfo.systemUptime - postedAt) * 1000
-                    Self.logDiagnostic("\(label) graphQueueDelayMs=\(String(format: "%.1f", delayMs)) engine=\(engine.isRunning ? "running" : "stopped")")
-                }
-            })
-        }
-    }
-
-    /// Timestamps a diagnostic line and writes it off the calling thread.
-    nonisolated private static func logDiagnostic(_ message: String) {
-        guard MorseJoggerAudioDiagnostics.enabled else { return }
-        let uptime = ProcessInfo.processInfo.systemUptime
-        diagnosticsQueue.async {
-            MorseJoggerAudioDiagnostics.log(String(format: "CW Field audio diag t=%.3f ", uptime) + message)
-        }
     }
 
     nonisolated private static func restartEngineIfNeeded(_ engine: AVAudioEngine, renderState: MRCEAudioRenderState) {
@@ -732,7 +679,6 @@ private final class MRCEAudioRenderState: @unchecked Sendable {
                 // Plain playback: other apps' audio stops while a session runs.
                 try session.setCategory(.playback, mode: .default)
                 try session.setActive(true)
-                if MorseJoggerAudioDiagnostics.enabled { Self.logDiagnostic("sessionActive rate=\(Int(session.sampleRate)) ioBuffer=\(String(format: "%.4f", session.ioBufferDuration))") }
                 result = .success(())
             } catch { result = .failure(error) }
             DispatchQueue.main.async { [weak self] in
@@ -837,12 +783,7 @@ private final class MRCEAudioRenderState: @unchecked Sendable {
         endRecording { [weak self] in
             guard let self, self.lifecycleGeneration == generation else { return }
             Self.audioGraphAsync(qos: .default) { [weak self] in
-                let stopStartedAt = ProcessInfo.processInfo.systemUptime
                 engine.stop()
-                if MorseJoggerAudioDiagnostics.enabled {
-                    let stopMs = (ProcessInfo.processInfo.systemUptime - stopStartedAt) * 1000
-                    Self.logDiagnostic("shutdownStop operationMs=\(String(format: "%.1f", stopMs))")
-                }
                 DispatchQueue.main.async { [weak self] in
                     guard let self, self.lifecycleGeneration == generation else { return }
                     Self.audioSessionQueue.async {

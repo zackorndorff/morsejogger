@@ -651,13 +651,11 @@ struct FieldActivityPresentation: Equatable, Identifiable {
         }
         session.onAudioSuspend = { [weak self] in
             guard let self else { return }; self.audio.suspend()
-            MorseJoggerAudioDiagnostics.log(String(format:"CW Field audio diag t=%.3f appSuspended",ProcessInfo.processInfo.systemUptime))
         }
         session.onAudioResume = { [weak self] completion in
             guard let self else { completion(.failure(.suspended)); return }
             self.audio.resume { result in
                 if case .success = result {
-                    MorseJoggerAudioDiagnostics.log(String(format:"CW Field audio diag t=%.3f appResumed",ProcessInfo.processInfo.systemUptime))
                     self.audioRecoveryAvailable=false
                 }
                 completion(result)
@@ -715,8 +713,7 @@ struct FieldActivityPresentation: Equatable, Identifiable {
         exchangeSecond=hint.value+" "
         insertedSweepstakesHint=(hint.call,exchangeSecond)
     }
-    func sceneDidChange(active:Bool,source:String = "unspecified",clearStaleInterruption:Bool = false) {
-        MorseJoggerAudioDiagnostics.log(String(format:"CW Field audio diag t=%.3f lifecycle source=%@ active=%@",ProcessInfo.processInfo.systemUptime,source,active ? "true" : "false"))
+    func sceneDidChange(active:Bool,clearStaleInterruption:Bool = false) {
         session.sceneDidChange(active:active)
         if !active {flushSettingsSave();foregroundReconciliation += 1;foregroundReconciliationPending=false}
         // Catalyst may not deliver an AVAudioSession interruption-ended event
@@ -724,7 +721,6 @@ struct FieldActivityPresentation: Equatable, Identifiable {
         // only that stale audio latch; iOS scene transitions retain the normal
         // interruption notification contract.
         if active && clearStaleInterruption && session.isAudioInterrupted {
-            MorseJoggerAudioDiagnostics.log("CW Field lifecycle: clearing stale audio interruption on app activation")
             session.clearStaleInterruption()
         } else if active && session.isAudioInterrupted && !session.areSessionControlsPresented {
             reconcileForegroundAudioInterruption()
@@ -734,7 +730,6 @@ struct FieldActivityPresentation: Equatable, Identifiable {
         // their own pause until their corresponding lifecycle event ends.
     }
     func audioInterruption(began:Bool) {
-        MorseJoggerAudioDiagnostics.log(String(format:"CW Field audio diag t=%.3f interruptionSignal=%@",ProcessInfo.processInfo.systemUptime,began ? "began" : "ended"))
         foregroundReconciliation += 1;foregroundReconciliationPending=false
         session.audioInterruption(began:began)
     }
@@ -759,7 +754,6 @@ struct FieldActivityPresentation: Equatable, Identifiable {
             guard self.session.isSceneActive, !self.session.areSessionControlsPresented,
                   self.session.isAudioInterrupted else {return}
             guard canActivate else {return}
-            MorseJoggerAudioDiagnostics.log("CW Field lifecycle: audio session reactivated; clearing stale interruption")
             self.session.clearStaleInterruption()
         }
     }

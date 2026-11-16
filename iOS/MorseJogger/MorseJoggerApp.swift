@@ -17,17 +17,17 @@ struct MorseJoggerApp: App {
             RootView()
                 .environmentObject(app)
                 .tint(.orange)
-                .onChange(of:scenePhase) { _,phase in app.sceneDidChange(active:phase == .active,source:"SwiftUI scenePhase: \(phase)") }
+                .onChange(of:scenePhase) { _,phase in app.sceneDidChange(active:phase == .active) }
                 // UIKit application notifications complement scenePhase. They
                 // cover app-level activation edges on iPhone and Catalyst.
                 .onReceive(NotificationCenter.default.publisher(for:UIApplication.willResignActiveNotification)) { _ in
-                    app.sceneDidChange(active:false,source:"UIApplication willResignActive")
+                    app.sceneDidChange(active:false)
                 }
                 .onReceive(NotificationCenter.default.publisher(for:UIApplication.didBecomeActiveNotification)) { _ in
                     #if targetEnvironment(macCatalyst)
-                    app.sceneDidChange(active:true,source:"UIApplication didBecomeActive",clearStaleInterruption:true)
+                    app.sceneDidChange(active:true,clearStaleInterruption:true)
                     #else
-                    app.sceneDidChange(active:true,source:"UIApplication didBecomeActive")
+                    app.sceneDidChange(active:true)
                     #endif
                 }
                 .onReceive(NotificationCenter.default.publisher(for:AVAudioSession.interruptionNotification)) { event in
