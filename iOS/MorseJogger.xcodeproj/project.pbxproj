@@ -37,9 +37,9 @@
 		D77AD7C44DBE889A25D1F3A2 /* SessionDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDriver.swift; sourceTree = "<group>"; };
 		F00D00000000000000000002 /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
 		F00D00000000000000000004 /* FieldFileServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldFileServices.swift; sourceTree = "<group>"; };
-		F2E449A01B776A590D52A6C8 /* SCPDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCPDataService.swift; sourceTree = "<group>"; };
 		F00D00000000000000000005 /* MorseJogger.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = MorseJogger.xcconfig; sourceTree = "<group>"; };
 		F00D00000000000000000006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2E449A01B776A590D52A6C8 /* SCPDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCPDataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
