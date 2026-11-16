@@ -106,7 +106,7 @@ public enum CallerSpeedMode: String, Codable, Sendable {
 }
 
 public struct ContestSettings: Codable, Equatable, Sendable {
-    public var myCall="VE3NEA"
+    public var myCall="N0CALL"
     /// Operator exchange overrides keyed by contest; absent entries use contest defaults.
     public var operatorExchangeProfiles: [String:OperatorExchangeProfile]? = nil
     public var contest: ContestID = .wpx, mode: SessionMode = .pileup
