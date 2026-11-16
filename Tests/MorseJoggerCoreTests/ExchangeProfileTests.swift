@@ -11,7 +11,7 @@ final class ExchangeProfileTests:XCTestCase {
         let cases:[(ContestID,String)] = [
             (.wpx,"5NN 007"),(.cwt,"DAVID 123"),(.fieldday,"3A OR"),(.naqp,"ALEX ON"),
             (.hst,"5NN 007"),(.cqww,"5NN 3"),(.sst,"BRUCE MA"),
-            (.allja,"5NN 10H"),(.acag,"5NN 1002H"),(.iaru,"5NN 6"),(.sweepstakes,"7 A VE3NEA 72 OR"),(.arrl10,"5NN OR")
+            (.allja,"5NN 10H"),(.acag,"5NN 1002H"),(.iaru,"5NN 6"),(.sweepstakes,"7 A N0CALL 72 OR"),(.arrl10,"5NN OR")
         ]
         for (contest,expected) in cases {
             var settings=ContestSettings();settings.contest=contest

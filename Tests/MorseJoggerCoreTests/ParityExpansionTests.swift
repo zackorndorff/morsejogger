@@ -13,7 +13,7 @@ import XCTest
 
 final class ParityExpansionTests: XCTestCase {
     func testContestSpecificSerialFormattingAndStableCustomCallerBranch() {
-        var settings=ContestSettings()
+        var settings=ContestSettings();settings.myCall="VE3NEA"
         settings.contest = .sweepstakes
         XCTAssertEqual(ContestRules.sentExchange(settings,serial:1),"1 A VE3NEA 72 OR")
         settings.contest = .arrl10

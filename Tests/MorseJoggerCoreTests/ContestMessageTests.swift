@@ -130,7 +130,7 @@ final class ContestMessageTests: XCTestCase {
     }
 
     private func transmitted(_ contest: ContestID, _ command: Command, call: String = "") -> [String] {
-        var settings = ContestSettings()
+        var settings = ContestSettings(); settings.myCall = "VE3NEA"
         settings.contest = contest; settings.mode = .single; settings.seed = 7
         let game = ContestSimulator(settings: settings)
         game.start(); game.tick(0.5)

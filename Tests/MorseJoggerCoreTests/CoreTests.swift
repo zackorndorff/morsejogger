@@ -10,7 +10,7 @@ final class CoreTests:XCTestCase {
     func testProfilesAndDefaultSettings() {
         XCTAssertEqual(ContestID.allCases.count,14)
         let s=ContestSettings()
-        XCTAssertEqual(s.myCall,"VE3NEA");XCTAssertEqual(s.wpm,25);XCTAssertEqual(s.activity,2)
+        XCTAssertEqual(s.myCall,"N0CALL");XCTAssertEqual(s.wpm,25);XCTAssertEqual(s.activity,2)
         XCTAssertEqual(s.duration,30);XCTAssertEqual(s.bandwidth,500);XCTAssertEqual(s.pitch,600)
         XCTAssertFalse(s.effects.qrm)
     }
@@ -290,7 +290,7 @@ final class OperatorTransitionTests: XCTestCase {
         XCTAssertTrue(game.settings.effects.qrm)
     }
     func testOwnCallAndNilTouchCommandsEmitTxEvents() {
-        var options=ContestSettings();options.mode = .single;options.seed=7
+        var options=ContestSettings();options.myCall="VE3NEA";options.mode = .single;options.seed=7
         let game=ContestSimulator(settings:options);game.start();game.tick(6.0 * 512.0 / 11025.0)
         _ = game.drainEvents()
         game.command(.mycall)

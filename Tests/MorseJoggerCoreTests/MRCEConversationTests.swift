@@ -60,6 +60,8 @@ final class MRCEConversationTests: XCTestCase {
 
         for scenario in document.scenarios {
             var settings = ContestSettings()
+            // The compiled-Pascal transcripts were recorded with MRCE's default call.
+            settings.myCall = "VE3NEA"
             settings.contest = try XCTUnwrap(ContestID(rawValue: scenario.settings.contest))
             settings.mode = try XCTUnwrap(SessionMode(rawValue: scenario.settings.mode))
             settings.seed = scenario.settings.seed

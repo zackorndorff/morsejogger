@@ -25,7 +25,10 @@ final class SourceFixtureTests:XCTestCase {
         let vectors=try JSONDecoder().decode(SourceFixture.self,from:Data(contentsOf:url))
         XCTAssertEqual(vectors.entries.count,84)
         for item in vectors.entries {
-            var settings=ContestSettings();settings.contest=try XCTUnwrap(ContestID(rawValue:item.contest))
+            // The fixtures were generated with VE3NEA as the operator, and
+            // operator-relative scoring (CQWW zone/continent points) depends on it.
+            var settings=ContestSettings();settings.myCall="VE3NEA"
+            settings.contest=try XCTUnwrap(ContestID(rawValue:item.contest))
             var st=Station(call:item.call,exchange:"599 012",wpm:25,tone:600,volume:1,shift:0)
             st.state=item.state;st.section=item.section;st.jaPref="10";st.jaCity="1002";st.serial=12
             let actual=ContestRules.score(settings,station:st)

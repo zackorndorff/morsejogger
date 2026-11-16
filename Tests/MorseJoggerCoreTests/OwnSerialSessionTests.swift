@@ -35,7 +35,7 @@ final class OwnSerialSessionTests:XCTestCase {
     }
 
     func testSweepstakesUnpaddedSerialIsSharedByRepeatedTXAndSavedLog() {
-        var settings=ContestSettings();settings.contest = .sweepstakes;settings.mode = .single;settings.seed=713
+        var settings=ContestSettings();settings.myCall="VE3NEA";settings.contest = .sweepstakes;settings.mode = .single;settings.seed=713
         var profile=settings.exchangeProfile();profile.check="86";profile.section="ON";settings.setExchangeProfile(profile)
         let game=ContestSimulator(settings:settings);startSingle(game);_ = game.drainEvents()
         game.command(.exchange);game.command(.exchange)
