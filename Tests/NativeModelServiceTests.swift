@@ -6,15 +6,42 @@
 import Foundation
 import MorseJoggerCore
 
+/// Answers `api/v1/files` from `listingETag`, and counts those requests in
+/// `listingHeaders`. Every other request is a download, counted in
+/// `requestCount`/`requestHeaders` and answered by `requestHandler`; a status
+/// of 0 drops the connection without any HTTP response.
 final class RetryURLProtocol: URLProtocol {
     nonisolated(unsafe) static var requestHeaders: [[String: String]] = []
     nonisolated(unsafe) static var responseBody = Data("valid".utf8)
     nonisolated(unsafe) static var requestHandler: ((URLRequest, Int) -> Int) = { _, _ in 200 }
     nonisolated(unsafe) static var requestCount = 0
+    nonisolated(unsafe) static var listingHeaders: [[String: String]] = []
+    nonisolated(unsafe) static var listingETag = "listed-tag"
+    /// Fail the listing without any HTTP response, as when offline.
+    nonisolated(unsafe) static var listingOffline = false
+
+    static func reset() {
+        requestHeaders = []; requestCount = 0; requestHandler = { _, _ in 200 }
+        listingHeaders = []; listingETag = "listed-tag"; listingOffline = false
+    }
 
     override class func canInit(with request: URLRequest) -> Bool { true }
     override class func canonicalRequest(for request: URLRequest) -> URLRequest { request }
     override func startLoading() {
+        if request.url?.path == "/api/v1/files" {
+            Self.listingHeaders.append(["User-Agent": request.value(forHTTPHeaderField: "User-Agent") ?? ""])
+            if Self.listingOffline {
+                client?.urlProtocol(self, didFailWithError: URLError(.notConnectedToInternet))
+                return
+            }
+            let body = Data(#"[{"name":"MASTER.DTA","size":10,"etag":"other"},{"name":"MASTER.SCP","size":5,"etag":"\#(Self.listingETag)"}]"#.utf8)
+            let response = HTTPURLResponse(url: request.url!, statusCode: 200, httpVersion: "HTTP/1.1",
+                                           headerFields: ["Content-Type": "application/json"])!
+            client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: .notAllowed)
+            client?.urlProtocol(self, didLoad: body)
+            client?.urlProtocolDidFinishLoading(self)
+            return
+        }
         let index = Self.requestCount
         Self.requestCount += 1
         Self.requestHeaders.append([
@@ -23,6 +50,10 @@ final class RetryURLProtocol: URLProtocol {
             "User-Agent": request.value(forHTTPHeaderField: "User-Agent") ?? ""
         ])
         let status = Self.requestHandler(request, index)
+        if status == 0 {
+            client?.urlProtocol(self, didFailWithError: URLError(.networkConnectionLost))
+            return
+        }
         let response = HTTPURLResponse(url: request.url!, statusCode: status,
             httpVersion: "HTTP/1.1", headerFields: status == 200 ? ["ETag": "new-tag"] : nil)!
         client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: .notAllowed)
@@ -44,7 +75,12 @@ struct NativeModelServiceTests {
         try await test304WithoutCachedBodyRetriesUnconditionally()
         try testUserAgentRequiresVersion()
         try await testRefreshWithoutVersionSendsNoRequest()
-        print("Native model/service checks passed (8).")
+        try await testUnchangedListingSkipsDownload()
+        try await testServerIsContactedAtMostOncePerDay()
+        try await testOfflineAttemptDoesNotCountTowardLimit()
+        try await testUserRefreshIsNotLimited()
+        try await testAutomaticRefreshBacksOffAfterTransportFailures()
+        print("Native model/service checks passed (13).")
     }
 
     static func testCallerSpeedSelectionPersists() throws {
@@ -160,41 +196,153 @@ struct NativeModelServiceTests {
 
     static func test304WithoutCachedBodyRetriesUnconditionally() async throws {
         let fixture = try Fixture()
-        let source = URL(string: "https://scp.invalid/MASTER.SCP")!
         let metadata = SCPDataService.Metadata(etag: "old-tag", lastModified: "yesterday",
-            checkedAt: Date(timeIntervalSince1970: 100), source: source.absoluteString, downloadedHash: "old-hash")
+            checkedAt: Date(timeIntervalSince1970: 100), source: testSourceKey, downloadedHash: "old-hash")
         let metadataData = try PropertyListEncoder().encode(metadata)
         try metadataData.write(to: fixture.directory.appendingPathComponent("SCP-cache-metadata.plist"))
 
-        RetryURLProtocol.requestCount = 0
-        RetryURLProtocol.requestHeaders = []
+        RetryURLProtocol.reset()
         RetryURLProtocol.requestHandler = { _, index in index == 0 ? 304 : 200 }
-        let configuration = URLSessionConfiguration.ephemeral
-        configuration.protocolClasses = [RetryURLProtocol.self]
-        let service = SCPDataService(sourceURL: source, session: URLSession(configuration: configuration),
-            directory: fixture.directory, decode: { _ in
-                var history = ImportedHistory()
-                history.calls = ["K1ABC"]
-                return history
-            }, bundleInfo: testBundleInfo)
+        let service = makeService(fixture)
         let refreshed = await service.refresh(force: true)
         try require(refreshed, "unconditional retry should download SCP data")
+        try require(RetryURLProtocol.listingHeaders.count == 1, "the file should be looked up in the listing first")
         try require(RetryURLProtocol.requestCount == 2, "304 without body should make one retry")
         try require(RetryURLProtocol.requestHeaders[0]["If-None-Match"] == "", "missing cache must not send ETag")
         try require(RetryURLProtocol.requestHeaders[1]["If-None-Match"] == "", "retry must be unconditional")
         try require(service.history?.calls == ["K1ABC"], "retry result should populate cache")
-        try require(RetryURLProtocol.requestHeaders.allSatisfy { $0["User-Agent"] == "Morse Jogger v9.8.7 (+test@example.invalid)" },
+        try require((RetryURLProtocol.requestHeaders + RetryURLProtocol.listingHeaders)
+                        .allSatisfy { $0["User-Agent"] == "MorseJogger/9.8.7 (+test@example.invalid)" },
                     "every request should carry the versioned User-Agent")
+    }
+
+    static let testSiteURL = URL(string: "https://scp.invalid/")!
+    static let testSourceKey = "https://scp.invalid/downloads/MASTER.SCP"
+
+    private static func makeService(_ fixture: Fixture, bundleInfo: [String: Any]? = nil,
+                            decode: (@Sendable (Data) throws -> ImportedHistory)? = nil) -> SCPDataService {
+        let configuration = URLSessionConfiguration.ephemeral
+        configuration.protocolClasses = [RetryURLProtocol.self]
+        return SCPDataService(siteURL: testSiteURL, session: URLSession(configuration: configuration),
+            directory: fixture.directory,
+            decode: decode ?? { _ in var history = ImportedHistory(); history.calls = ["K1ABC"]; return history },
+            bundleInfo: bundleInfo ?? testBundleInfo)
+    }
+
+    static func testUnchangedListingSkipsDownload() async throws {
+        let fixture = try Fixture()
+        try Data("cached".utf8).write(to: fixture.directory.appendingPathComponent("MASTER.SCP"))
+        // Headers quote the ETag; the listing does not.
+        let metadata = SCPDataService.Metadata(etag: "\"same-tag\"", lastModified: "yesterday",
+            checkedAt: Date(timeIntervalSince1970: 100), source: testSourceKey, downloadedHash: nil)
+        try PropertyListEncoder().encode(metadata).write(to: fixture.directory.appendingPathComponent("SCP-cache-metadata.plist"))
+        RetryURLProtocol.reset()
+        RetryURLProtocol.listingETag = "same-tag"
+        let service = makeService(fixture)
+        let refreshed = await service.refresh(force: true)
+        try require(refreshed, "an unchanged file should count as a successful check")
+        try require(RetryURLProtocol.listingHeaders.count == 1, "the listing should be checked")
+        try require(RetryURLProtocol.requestCount == 0, "an unchanged ETag must not download the file")
+        try require(service.history?.calls == ["K1ABC"], "the saved copy should stay in use")
+    }
+
+    static func testServerIsContactedAtMostOncePerDay() async throws {
+        let fixture = try Fixture()
+        RetryURLProtocol.reset()
+        struct Unparseable: Error {}
+        let start = Date(timeIntervalSince1970: 1_000_000)
+        let failing = makeService(fixture, decode: { _ in throw Unparseable() })
+        let first = await failing.refresh(force: true, automatic: true, now: start)
+        try require(!first, "an unusable download should fail")
+        try require(RetryURLProtocol.listingHeaders.count == 1 && RetryURLProtocol.requestCount == 1, "the first attempt should reach the server")
+        _ = await failing.refresh(force: true, automatic: true, now: start.addingTimeInterval(60 * 60))
+        try require(RetryURLProtocol.listingHeaders.count == 1 && RetryURLProtocol.requestCount == 1,
+                    "a second attempt within a day must not contact the server")
+        // The limit survives a relaunch.
+        let relaunched = makeService(fixture)
+        _ = await relaunched.refresh(force: true, automatic: true, now: start.addingTimeInterval(2 * 60 * 60))
+        try require(RetryURLProtocol.listingHeaders.count == 1, "the saved contact time should hold after a relaunch")
+        let later = await relaunched.refresh(force: true, automatic: true, now: start.addingTimeInterval(25 * 60 * 60))
+        try require(later, "an attempt after a day should be allowed")
+        try require(RetryURLProtocol.listingHeaders.count == 2, "the server should be contacted again after a day")
+    }
+
+    static func testUserRefreshIsNotLimited() async throws {
+        let fixture = try Fixture()
+        RetryURLProtocol.reset()
+        let start = Date(timeIntervalSince1970: 1_000_000)
+        let service = makeService(fixture)
+        let first = await service.refresh(force: true, automatic: true, now: start)
+        try require(first, "the first check should download the file")
+        _ = await service.refresh(force: true, now: start.addingTimeInterval(60))
+        try require(RetryURLProtocol.listingHeaders.count == 2,
+                    "a refresh the user asks for must go ahead within the day")
+        _ = await service.refresh(force: true, automatic: true, now: start.addingTimeInterval(120))
+        try require(RetryURLProtocol.listingHeaders.count == 2,
+                    "the user's check should still count toward the automatic limit")
+    }
+
+    /// A download that drops after the listing answered must not use up the
+    /// daily check; automatic retries wait one minute, then two.
+    static func testAutomaticRefreshBacksOffAfterTransportFailures() async throws {
+        let fixture = try Fixture()
+        RetryURLProtocol.reset()
+        RetryURLProtocol.requestHandler = { _, index in index < 2 ? 0 : 200 }
+        let start = Date(timeIntervalSince1970: 1_000_000)
+        func attempt(_ service: SCPDataService, at offset: TimeInterval, automatic: Bool = true) async -> Bool {
+            await service.refresh(force: true, automatic: automatic, now: start.addingTimeInterval(offset))
+        }
+        let service = makeService(fixture)
+        let dropped = await attempt(service, at: 0)
+        try require(!dropped && RetryURLProtocol.requestCount == 1, "the first download should drop")
+        _ = await attempt(service, at: 30)
+        try require(RetryURLProtocol.listingHeaders.count == 1, "no automatic retry inside the first minute")
+        // The wait survives a relaunch.
+        let relaunched = makeService(fixture)
+        _ = await attempt(relaunched, at: 45)
+        try require(RetryURLProtocol.listingHeaders.count == 1, "the saved wait should hold after a relaunch")
+        let second = await attempt(relaunched, at: 61)
+        try require(!second && RetryURLProtocol.requestCount == 2, "after a minute the retry should run and drop again")
+        _ = await attempt(relaunched, at: 61 + 90)
+        try require(RetryURLProtocol.requestCount == 2, "the second wait should be two minutes")
+        let third = await attempt(relaunched, at: 61 + 121)
+        try require(third && RetryURLProtocol.requestCount == 3, "after two minutes the retry should succeed")
+        try require(SCPDataService.retryDelay(afterFailures: 40) == SCPDataService.minimumContactInterval,
+                    "the wait should stop growing at one day")
+        // The user is never made to wait.
+        let other = try Fixture()
+        RetryURLProtocol.reset()
+        RetryURLProtocol.listingOffline = true
+        let manual = makeService(other)
+        _ = await attempt(manual, at: 0, automatic: false)
+        RetryURLProtocol.listingOffline = false
+        let retried = await attempt(manual, at: 1, automatic: false)
+        try require(retried, "a refresh the user asks for should ignore the wait")
+    }
+
+    static func testOfflineAttemptDoesNotCountTowardLimit() async throws {
+        let fixture = try Fixture()
+        RetryURLProtocol.reset()
+        RetryURLProtocol.listingOffline = true
+        let start = Date(timeIntervalSince1970: 1_000_000)
+        let service = makeService(fixture)
+        let offline = await service.refresh(force: true, now: start)
+        try require(!offline, "an offline attempt should fail")
+        RetryURLProtocol.listingOffline = false
+        let online = await service.refresh(force: true, now: start.addingTimeInterval(60))
+        try require(online, "an attempt that never reached the server must not block the next one")
+        try require(RetryURLProtocol.listingHeaders.count == 2 && RetryURLProtocol.requestCount == 1,
+                    "the retry should look up and download the file")
     }
 
     static let testBundleInfo: [String: Any] = ["CFBundleShortVersionString": "9.8.7", "SCPContact": "test@example.invalid"]
 
     static func testUserAgentRequiresVersion() throws {
-        try require(SCPDataService.userAgent(info: testBundleInfo) == "Morse Jogger v9.8.7 (+test@example.invalid)",
+        try require(SCPDataService.userAgent(info: testBundleInfo) == "MorseJogger/9.8.7 (+test@example.invalid)",
                     "User-Agent should carry version and contact")
-        try require(SCPDataService.userAgent(info: ["CFBundleShortVersionString": "9.8.7", "SCPContact": " "]) == "Morse Jogger v9.8.7",
+        try require(SCPDataService.userAgent(info: ["CFBundleShortVersionString": "9.8.7", "SCPContact": " "]) == "MorseJogger/9.8.7",
                     "an empty contact should be left out")
-        try require(SCPDataService.userAgent(info: ["CFBundleShortVersionString": "9.8.7"]) == "Morse Jogger v9.8.7",
+        try require(SCPDataService.userAgent(info: ["CFBundleShortVersionString": "9.8.7"]) == "MorseJogger/9.8.7",
                     "a missing contact should be left out")
         try require(SCPDataService.userAgent(info: ["SCPContact": "test@example.invalid"]) == nil,
                     "no version should give no User-Agent")
@@ -204,18 +352,12 @@ struct NativeModelServiceTests {
 
     static func testRefreshWithoutVersionSendsNoRequest() async throws {
         let fixture = try Fixture()
-        RetryURLProtocol.requestCount = 0
-        RetryURLProtocol.requestHeaders = []
-        RetryURLProtocol.requestHandler = { _, _ in 200 }
-        let configuration = URLSessionConfiguration.ephemeral
-        configuration.protocolClasses = [RetryURLProtocol.self]
-        let service = SCPDataService(sourceURL: URL(string: "https://scp.invalid/MASTER.SCP")!,
-            session: URLSession(configuration: configuration), directory: fixture.directory,
-            decode: { _ in var history = ImportedHistory(); history.calls = ["K1ABC"]; return history },
-            bundleInfo: ["SCPContact": "test@example.invalid"])
+        RetryURLProtocol.reset()
+        let service = makeService(fixture, bundleInfo: ["SCPContact": "test@example.invalid"])
         let refreshed = await service.refresh(force: true)
         try require(!refreshed, "refresh without a version should fail")
-        try require(RetryURLProtocol.requestCount == 0, "no request may be sent without a version")
+        try require(RetryURLProtocol.requestCount == 0 && RetryURLProtocol.listingHeaders.isEmpty,
+                    "no request may be sent without a version")
         try require(service.status == SCPDataService.CacheError.missingVersion.localizedDescription,
                     "status should say why SCP was not downloaded")
     }

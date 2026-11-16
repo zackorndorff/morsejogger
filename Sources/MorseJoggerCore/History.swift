@@ -298,14 +298,14 @@ public enum HistoryImport {
         }
         var history=ImportedHistory();history.sourceName="Super Check Partial"
         var seen:Set<String>=[]
-        var sawOfficialHeader=false
+        var sawOrderHeader=false
         for rawLine in normalized.components(separatedBy:"\n") {
             let line=rawLine.trimmingCharacters(in:.whitespacesAndNewlines)
             guard !line.isEmpty,
                   !line.hasPrefix("#"),!line.hasPrefix(";") else {continue}
             // MASTER.SCP identifies its one-call-per-line format explicitly.
             if line.hasPrefix("!") {
-                if line.uppercased() == "!!ORDER,1,1" { sawOfficialHeader=true }
+                if line.uppercased() == "!!ORDER,1,1" { sawOrderHeader=true }
                 continue
             }
             let content=line.split(separator:";",maxSplits:1,omittingEmptySubsequences:false).first ?? ""
@@ -315,7 +315,7 @@ public enum HistoryImport {
                 seen.insert(call);history.calls.append(call)
             }
         }
-        guard sawOfficialHeader else {throw ImportError.invalid("SCP list is missing the !!Order,1,1 header")}
+        guard sawOrderHeader else {throw ImportError.invalid("SCP list is missing the !!Order,1,1 header")}
         guard history.calls.count >= 2 else {throw ImportError.invalid("SCP list has fewer than two valid callsigns")}
         return history
     }

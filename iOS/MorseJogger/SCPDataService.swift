@@ -13,8 +13,24 @@ import MorseJoggerCore
 /// Both files live in Application Support; no user Documents directory is read.
 @MainActor
 final class SCPDataService: ObservableObject {
-    static let officialSourceURL = URL(string: "https://www.supercheckpartial.com/downloads/MASTER.SCP")
-    /// "Morse Jogger v<version> (+<contact>)", or nil when `info` has no
+    /// The Super Check Partial site. Its developer guide asks clients to find
+    /// files through `api/v1/files`; that listing gives each file's name, size
+    /// and ETag but no URL, so the file itself comes from `downloads/<name>`.
+    static let defaultSiteURL = URL(string: "https://www.supercheckpartial.com/")
+    nonisolated static let fileName = "MASTER.SCP"
+    /// The guide asks for no more than one check a day. This limits automatic
+    /// refreshes only: a refresh the user asks for always goes ahead. A check
+    /// counts once the server has answered it, whatever the answer.
+    nonisolated static let minimumContactInterval: TimeInterval = 24 * 60 * 60
+    /// An attempt that ends without an HTTP response (offline, timed out,
+    /// connection dropped) does not count as a check. Automatic refreshes wait
+    /// this long after the first such failure, doubling up to a day.
+    nonisolated static let initialRetryDelay: TimeInterval = 60
+    nonisolated static func retryDelay(afterFailures failures: Int) -> TimeInterval {
+        let doublings = Double(min(max(failures, 1) - 1, 20))
+        return min(initialRetryDelay * pow(2, doublings), minimumContactInterval)
+    }
+    /// "MorseJogger/<version> (+<contact>)", or nil when `info` has no
     /// version. No request is sent without one. The version is
     /// MARKETING_VERSION and the contact is SCP_CONTACT from the gitignored
     /// iOS/Local.xcconfig, both from Info.plist; an empty contact is left out.
@@ -25,7 +41,7 @@ final class SCPDataService: ObservableObject {
             return text
         }
         guard let version = value("CFBundleShortVersionString") else { return nil }
-        var agent = "Morse Jogger v\(version)"
+        var agent = "MorseJogger/\(version)"
         if let contact = value("SCPContact") { agent += " (+\(contact))" }
         return agent
     }
@@ -47,6 +63,27 @@ final class SCPDataService: ObservableObject {
         var checkedAt: Date
         var source: String?
         var downloadedHash: String?
+        /// When the server last answered a check. Absent in older caches.
+        var lastContactAt: Date? = nil
+        /// Attempts in a row that ended without an HTTP response.
+        var transportFailures: Int? = nil
+        /// Earliest time for the next automatic attempt after such a failure.
+        var retryAfter: Date? = nil
+    }
+
+    /// One entry of `api/v1/files`. Only the fields used here are decoded.
+    private struct ListedFile: Decodable {
+        var name: String
+        var size: Int?
+        var etag: String?
+    }
+
+    /// The listing gives bare ETags; HTTP headers quote them and may mark them weak.
+    nonisolated static func normalizedETag(_ tag: String?) -> String? {
+        guard var text = tag?.trimmingCharacters(in: .whitespaces), !text.isEmpty else { return nil }
+        if text.hasPrefix("W/") { text.removeFirst(2) }
+        text = text.trimmingCharacters(in: CharacterSet(charactersIn: "\""))
+        return text.isEmpty ? nil : text
     }
 
     enum CacheError: LocalizedError {
@@ -54,9 +91,11 @@ final class SCPDataService: ObservableObject {
         case invalidResponse
         case missingCachedData
         case missingVersion
+        case notListed
         var errorDescription: String? {
             switch self {
             case .sourceUnavailable: "SCP source is not configured."
+            case .notListed: "The SCP server does not list \(SCPDataService.fileName)."
             case .missingVersion: "SCP download is disabled: this build has no version number."
             case .invalidResponse: "The SCP server returned an unexpected response."
             case .missingCachedData: "No validated SCP cache is available."
@@ -70,7 +109,7 @@ final class SCPDataService: ObservableObject {
     @Published private(set) var lastChecked: Date?
     @Published private(set) var isUsingCustomOverride = false
 
-    private let sourceURL: URL?
+    private let siteURL: URL?
     private let userAgent: String?
     private let decode: @Sendable (Data) throws -> ImportedHistory
     private let directory: URL
@@ -131,13 +170,16 @@ final class SCPDataService: ObservableObject {
     private var databaseURL: URL { directory.appendingPathComponent("MASTER.SCP") }
     private var customOverrideURL: URL { directory.appendingPathComponent("Custom-MASTER.SCP") }
     private var metadataURL: URL { directory.appendingPathComponent("SCP-cache-metadata.plist") }
-    private var sourceKey: String? { sourceURL?.absoluteString }
+    private var listingURL: URL? { siteURL?.appendingPathComponent("api/v1/files") }
+    private var downloadURL: URL? { siteURL?.appendingPathComponent("downloads/\(Self.fileName)") }
+    /// The download URL, as before the listing was used, so existing caches stay valid.
+    private var sourceKey: String? { downloadURL?.absoluteString }
 
-    init(sourceURL: URL?, session: URLSession = .shared,
+    init(siteURL: URL?, session: URLSession = .shared,
          directory: URL? = nil,
          decode: (@Sendable (Data) throws -> ImportedHistory)? = nil,
          bundleInfo: [String: Any]? = nil) {
-        self.sourceURL = sourceURL
+        self.siteURL = siteURL
         self.userAgent = Self.userAgent(info: bundleInfo ?? Bundle.main.infoDictionary ?? [:])
         self.session = session
         self.decode = decode ?? { data in try Self.decodePublishedText(data) }
@@ -280,8 +322,8 @@ final class SCPDataService: ObservableObject {
         refreshTask?.cancel()
     }
 
-    private func performRefresh(now: Date, automatic: Bool, unconditionalRetry: Bool = false) async -> Bool {
-        guard let sourceURL else {
+    private func performRefresh(now: Date, automatic: Bool) async -> Bool {
+        guard let listingURL, let downloadURL else {
             status = history == nil ? CacheError.sourceUnavailable.localizedDescription : "Using saved SCP data; refresh source is unavailable."
             return history != nil
         }
@@ -289,53 +331,57 @@ final class SCPDataService: ObservableObject {
             status = history == nil ? CacheError.missingVersion.localizedDescription : "Using saved SCP data; this build has no version number to download with."
             return history != nil
         }
-        do {
-            var request = URLRequest(url: sourceURL, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 45)
-            request.setValue(userAgent, forHTTPHeaderField: "User-Agent")
-            // Validators are meaningful only when the corresponding downloaded
-            // body was parsed successfully from our durable cache.
-            if !unconditionalRetry, cachedHistory != nil, metadata.source == sourceKey {
-                if let etag = metadata.etag { request.setValue(etag, forHTTPHeaderField: "If-None-Match") }
-                if let modified = metadata.lastModified { request.setValue(modified, forHTTPHeaderField: "If-Modified-Since") }
-            }
-            let (data, response) = try await session.data(for: request)
-            if automatic && Task.isCancelled { return history != nil }
-            guard let response = response as? HTTPURLResponse else { throw CacheError.invalidResponse }
-            if response.statusCode == 304 {
-                guard cachedHistory != nil, metadata.source == sourceKey else {
-                    if !unconditionalRetry { return await performRefresh(now: now, automatic: automatic, unconditionalRetry: true) }
-                    throw CacheError.missingCachedData
+        if automatic {
+            if let last = metadata.lastContactAt {
+                let age = now.timeIntervalSince(last)
+                if age >= 0 && age < Self.minimumContactInterval {
+                    status = history == nil
+                        ? "SCP data was checked less than a day ago and could not be used."
+                        : "SCP data was checked less than a day ago; using saved data."
+                    return history != nil
                 }
-                let saved = await updateMetadata(response: response, checkedAt: now)
+            }
+            if let retryAfter = metadata.retryAfter {
+                // A wait longer than the longest delay means the clock moved.
+                let wait = retryAfter.timeIntervalSince(now)
+                if wait > 0 && wait <= Self.minimumContactInterval {
+                    status = history == nil
+                        ? "The last SCP download did not reach the server; it will be retried later."
+                        : "The last SCP check did not reach the server; using saved data."
+                    return history != nil
+                }
+            }
+        }
+        do {
+            let listed = try await listedFile(at: listingURL, userAgent: userAgent, now: now)
+            if automatic && Task.isCancelled { return history != nil }
+            if let size = listed.size, size > Self.maximumDatabaseBytes {
+                throw ImportError.invalid("SCP database exceeds the 64 MiB limit")
+            }
+            // An unchanged ETag means the saved copy is current: no download.
+            if cachedHistory != nil, metadata.source == sourceKey,
+               let listedTag = Self.normalizedETag(listed.etag), listedTag == Self.normalizedETag(metadata.etag) {
+                noteContact(at: now)
+                let saved = await updateMetadata(response: nil, checkedAt: now)
                 status = saved ? "SCP data checked; saved database is current." : "SCP data checked, but cache metadata could not be saved."
                 return history != nil
             }
-            guard response.statusCode == 200 else { throw CacheError.invalidResponse }
-            guard data.count <= Self.maximumDatabaseBytes else {
-                throw ImportError.invalid("SCP database exceeds the 64 MiB limit")
-            }
-            let decode = self.decode
-            let parsed = try await Task.detached(priority: .utility) { try decode(data) }.value
-            if automatic && Task.isCancelled { return history != nil }
-            guard !parsed.calls.isEmpty else { throw ImportError.invalid("SCP database contains no calls") }
-            let databaseURL = self.databaseURL
-            try await Task.detached(priority: .utility) {
-                try FileManager.default.createDirectory(at: databaseURL.deletingLastPathComponent(), withIntermediateDirectories: true)
-                try data.write(to: databaseURL, options: .atomic)
-            }.value
-            if automatic && Task.isCancelled { return history != nil }
-            cachedHistory = parsed
-            if !isUsingCustomOverride { history = parsed }
-            let saved = await updateMetadata(response: response, checkedAt: now,
-                                             downloadedHash: CacheReader.hash(data))
-            status = isUsingCustomOverride
-                ? "Downloaded SCP cache updated: \(parsed.calls.count.formatted()) calls; custom list remains active."
-                : (saved ? "SCP data updated: \(parsed.calls.count.formatted()) calls."
-                         : "SCP data updated: \(parsed.calls.count.formatted()) calls, but cache metadata could not be saved.")
-            return true
+            return try await download(from: downloadURL, userAgent: userAgent, now: now, automatic: automatic)
         } catch is CancellationError {
             return history != nil
+        } catch let error as URLError where error.code == .cancelled {
+            return history != nil
+        } catch let error as URLError {
+            // No HTTP response: back off instead of using up the daily check.
+            await recordTransportFailure(at: now)
+            status = history == nil
+                ? "SCP data unavailable: \(error.localizedDescription)"
+                : "SCP update failed; using saved data (\(error.localizedDescription))."
+            return history != nil
         } catch {
+            // Every other failure follows an answer from the server.
+            noteContact(at: now)
+            _ = await writeMetadata(metadata)
             status = history == nil
                 ? "SCP data unavailable: \(error.localizedDescription)"
                 : "SCP update failed; using saved data (\(error.localizedDescription))."
@@ -343,27 +389,113 @@ final class SCPDataService: ObservableObject {
         }
     }
 
+    /// Fetches `api/v1/files` and returns the entry for `fileName`.
+    private func listedFile(at url: URL, userAgent: String, now: Date) async throws -> ListedFile {
+        var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 45)
+        request.setValue(userAgent, forHTTPHeaderField: "User-Agent")
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        let (data, response) = try await session.data(for: request)
+        guard let response = response as? HTTPURLResponse else { throw CacheError.invalidResponse }
+        guard response.statusCode == 200,
+              let files = try? JSONDecoder().decode([ListedFile].self, from: data) else { throw CacheError.invalidResponse }
+        guard let file = files.first(where: { $0.name == Self.fileName }) else { throw CacheError.notListed }
+        return file
+    }
+
+    private func download(from url: URL, userAgent: String, now: Date, automatic: Bool,
+                          unconditionalRetry: Bool = false) async throws -> Bool {
+        var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 45)
+        request.setValue(userAgent, forHTTPHeaderField: "User-Agent")
+        // Validators are meaningful only when the corresponding downloaded
+        // body was parsed successfully from our durable cache.
+        if !unconditionalRetry, cachedHistory != nil, metadata.source == sourceKey {
+            if let etag = metadata.etag { request.setValue(etag, forHTTPHeaderField: "If-None-Match") }
+            if let modified = metadata.lastModified { request.setValue(modified, forHTTPHeaderField: "If-Modified-Since") }
+        }
+        let (data, response) = try await session.data(for: request)
+        if automatic && Task.isCancelled { return history != nil }
+        guard let response = response as? HTTPURLResponse else { throw CacheError.invalidResponse }
+        if response.statusCode == 304 {
+            guard cachedHistory != nil, metadata.source == sourceKey else {
+                if !unconditionalRetry {
+                    return try await download(from: url, userAgent: userAgent, now: now, automatic: automatic, unconditionalRetry: true)
+                }
+                throw CacheError.missingCachedData
+            }
+            noteContact(at: now)
+            let saved = await updateMetadata(response: response, checkedAt: now)
+            status = saved ? "SCP data checked; saved database is current." : "SCP data checked, but cache metadata could not be saved."
+            return history != nil
+        }
+        guard response.statusCode == 200 else { throw CacheError.invalidResponse }
+        guard data.count <= Self.maximumDatabaseBytes else {
+            throw ImportError.invalid("SCP database exceeds the 64 MiB limit")
+        }
+        let decode = self.decode
+        let parsed = try await Task.detached(priority: .utility) { try decode(data) }.value
+        if automatic && Task.isCancelled { return history != nil }
+        guard !parsed.calls.isEmpty else { throw ImportError.invalid("SCP database contains no calls") }
+        let databaseURL = self.databaseURL
+        try await Task.detached(priority: .utility) {
+            try FileManager.default.createDirectory(at: databaseURL.deletingLastPathComponent(), withIntermediateDirectories: true)
+            try data.write(to: databaseURL, options: .atomic)
+        }.value
+        if automatic && Task.isCancelled { return history != nil }
+        cachedHistory = parsed
+        if !isUsingCustomOverride { history = parsed }
+        noteContact(at: now)
+        let saved = await updateMetadata(response: response, checkedAt: now,
+                                         downloadedHash: CacheReader.hash(data))
+        status = isUsingCustomOverride
+            ? "Downloaded SCP cache updated: \(parsed.calls.count.formatted()) calls; custom list remains active."
+            : (saved ? "SCP data updated: \(parsed.calls.count.formatted()) calls."
+                     : "SCP data updated: \(parsed.calls.count.formatted()) calls, but cache metadata could not be saved.")
+        return true
+    }
+
+    /// Notes, in memory, that the server answered a check; the caller saves
+    /// it. If the save fails the limit still holds for this run of the app.
+    private func noteContact(at date: Date) {
+        metadata.lastContactAt = date
+        metadata.transportFailures = nil
+        metadata.retryAfter = nil
+    }
+
+    private func recordTransportFailure(at date: Date) async {
+        let failures = (metadata.transportFailures ?? 0) + 1
+        metadata.transportFailures = failures
+        metadata.retryAfter = date.addingTimeInterval(Self.retryDelay(afterFailures: failures))
+        _ = await writeMetadata(metadata)
+    }
+
     @discardableResult
-    private func updateMetadata(response: HTTPURLResponse, checkedAt: Date, downloadedHash: String? = nil) async -> Bool {
+    private func updateMetadata(response: HTTPURLResponse?, checkedAt: Date, downloadedHash: String? = nil) async -> Bool {
         let prior = metadata
-        let updated = Metadata(etag: response.value(forHTTPHeaderField: "ETag") ?? metadata.etag,
-                               lastModified: response.value(forHTTPHeaderField: "Last-Modified") ?? metadata.lastModified,
-                               checkedAt: checkedAt, source: sourceKey,
-                               downloadedHash: downloadedHash ?? metadata.downloadedHash)
-        guard let data = try? PropertyListEncoder().encode(updated) else { return false }
+        var updated = metadata
+        updated.etag = response?.value(forHTTPHeaderField: "ETag") ?? metadata.etag
+        updated.lastModified = response?.value(forHTTPHeaderField: "Last-Modified") ?? metadata.lastModified
+        updated.checkedAt = checkedAt
+        updated.source = sourceKey
+        updated.downloadedHash = downloadedHash ?? metadata.downloadedHash
+        if await writeMetadata(updated) {
+            metadata = updated
+            lastChecked = checkedAt
+            return true
+        }
+        metadata = prior
+        lastChecked = prior.checkedAt == .distantPast ? nil : prior.checkedAt
+        return false
+    }
+
+    private func writeMetadata(_ value: Metadata) async -> Bool {
+        guard let data = try? PropertyListEncoder().encode(value) else { return false }
         let metadataURL = self.metadataURL
         do {
             try await Task.detached(priority: .utility) {
                 try FileManager.default.createDirectory(at: metadataURL.deletingLastPathComponent(), withIntermediateDirectories: true)
                 try data.write(to: metadataURL, options: .atomic)
             }.value
-            metadata = updated
-            lastChecked = checkedAt
             return true
-        } catch {
-            metadata = prior
-            lastChecked = prior.checkedAt == .distantPast ? nil : prior.checkedAt
-            return false
-        }
+        } catch { return false }
     }
 }

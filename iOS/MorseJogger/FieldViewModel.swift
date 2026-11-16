@@ -168,7 +168,7 @@ struct FieldActivityPresentation: Equatable, Identifiable {
         let savedConsent = settingsStore.loadConsent() ?? .unresolved
         scpDownloadConsent = savedConsent
         automaticSCPDownloads = savedConsent == .allow
-        scpData=SCPDataService(sourceURL:SCPDataService.officialSourceURL)
+        scpData=SCPDataService(siteURL:SCPDataService.defaultSiteURL)
         startupRefreshTask = Task { @MainActor [weak self] in
             guard let self else {return false}
             guard let scpData=self.scpData else {return false}
@@ -377,7 +377,9 @@ struct FieldActivityPresentation: Equatable, Identifiable {
     var ssProgress:SweepstakesProgress? {
         settings.contest == .sweepstakes ? SweepstakesParser.parse(call:callsign,exchange:exchange) : nil
     }
-    func start() {
+    /// `userRetry` marks a start the user asked to retry after an SCP failure;
+    /// its download is not held back by the automatic-refresh limits.
+    func start(userRetry: Bool = false) {
         guard settings.configurationError == nil else { return }
         guard !preparingSession else {return}
         guard scpDownloadConsent != .unresolved else {
@@ -417,7 +419,7 @@ struct FieldActivityPresentation: Equatable, Identifiable {
                     return
                 }
                 if scpData.history == nil && self.automaticSCPDownloads {
-                    _ = await scpData.refresh(force:true, automatic:true)
+                    _ = await scpData.refresh(force:true, automatic:!userRetry)
                     self.syncSCPState()
                 }
                 guard self.automaticSCPDownloads else {
@@ -455,7 +457,7 @@ struct FieldActivityPresentation: Equatable, Identifiable {
     }
     func retrySCPFromError() {
         scpStartError=nil
-        start()
+        start(userRetry:true)
     }
     func dismissSCPStartError() { scpStartError=nil }
     private func beginSession() {
