@@ -78,8 +78,19 @@ import MorseJoggerCore
     var isAudioInterrupted: Bool { audioInterrupted }
     var areSessionControlsPresented: Bool { sessionControlsPresented }
 
-    init(monotonicClock: @escaping MonotonicClock = { ProcessInfo.processInfo.systemUptime }) {
+    init(monotonicClock: @escaping MonotonicClock = SessionDriver.suspendingClock()) {
         self.monotonicClock = monotonicClock
+    }
+
+    /// Seconds since this clock was made, on `SuspendingClock`: it never runs
+    /// backwards and does not advance while the device sleeps. Only differences
+    /// between readings are used.
+    nonisolated static func suspendingClock() -> MonotonicClock {
+        let clock = SuspendingClock(), origin = clock.now
+        return {
+            let elapsed = origin.duration(to: clock.now).components
+            return Double(elapsed.seconds) + Double(elapsed.attoseconds) * 1e-18
+        }
     }
 
     private var simulationTime: TimeInterval {
