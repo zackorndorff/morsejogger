@@ -1561,7 +1561,7 @@ public final class ContestSimulator {
         if match.tied.count > 1 && match.confidence < 100 {
             emit(.notice,"Several callers match the partial. Copy their complete callsign.");return
         }
-        guard !typed.contains("?"),exchangeSent,let index=pileup.firstIndex(where:{$0.call==match.call}) else {return}
+        guard !typed.contains("?"),exchangeSent,pileup.contains(where:{$0.call==match.call}) else {return}
         let call=match.call
         if settings.contest == .sweepstakes && settings.showCheckSection>0 && hintRng.random()*100<Double(settings.showCheckSection),
            let history=settings.contestHistories["sweepstakes"],history.calls.contains(call),
